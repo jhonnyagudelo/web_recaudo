@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/home.css">
+		<title>Inicio sesión</title>
+	</head>
+	<body>
+		<div class="container__login">
+			<form  action="listVehicle.html" method="get" accept-charset="utf-8">
+				<div class="formLogin" id="form">
+					<h1 class="formLogin-title">SUIC | Sistema unificado de información consolidada</h1>
+					<div class="dateUser">
+						<label for="name" class="dateUser-label_name">Usuario</label>
+						<input type="text" required class="dateUser-input_name" id="name" name="name">
+						<label for="password" class="dateUser-label_password" >Password</label>
+						<input type="password" required class="dateUser-input_password" id="password" name="password">
+						<label><input type="checkbox" name="recordar" value="recordar">Recordar</label>
+						<div class="btn__form">
+							<button class="btn btn_login" type="submit" value="login">Iniciar sesión</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="waves">
+				<div class="wave circulo a"></div>
+				<div class="wave circulo b"></div>
+				<div class="wave circulo c"></div>
+			</div>
+		</div>
+	</body>
+</html>

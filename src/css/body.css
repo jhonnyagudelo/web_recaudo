@@ -1,0 +1,45 @@
+body{
+  font-family: 'Poppins', system-ui;
+	margin:0;
+}
+
+h1
+,h2
+,h3
+,h4
+,h5
+,h6{
+ font-weight: normal;
+	font-family: 'Source Sans Pro', system-ui;
+	margin:0;
+}
+
+ol
+,ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+table,td,th{
+  border:1px solid var(--principalColor);
+  border-collapse: collapse; /*quitar la doble linea*/
+  text-align: center;
+}
+table{
+  max-width: 100%;
+}
+
+th{
+  background-color: var(--principalColor);
+  color:var(--lightColor);
+  padding: 0 20px;
+  text-align: center;
+  width: 8em;
+}
+
+
+td{
+  width: 7.3em;
+  padding: .1em;
+}

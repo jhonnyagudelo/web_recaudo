@@ -1,0 +1,32 @@
+.waves{
+	position: absolute;
+	bottom: -135px;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.wave{
+
+	position: absolute;
+	left: -180px;
+	bottom: 0;
+	width: 2402px;
+	height:427px;
+	background:url(../../src/images/waves.png) center bottom no-repeat;
+	animation: 5s wave ease-in-out infinite alternate;
+}
+
+.wave.a{
+	background-position: 0 -854px;
+}
+
+.wave.b{
+	background-position: 0 -427px;
+	animation-delay: .6s;
+}
+
+.wave.c{
+	background-position: 0 0;
+	animation-delay: 1.2s;
+}

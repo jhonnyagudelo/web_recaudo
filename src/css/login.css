@@ -1,0 +1,44 @@
+/*login*/
+
+.container__login	{
+	display: flex;
+	height: 100vh;
+	background-color: var(--principalColor);
+	overflow: hidden;
+	position: relative;
+	justify-content:center;
+	align-items: center;
+
+}
+
+.formLogin{
+		display: flex;
+		justify-content:center;
+		color: white;
+		text-align: center;
+		max-width: 500px;
+		position: relative;
+		z-index: 2;
+		@media(--extra-small) {
+			display: block;
+		}
+	}
+
+.formLogin-title{
+	display: flex;
+	align-items: center;
+}
+
+.dateUser label{
+	display: block;
+	padding: .5em;
+}
+
+
+
+
+
+
+
+
+/*login*/

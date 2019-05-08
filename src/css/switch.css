@@ -1,0 +1,66 @@
+/*SWITCH*/
+.onoffswitch__form{
+	display: flex;
+	justify-content: center;
+}
+
+.onoffswitch{
+	position: relative;
+	width: 50px;
+}
+
+.onoffswitch-checkbox {
+	display: none;
+}
+
+.onoffswitch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border:1px solid var(--lightColor);
+	border-radius: 20px;
+}
+
+.onoffswitch-inner {
+	display: block;
+	width: 200%;
+	margin-left: -100%;
+	transition: margin .3s ease-out;
+	&:after {
+		content:"On";
+		padding-left: 5px;
+		background-color: var(--switchOn);
+		color:var(--lightColor);
+	}
+	&:before {
+		content: "Off";
+		padding-right: 5px;
+		background-color: var(--lightColor);
+		color:var(--switchOff);
+	}
+}
+
+
+:--checkable {
+	float:left;
+	width: 50%;
+	height: 20px;
+	padding: 0;
+	line-height: 20px;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+  background-color: red;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0;
+  background-color: red;
+}
+
+/*SWITCH*/

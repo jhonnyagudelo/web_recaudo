@@ -1,0 +1,50 @@
+/*animation*/
+@keyframes animationIn{
+  0% {
+    transform: translateY(-3000px);
+  }
+  60% {
+    transform: translateY(25px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+		@keyframes animationOut{
+  0% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-3000px);
+  }
+}
+
+
+
+@keyframes wave{
+	0%{
+		transform: translate(0, 0);
+	}
+	50%{
+		transform: translate(-80px 30px);
+	}
+	100%{
+		transform: translate(160px, -60px);
+	}
+}
+
+
+/*animation*/

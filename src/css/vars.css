@@ -1,0 +1,37 @@
+:root{
+	--principalColor:#273b47;
+	--navColor:#57717F;
+	--lightColor: white;
+	--lightBorder: #C2C2C2;
+	--contrans:#57717F;
+	--black:black;
+	--modalColor: rgba(0,0,0,0.8);
+	--btnLogin:#6C7880;
+	--switchOn:#2E654A;
+	--switchOff:#9C9C9C;
+
+	/*boton*/
+	--button: {
+		padding: .6em .8em .8em;
+		border:none;
+		color: white;
+		margin:5px;
+		border-radius: 5px;
+		cursor:pointer;
+		box-shadow: inset 0 -.2em rgba(0,0,0,.2);
+		transition: .2s;
+		will-change:transform;
+		text-transform: uppercase;
+		font-weight:700;
+	}
+
+
+/*@custom-media --small screen and (max-width: 768px);*/
+@custom-media --large screen and (width >= 1024px);
+@custom-media --medium screen and (width >= 768px);
+@custom-media --small screen and (width < 768px);
+@custom-media --extra-small (width < 480px);
+
+@custom-selector :--checkable .onoffswitch-inner:before, .onoffswitch-inner:after;
+
+}
