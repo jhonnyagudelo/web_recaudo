@@ -433,6 +433,22 @@ td{
 
 }
 
+.form_busqueda{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding-bottom: 10px;
+}
+
+.title_marcada_search{
+	display: inline-block;
+
+	padding: 8px;
+}
+
 .departure {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -683,7 +699,7 @@ td{
 	bottom: 0;
 	width: 2402px;
 	height:427px;
-	background:url(../../src/images/waves.png) center bottom no-repeat;
+	background:url(../images/waves.png) center bottom no-repeat;
 	-webkit-animation: 5s wave ease-in-out infinite alternate;
 	        animation: 5s wave ease-in-out infinite alternate;
 }
@@ -972,6 +988,7 @@ td{
 
 	.marked {
 		height: 90%;
+		width:auto;
 
 		/*margin: 30px 20px;*/
 
@@ -1042,7 +1059,7 @@ td{
 	}
 
 	.marked {
-		width: 500px;
+		width: 528px;
 
 		/*border:1px solid red;*/
 

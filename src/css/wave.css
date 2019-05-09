@@ -13,7 +13,7 @@
 	bottom: 0;
 	width: 2402px;
 	height:427px;
-	background:url(../../src/images/waves.png) center bottom no-repeat;
+	background:url(../images/waves.png) center bottom no-repeat;
 	animation: 5s wave ease-in-out infinite alternate;
 }
 

@@ -35,11 +35,12 @@
 	/*display: flex;*/
 	/*justify-content: center;*/
 	@media(--small){
-		width: 500px;
+		width: 528px;
 		/*border:1px solid red;*/
 	}
 	@media(--extra-small){
 		height: calc(100% - 10%);
+		width:auto;
 		/*margin: 30px 20px;*/
 	}
 }
@@ -49,6 +50,20 @@
 
 
 }
+
+.form_busqueda{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+
+.title_marcada_search{
+	display: inline-block;
+
+	padding: 8px;
+}
+
 
 .departure {
 	display: flex;
