@@ -107,5 +107,5 @@ validation($movil);
       }
     }
 
-
+var link = `hola + {hola}`;
 

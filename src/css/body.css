@@ -27,13 +27,13 @@ table,td,th{
   text-align: center;
 }
 table{
-  max-width: 100%;
+  width: 100%;
 }
 
 th{
   background-color: var(--principalColor);
   color:var(--lightColor);
-  padding: 0 20px;
+  padding: 5px 20px;
   text-align: center;
   width: 8em;
 }
@@ -42,4 +42,8 @@ th{
 td{
   width: 7.3em;
   padding: .1em;
+}
+
+tbody:nth-child(even){
+  background-color: var(--ligtTbody);
 }

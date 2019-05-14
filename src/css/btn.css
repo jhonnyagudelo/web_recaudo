@@ -1,8 +1,16 @@
+.btn-search,
 .btn {
 	@apply --button;
 	&:active{
 		transform:scale(.9);
 	}
+}
+
+.btn-search {
+	color: var(--principalColor);
+	font-weight: 580;
+	font-size: .7em;
+	margin-left: 10px;
 }
 
 .btn.btn_login{

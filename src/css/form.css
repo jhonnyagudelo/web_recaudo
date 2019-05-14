@@ -1,0 +1,23 @@
+
+.form_search{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+
+.form_search label:nth-child(1n + 2) {
+	margin-left: 17px;
+}
+
+
+
+.form_search input{
+	border-radius: 5px;
+	border: 1px solid var(--principalColor);
+	padding: 3px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-left: 10px;
+}

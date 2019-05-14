@@ -3,12 +3,15 @@
 	--navColor:#57717F;
 	--lightColor: white;
 	--lightBorder: #C2C2C2;
+	--ligtTbody:#DFE5E8;
 	--contrans:#57717F;
 	--black:black;
 	--modalColor: rgba(0,0,0,0.8);
 	--btnLogin:#6C7880;
 	--switchOn:#2E654A;
 	--switchOff:#9C9C9C;
+	--letters: #273b47 ;
+	--borderhover :#027687;
 
 	/*boton*/
 	--button: {
