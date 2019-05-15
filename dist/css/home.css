@@ -612,6 +612,15 @@ tbody:nth-child(even){
 	border-right: 1px solid #273b47;
 }
 
+.save_button{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align:end;
+	    -ms-flex-align:end;
+	        align-items:flex-end;
+}
+
 /*login*/
 
 .container__login	{
@@ -933,24 +942,38 @@ tbody:nth-child(even){
 }
 
 .form_time {
-	display: grid;
-	grid-template-columns: repeat(8,1fr);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	/*grid-template-columns: repeat(8,1fr);*/
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	grid-gap: 3px;
+	/*margin-left: 5px;*/
+	-webkit-box-flex:1;
+	    -ms-flex-positive:1;
+	        flex-grow:1;
 	padding: .5em;
 
 }
 
 .form_time .select_vehi {
 	width: 104px;
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #273b47;
 
 }
 
-.form_time input{
+.form_time input {
 	border-radius: 5px;
+	padding: 5px;
 	border: 1px solid #273b47;
+
+}
+
+.form_time label {
+	text-align: center;
 
 }
 

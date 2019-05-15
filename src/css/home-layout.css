@@ -233,3 +233,8 @@
 .paginate_button:nth-child(5){
 	border-right: 1px solid var(--letters);
 }
+
+.save_button{
+	display: flex;
+	align-items:flex-end;
+}
