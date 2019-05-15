@@ -32,16 +32,10 @@
 .content {
 	grid-area: content;
 	margin: 50px 20px;
-/*	display: flex;
-	justify-content: center;*/
+
 	@media(--small){
-		/*width: 528px;*/
-		/*border:1px solid red;*/
-	}
-	@media(--extra-small){
 		height: calc(100% - 10%);
 		max-width:335px;
-		/*margin: 30px 20px;*/
 	}
 }
 
@@ -129,7 +123,6 @@
 		@media(--extra-small){
 			text-align:initial;
 			margin-left:15px;
-			/*font-size: em;*/
 		}
 }
 

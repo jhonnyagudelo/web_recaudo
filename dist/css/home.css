@@ -427,8 +427,6 @@ tbody:nth-child(even){
 .content {
 	grid-area: content;
 	margin: 50px 20px;
-/*	display: flex;
-	justify-content: center;*/
 }
 
 .info__content{
@@ -934,6 +932,28 @@ tbody:nth-child(even){
 	margin-left: 10px;
 }
 
+.form_time {
+	display: grid;
+	grid-template-columns: repeat(8,1fr);
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	grid-gap: 3px;
+	padding: .5em;
+
+}
+
+.form_time .select_vehi {
+	width: 104px;
+
+}
+
+.form_time input{
+	border-radius: 5px;
+	border: 1px solid #273b47;
+
+}
+
 /*animation*/
 
 @-webkit-keyframes animationIn{
@@ -1066,14 +1086,6 @@ tbody:nth-child(even){
 
 	}
 
-	.content {
-		height: 90%;
-		max-width:335px;
-
-		/*margin: 30px 20px;*/
-
-	}
-
 	.departure {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -1102,8 +1114,6 @@ tbody:nth-child(even){
 		text-align:left;
 		text-align:initial;
 		margin-left:15px;
-
-		/*font-size: em;*/
 
 	}
 
@@ -1139,10 +1149,8 @@ tbody:nth-child(even){
 	}
 
 	.content {
-
-		/*width: 528px;*/
-
-		/*border:1px solid red;*/
+		height: 90%;
+		max-width:335px;
 
 	}
 
@@ -1169,6 +1177,11 @@ tbody:nth-child(even){
 
 	.action_modal input {
 		width: auto;
+
+	}
+
+	.form_time {
+		grid-template-columns: 1fr;
 
 	}
 

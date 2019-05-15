@@ -11,8 +11,6 @@
 	margin-left: 17px;
 }
 
-
-
 .form_search input{
 	border-radius: 5px;
 	border: 1px solid var(--principalColor);
@@ -20,4 +18,24 @@
 	text-align: center;
 	text-transform: uppercase;
 	margin-left: 10px;
+}
+
+.form_time {
+	display: grid;
+	grid-template-columns: repeat(8,1fr);
+	justify-content: center;
+	grid-gap: 3px;
+	padding: .5em;
+	@media(--small){
+		grid-template-columns: 1fr;
+	}
+		& .select_vehi {
+			width: 104px;
+		}
+		& input{
+			border-radius: 5px;
+			border: 1px solid var(--principalColor);
+
+		}
+
 }

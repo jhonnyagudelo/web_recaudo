@@ -1,6 +1,5 @@
 module.exports = {
   plugins: [
-  // use: [ 'rucksack-css' ]
     // require('autoprefixer')({
     //   grid: true
     // }),
@@ -30,3 +29,4 @@ module.exports = {
     // require('cssnano'),
   ]
 }
+
