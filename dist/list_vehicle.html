@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>SUIC | Rodamiento</title>
+		<title>SUIC | Caídas</title>
 		<link rel="stylesheet" type="text/css" href="css/home.css">
 	</head>
 	<body>
@@ -23,35 +23,35 @@
 							<i class="nav__icon icon-truck"></i><a href="#">Vehículos</a>
 						</li>
 						<ul class="sub__menu">
-							<li id="add_vehicle" ><a href="#">Agregar vehículo</a></li>
+							<li id="add_vehicle" ><a href="#">Registrar vehículo</a></li>
 							<li><a href="listVehicle.html">Listar vehículos</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-road "></i><a href="#">Rodamiento</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a class="add_tread" href="#">Agregar rodamiento</a></li>
+							<li><a class="add_tread" href="#">Registrar rodamiento</a></li>
 							<li><a href="#">Listar rodamiento</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link">
 							<i class="nav__icon icon-stopwatch"></i><a href="#">Tiempos</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="caidas.html">Mirar Tiempos</a></li>
+							<li><a href="#">Mirar Tiempos</a></li>
 							<li><a href="#">Consultar Tiempo</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-user"></i><a href="#">Operadores</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="#">Agregar operador</a></li>
+							<li><a href="#">Registrar operador</a></li>
 							<li><a href="#">Listar operador</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-spinner10"></i><a href="#">Turnos</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="#">Agregar turno</a></li>
+							<li><a href="#">Registrar turno</a></li>
 							<li><a href="#">Listar turno</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
@@ -75,29 +75,33 @@
 					</div>
 				</article>
 			</section>
-			<section class="content tread">
-			<div class="dataFilter">
-				<form class="dataFilter-from">
-					<label class="search-label">Search: </label>
-					<input class=" from-search" type="search" placeholder="Search..."	>
-				</form>
-			</div>
-				<article class="info__content" >
+			<section class="content">
+				<div class="dataFilter">
+					<form class="dataFilter-from">
+						<label class="search-label">Search: </label>
+						<input class=" from-search" type="search" placeholder="Search..."	>
+					</form>
+				</div>
+				<div class="info__content" >
 					<table class="info__frame"> <!-- tabla -->
 					<thead> <!-- cabecera -->
 					<tr> <!-- fila -->
 					<th>Numero interno</th>
-					<th>Despacho</th>
-					<th>Numero planilla</th>
-					<th>Activos</th>
+					<th>Placa</th>
+					<th>Marca</th>
+					<th>Carrocería</th>
+					<th>Consumo</th>
+					<th>Activo</th>
 					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody> <!-- cuerpo -->
 			<tr>
 				<td>6001</td>
-				<td>Control versalles</td>
-				<td>0</td>
+				<td>hgt-965</td>
+				<td>chevt</td>
+				<td>cerrada</td>
+				<td>35Gal</td>
 				<td>
 					<form class="onoffswitch__form" action="listVehicle_submit" method="get" accept-charset="utf-8">
 						<div class="onoffswitch">
@@ -111,14 +115,14 @@
 				</td>
 				<td>
 					<div class="acciones_icon">
-						<i class="edit__bus icon-pencil" id=""></i>
-						<i class="delete__bus icon-bin" id="delete__bus"></i>
+						<i class="edit__bus icon-pencil"></i>
+						<i class="delete__bus icon-bin"></i>
 					</div>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-</article>
+</div>
 <div class="dataTable_paginate">
 	<ul class="pagination">
 		<li class="paginate_button page-item">
@@ -139,14 +143,17 @@
 	</ul>
 </div>
 </section>
-<section class="formulario vehicle">
+<section class="formulario add_vehicle">
 <div class="form_modal" id="form_modal">
 	<div class="modal" id="modal">
 		<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
 			<div class="title__form">
-				<h1 class="">Actualizar Vehículo</h1>
+				<h1 class="">Registrar vehículo</h1>
 			</div>
 			<div class="side__left">
+				<label for="numero_interno">Ingresar numero interno
+					<input type="text" required placeholder="numero interno" name="numero_interno" value="">
+				</label>
 				<label for="placa">Ingresar placa
 					<input type="text" required placeholder="Ingresar placa" name="placa" value="">
 				</label>
@@ -208,7 +215,7 @@
 				</label>
 			</div>
 			<div class="btn_form">
-				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Actualizar</button>
+				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
 				<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
 			</div>
 		</form>
@@ -223,11 +230,14 @@
 				<h1 class="">Editar Vehículo</h1>
 			</div>
 			<div class="side__left">
-				<label for="placa">Ingresar placa
-					<input type="text" required placeholder="Ingresar placa" name="placa" value="">
+				<label for="numero_interno">Actualizar numero interno
+					<input type="text" required placeholder="numero interno" name="numero_interno" value="">
 				</label>
-				<label for="marca">Ingresar modelo
-					<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
+				<label for="placa">Actualizar placa
+					<input type="text" required placeholder="Actualizar placa" name="placa" value="">
+				</label>
+				<label for="marca">Actualizar modelo
+					<input type="text" required autofocus placeholder="Actualizar modelo" name="modelo" value="">
 				</label>
 				<label for="capacidad">Capacidad</label>
 				<input type="text" required name="capacidad" placeholder="capacidad">
@@ -296,7 +306,7 @@
 				¿Esta seguro que desea eliminar el vehiculo?
 			</p>
 			<div class="btn_form">
-				<button class="btn btn__add" id="hiden-add" type="submit" value="eliminar"  >Eliminar</button>
+				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar"  >Eliminar</button>
 				<button class="btn btn__close" id="remove-cancel" type="submit" value="cencelar">Cancelar</button>
 			</div>
 		</form>

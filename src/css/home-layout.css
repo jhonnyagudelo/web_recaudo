@@ -1,6 +1,6 @@
 .container {
 	display: grid;
-	grid-template: 100px 1fr / 200px 1fr;
+	grid-template: 100px 1fr / 300px 1fr;
 	grid-template-areas: "header info"
 						 "header content";
 	@media(--extra-small) {
@@ -40,7 +40,7 @@
 	}
 	@media(--extra-small){
 		height: calc(100% - 10%);
-		width:auto;
+		max-width:335px;
 		/*margin: 30px 20px;*/
 	}
 }
@@ -103,7 +103,7 @@
 	border:1px solid #273b47;
 	border-radius: .8em;
 	width: 520px;
-	height: 430px;
+	height: 470px;
 	text-align: center;
 	@media(--extra-small) {
 		width: auto;
@@ -213,8 +213,9 @@
 	border-radius: 	5px;
 	padding: .6em;
 	border: 1px solid var(--contrans);
-	&:hover{
+	&:focus{
 		border:1px solid var(--borderhover);
+		box-shadow: 0 0 0 .1rem rgba(68, 113, 188, .4);
 	}
 }
 

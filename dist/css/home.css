@@ -405,7 +405,7 @@ tbody:nth-child(even){
 
 .container {
 	display: grid;
-	grid-template: 100px 1fr / 200px 1fr;
+	grid-template: 100px 1fr / 300px 1fr;
 	grid-template-areas: "header info"
 						 "header content";
 
@@ -491,7 +491,7 @@ tbody:nth-child(even){
 	border:1px solid #273b47;
 	border-radius: .8em;
 	width: 520px;
-	height: 430px;
+	height: 470px;
 	text-align: center;
 }
 
@@ -580,8 +580,10 @@ tbody:nth-child(even){
 	border: 1px solid #57717F
 }
 
-.from-search:hover{
+.from-search:focus{
 	border:1px solid #027687;
+	-webkit-box-shadow: 0 0 0 .1rem rgba(68, 113, 188, .4);
+	        box-shadow: 0 0 0 .1rem rgba(68, 113, 188, .4);
 
 }
 
@@ -1066,7 +1068,7 @@ tbody:nth-child(even){
 
 	.content {
 		height: 90%;
-		width:auto;
+		max-width:335px;
 
 		/*margin: 30px 20px;*/
 
