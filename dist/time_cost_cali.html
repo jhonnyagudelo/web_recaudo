@@ -79,32 +79,39 @@
 			<section class="content">
 				<div class="add_time">
 					<form action="time_cali_cost_submit" class="form_time" method="get" accept-charset="utf-8">
-						<label for="time">Salida:
-							<input type="time" name="time" value="03:00" min="03:00" max="23:00" >
-						</label>
-						<label for="label_vehi">Vehiculo:
-							<select class="select_vehi" id="list_vehi" name="label_vehi">
-								<option value="8046">8046</option>
-								<option value="8016">8016</option>
-								<option value="8036">8036</option>
-								<option value="8048">8048</option>
-								<option value="8004">8004</option>
-								<option value="65000">65000</option>
-								<option value="8018">8018</option>
-							</select>
-						</label>
-						<label for="time_mio">Reloj ginebra:
-							<input type="time" name="time_mio" value="03:00" min="03:00" max="23:00">
-						</label>
-						<label for="time_42-48">EDS viña: <input type="time" name="time_42-48" value="03:00"
-						min="03:00" max="23:00"></label>
-						<label for="time_reforma">Control cerrito: <input type="time" name="time_reforma" value="03:00" min="03:00" max="23:00"></label>
-						<label for="time_reloj">Reforma: <input type="time" name="time_reloj" value="03:00"
-						min="03:00" max="23:00"></label>
-						<label for="observacion">Observación: <input type="text" name="observacion"></label>
+						<div class="horario">
+
+							<label for="time">Salida:
+								<input type="time" name="time" value="03:00" min="03:00" max="23:00" >
+							</label>
+							<label for="label_vehi">Vehiculo:
+								<select class="select_vehi" id="list_vehi" name="label_vehi">
+									<option value="8046">8046</option>
+									<option value="8016">8016</option>
+									<option value="8036">8036</option>
+									<option value="8048">8048</option>
+									<option value="8004">8004</option>
+									<option value="65000">65000</option>
+									<option value="8018">8018</option>
+								</select>
+							</label>
+						</div>
+						<div class="oneRow">
+
+							<label for="time_mio">Reloj ginebra:
+								<input type="time" name="time_mio" value="03:00" min="03:00" max="23:00">
+							</label>
+							<label for="time_42-48">EDS viña: <input type="time" name="time_42-48" value="03:00"
+							min="03:00" max="23:00"></label>
+							<label for="time_reforma">Control cerrito: <input type="time" name="time_reforma" value="03:00" min="03:00" max="23:00"></label>
+							<label for="time_reloj">Reforma: <input type="time" name="time_reloj" value="03:00"
+							min="03:00" max="23:00"></label>
+							<label for="observacion">Observación: <input type="text" name="observacion"></label>
+						</div>
 						<div class="form_button save_button">
 							<button class="btn btn__add " type="submit">Guardar</button>
 						</div>
+						</form>
 					</div>
 					<article class="info__content" >
 						<table class="info__frame"> <!-- tabla -->
@@ -139,24 +146,24 @@
 		</table>
 	</article>
 	<div class="dataTable_paginate">
-	<ul class="pagination">
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >Anterior</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >1</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >2</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >3</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >Siguiente</a>
-		</li>
-	</ul>
-</div>
+		<ul class="pagination">
+			<li class="paginate_button page-item">
+				<a class="page_link" href="#" >Anterior</a>
+			</li>
+			<li class="paginate_button page-item">
+				<a class="page_link" href="#" >1</a>
+			</li>
+			<li class="paginate_button page-item">
+				<a class="page_link" href="#" >2</a>
+			</li>
+			<li class="paginate_button page-item">
+				<a class="page_link" href="#" >3</a>
+			</li>
+			<li class="paginate_button page-item">
+				<a class="page_link" href="#" >Siguiente</a>
+			</li>
+		</ul>
+	</div>
 </section>
 <section class="formulario add_vehicle">
 	<div class="form_modal" id="form_modal">

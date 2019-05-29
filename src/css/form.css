@@ -1,48 +1,95 @@
+.dataFilter-from{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-.form_search{
+.search__icon{
+	font-size: 1.4em;
+	position: relative;
+	padding: 5px;
+	color: var(--lightColor);
+	z-index: 1;
+	border: 1px solid var(--principalColor);
+	border-radius: 5px 0 0 5px;
+	background-color: var(--principalColor);
+}
+
+
+
+.from-search {
 	align-items: center;
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
+	border-radius: 0 5px 5px 0;
+	padding: .6em;
+	border: 1px solid var(--contrans);
+	color:var(--principalColor);;
+	width: 50%;
+	transition: .6s;
+	cursor: pointer;
+	&:focus{
+		border:1px solid var(--borderhover);
+		box-shadow: 0 0 0 .1rem rgba(68, 113, 188, .4);
+		width: 100%;
+	}
 }
 
-
-.form_search label:nth-child(1n + 2) {
-	margin-left: 17px;
-}
-
-.form_search input{
-	border-radius: 5px;
-	border: 1px solid var(--principalColor);
-	padding: 3px 5px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-left: 10px;
-}
 
 .form_time {
-	display: flex;
-	/*grid-template-columns: repeat(8,1fr);*/
+	display: grid;
+	grid-template: 50px 120px 50px / 1fr;
+	grid-gap: 5px;
 	justify-content: center;
-	/*margin-left: 5px;*/
-	flex-grow:1;
 	padding: .5em;
-	@media(--small){
-		grid-template-columns: 1fr;
-	}
 		& .select_vehi {
 			width: 104px;
 			border-radius: 5px;
 			padding: 5px;
 			border: 1px solid var(--principalColor);
 		}
-		& input {
-			border-radius: 5px;
-			padding: 5px;
-			border: 1px solid var(--principalColor);
-		}
-		& label {
-			text-align: center;
-		}
+			& input {
+				border-radius: 5px;
+				padding: 5px;
+				border: 1px solid var(--principalColor);
+			}
 
+			& label {
+				text-align: center;
+				margin: 5px;
+			}
+	@media(--small) {
+		display: grid;
+		grid-template: 50px 170px 50px / 1fr;
+	}
+	@media(--extra-small) {
+		display: grid;
+		grid-template: 70px 260px 50px / 1fr;
+	}
+}
+
+
+
+.horario
+,.oneRow
+,.save_button {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-wrap:wrap;
+	justify-content: center;
+	@media(--small) {
+		display: grid;
+		grid-template-columns:  repeat(2, 1fr);
+			&.save_button{
+				display:unset;
+			}
+	}
+
+}
+
+.horario {
+
+		box-shadow:  0 .1rem rgba(0, 0, 0, .3);
 }

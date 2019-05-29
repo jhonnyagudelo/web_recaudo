@@ -2,6 +2,7 @@
 .onoffswitch__form{
 	display: flex;
 	justify-content: center;
+
 }
 
 .onoffswitch{
@@ -19,10 +20,12 @@
 	cursor: pointer;
 	border:1px solid var(--lightColor);
 	border-radius: 20px;
+
 }
 
 .onoffswitch-inner {
 	display: block;
+
 	width: 200%;
 	margin-left: -100%;
 	transition: margin .3s ease-out;
@@ -35,8 +38,8 @@
 	&:before {
 		content: "Off";
 		padding-right: 5px;
-		background-color: var(--lightColor);
-		color:var(--switchOff);
+		background-color:var(--ligtTbody);
+		color:var(--black);
 	}
 }
 
@@ -64,3 +67,4 @@
 }
 
 /*SWITCH*/
+
