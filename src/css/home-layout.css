@@ -174,14 +174,7 @@
 	padding: .2em;
 }
 
-.title__form {
-	grid-area: title__form;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-	font-weight: 800;
-	color: inherit;
-	padding: 0 10px;
-}
+
 
 .side__left{
 	grid-area: side__left;
@@ -242,8 +235,48 @@
 	align-items:flex-end;
 }
 
-.rodamiento-container form{
-	border:1px solid red;
+
+
+.icon_title{
+	display: inline-block;
 	display: flex;
-	justify-content: space-between;
+	margin-bottom: 10px;
+	align-items: center;
+
+}
+
+
+.ico-roda,
+.title_rodamiento{
+	font-weight: 700;
+	font-size: 1.8em;
+	color:var(--principalColor);
+}
+
+.ico-roda{
+	margin-right: 10px;
+}
+
+.title_sub{
+	color: var(--lightColor);
+	font-size: 1em;
+}
+
+
+
+.info_general{
+	color:var(--principalColor);
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-left: 15px;
+	padding: 20px 0;
+	font-weight: 700;
+}
+
+.div_btn{
+	@media(--extra-small){
+		display: flex;
+		justify-content: center;
+		padding-top: 10px;
+	}
 }

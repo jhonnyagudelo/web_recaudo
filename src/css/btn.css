@@ -1,5 +1,6 @@
-.btn-search,
-.btn {
+.btn-save
+,.btn-search
+,.btn {
 	@apply --button;
 	&:active{
 		transform:scale(.9);
@@ -7,6 +8,11 @@
 }
 
 
+.btn-save{
+	margin: 5px ;
+	background-color: var(--principalColor);
+	display: flex;
+}
 
 
 

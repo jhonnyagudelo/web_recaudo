@@ -242,8 +242,9 @@
 
 :root{
 
-	/*boton*/
 
+
+	/*boton*/
 
 /*@custom-media --small screen and (max-width: 768px);*/
 
@@ -2424,15 +2425,6 @@ tbody:nth-child(even){
 	padding: .2em;
 }
 
-.title__form {
-	grid-area: title__form;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-	font-weight: 800;
-	color: inherit;
-	padding: 0 10px;
-}
-
 .side__left{
 	grid-area: side__left;
 }
@@ -2496,14 +2488,41 @@ tbody:nth-child(even){
 	        align-items:flex-end;
 }
 
-.rodamiento-container form{
-	border:1px solid red;
+.icon_title{
+	display: inline-block;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	margin-bottom: 10px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+}
+
+.ico-roda,
+.title_rodamiento{
+	font-weight: 700;
+	font-size: 1.8em;
+	color:#273b47;
+}
+
+.ico-roda{
+	margin-right: 10px;
+}
+
+.title_sub{
+	color: white;
+	font-size: 1em;
+}
+
+.info_general{
+	color:#273b47;
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-left: 15px;
+	padding: 20px 0;
+	font-weight: 700;
 }
 
 /*login*/
@@ -2555,8 +2574,9 @@ tbody:nth-child(even){
 
 /*login*/
 
-.btn-search,
-.btn {
+.btn-save
+,.btn-search
+,.btn {
   padding: .6em .8em .8em;
   border:none;
   color: white;
@@ -2572,10 +2592,18 @@ tbody:nth-child(even){
   font-weight:700
 }
 
-.btn-search:active,.btn:active{
+.btn-save:active,.btn-search:active,.btn:active{
 	-webkit-transform:scale(.9);
 	        transform:scale(.9);
 
+}
+
+.btn-save{
+	margin: 5px ;
+	background-color: #273b47;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .btn-search {
@@ -2803,6 +2831,8 @@ tbody:nth-child(even){
 
 }
 
+/*FORMULARIOS*/
+
 .dataFilter-from{
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2909,6 +2939,61 @@ tbody:nth-child(even){
 		-webkit-box-shadow:  0 .1rem rgba(0, 0, 0, .3);
 
 		        box-shadow:  0 .1rem rgba(0, 0, 0, .3);
+}
+
+.form_rodamiento {
+	background-color: #DFE5E8;
+}
+
+.title__form {
+	grid-area: title__form;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color: inherit;
+	padding: 0 10px;
+}
+
+.rodamiento-container form{
+	border:1px solid red;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.sub_rodamiento_title {
+	text-transform: uppercase;
+	border: 1px solid #57717F;
+	border-radius: 8px 8px 0 0;
+	background-color: #57717F;
+	padding: 15px ;
+}
+
+.form_rodamiento-content {
+	margin-left: 30px;
+	padding: 10px;
+}
+
+.input-rodamiento{
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #273b47;
+	font-size: 1em;
+	width: 350px
+}
+
+.input-rodamiento:hover {
+	background-color:#DFE5E8;
+
+}
+
+.label-rodamiento {
+	display: block;
+	font-size: 1.2em;
+	color: #273b47;
 }
 
 /*animation*/
@@ -3157,6 +3242,17 @@ tbody:nth-child(even){
 
 	}
 
+	.div_btn{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		padding-top: 10px;
+
+	}
+
 	.formLogin{
 		display: block;
 
@@ -3170,6 +3266,11 @@ tbody:nth-child(even){
 	.form_time {
 		display: grid;
 		grid-template: 70px 260px 50px / 1fr;
+
+	}
+
+	.input-rodamiento{
+		width:auto;
 
 	}
 

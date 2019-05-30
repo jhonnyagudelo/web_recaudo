@@ -13,6 +13,8 @@
 	--letters: #273b47 ;
 	--borderhover :#027687;
 
+
+
 	/*boton*/
 	--button: {
 		padding: .6em .8em .8em;
@@ -26,8 +28,14 @@
 		will-change:transform;
 		text-transform: uppercase;
 		font-weight:700;
-	}
+	};
 
+--form_input: {
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid var(--principalColor);
+	font-size: 1em;
+}
 
 /*@custom-media --small screen and (max-width: 768px);*/
 @custom-media --small screen and (width <= 768px);

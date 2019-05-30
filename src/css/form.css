@@ -1,3 +1,6 @@
+/*FORMULARIOS*/
+
+
 .dataFilter-from{
 	display: flex;
 	align-items: center;
@@ -93,3 +96,67 @@
 
 		box-shadow:  0 .1rem rgba(0, 0, 0, .3);
 }
+
+
+
+.form_rodamiento {
+	background-color: var(--ligtTbody);
+}
+
+.title__form {
+	grid-area: title__form;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-weight: 800;
+	color: inherit;
+	padding: 0 10px;
+}
+
+
+.rodamiento-container form{
+	border:1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.sub_rodamiento_title {
+	text-transform: uppercase;
+	border: 1px solid var(--contrans);
+	border-radius: 8px 8px 0 0;
+	background-color: var(--contrans);
+	padding: 15px ;
+}
+
+
+.form_rodamiento-content {
+	margin-left: 30px;
+	padding: 10px;
+}
+.input-rodamiento{
+	@apply --form_input;
+	width: 350px;
+	&:hover {
+		background-color:var(--ligtTbody);
+	}
+	@media(--extra-small){
+		width:auto;
+
+	}
+}
+
+.label-rodamiento {
+	display: block;
+	font-size: 1.2em;
+	color: var(--letters);
+}
+
+
+
+
+
+
+
+
+
