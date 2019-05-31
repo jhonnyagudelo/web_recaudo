@@ -34,8 +34,9 @@
 	text-align: center;
 	border:1px solid var(--switchOff);
 	border-radius: 6px;
-	padding:3px 17px;
+	padding:5px 30px;
 	margin: 5px auto;
+	font-size: .8em;
 		&:focus{
 		background-color: var(--switchOff);
 		}
@@ -43,6 +44,11 @@
 	& select {
 		display: block;
 		margin: 5px auto;
+		border:1px solid var(--switchOff);
+		border-radius: 6px;
+		padding:5px 30px;
+		margin: 5px auto;
+		font-size: .8em;
 	}
 	@media(--small){
 		max-width:400px;

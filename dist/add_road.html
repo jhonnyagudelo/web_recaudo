@@ -79,20 +79,20 @@
 			<section class="content">
 				<div class="rodamiento_add">
 					<div class="icon_title">
-						<i class="icon-road ico-roda "></i>
-						<h1 class="title_rodamiento">Rodamientos</h1>
+						<i class="icon-road icon-title "></i>
+						<h1 class="main_title">Rodamientos</h1>
 					</div>
-					<div class="sub_rodamiento_title">
+					<div class="sub_title">
 						<h2 class="title_sub">Registrar rodamiento</h2>
 					</div>
-					<div class="form_rodamiento">
+					<div class="general_from">
 						<h2 class="info_general">Informacion general</h2>
-						<div class="form_rodamiento-content">
+						<div class="form_general-content">
 							<form action="list_road.html" method="get" accept-charset="utf-8">
-								<label class="label-rodamiento" for="planilla_road" class="planilla" id="planilla"> Planilla: </label>
-								<input class="input-rodamiento" type="number"  name="planilla_road" value="">
-								<label class="label-rodamiento" for="despacho" class="check"> Despacho:</label>
-								<select class="input-rodamiento" name="despacho" required>
+								<label class="general_label label-rodamiento" for="planilla_road" class="planilla" id="planilla"> Planilla: </label>
+								<input class="general_input input-rodamiento" type="number"  name="planilla_road" value="">
+								<label class="general_label label-rodamiento" for="despacho" class="check"> Despacho:</label>
+								<select class="general_input input-rodamiento" name="despacho" required>
 									<option value="">-------</option>
 									<option value="">Versalles</option>
 									<option value="">Piso 1</option>
@@ -101,92 +101,16 @@
 									<option value="">Buga</option>
 									<option value="">La maria</option>
 								</select>
-								<label class="label-rodamiento" for="roda_vehiculo"  required class="vehiculo_road"> Vehiculo:</label>
-								<input class="input-rodamiento" type="text" name="roda_vehiculo">
+								<label class="general_label label-rodamiento" for="roda_vehiculo"  required class="vehiculo_road"> Vehiculo:</label>
+								<input class="general_input input-rodamiento" type="text" name="roda_vehiculo">
 								<div class="div_btn">
 									<input type="submit" class="btn-save" name="" value="Guardar">
 								</div>
 							</form>
 						</div>
 					</div>
-				</section>
-				<section class="formulario add_vehicle">
-					<div class="form_modal" id="form_modal">
-						<div class="modal" id="modal">
-							<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
-								<div class="title__form">
-									<h1 class="">Insertar Vehículo</h1>
-								</div>
-								<div class="side__left">
-									<label for="placa">Ingresar placa
-										<input type="text" required placeholder="Ingresar placa" name="placa" value="">
-									</label>
-									<label for="marca">Ingresar modelo
-										<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
-									</label>
-									<label for="numero_interno"> Numero interno
-										<input type="text" required placeholder="Numero interno" name="numero_interno" value="">
-									</label>
-									<label for="capacidad">Capacidad</label>
-									<input type="text" required name="capacidad" placeholder="capacidad">
-									<label for="consumo_galon">Consumo por galón</label>
-									<input type="text" required name="consumo_galon" placeholder="consumo galon">
-								</div>
-								<div class="side__right">
-									<label for="clase_bus">Clase bus</label>
-									<select required id="clase_bus" name="clase_bus" >
-										<option value="">--Seleccionar una opción--</option>
-										<option value="buseta">Buseta</option>
-										<option value="bus">Bus</option>
-										<option value="microbus">Micro bus</option>
-										<option value="busetaNPR">NPR</option>
-									</select>
-									<label for="ruta">Ruta</label>
-									<select required id="ruta" name="ruta" >
-										<option value="">--Seleccionar una opción--</option>
-										<option value="buga">Buga</option>
-										<option value="florida">Florida</option>
-										<option value="pradera">Pradera</option>
-										<option value="costa_rica">Costa rica</option>
-										<option value="candelario">Candelaria</option>
-									</select>
-									<label for="marcas">Marcas
-										<select required id="marca" name="marca">
-											<option value="">--Seleccionar una opcion--</option>
-											<option value="chev">Chev</option>
-											<option value="ford">Ford</option>
-											<option value="stud">Stud</option>
-											<option value="daihat">Daihat</option>
-											<option value="merc">Merc</option>
-											<option value="dog">Dog</option>
-											<option value="hino">Hino</option>
-											<option value="NonPlusUltra">Non plus ultra</option>
-											<option value="nissa">Nissan</option>
-											<option value="novie">Novie</option>
-											<option value="iveco">Iveco</option>
-											<option value="volsk">Volsk</option>
-											<option value="tl">TL</option>
-											<option value="jac">JAC</option>
-										</select>
-									</label>
-									<label for="marcas">Carrocería
-										<select  required id="carroceria" name="carroceria">
-											<option value="">--Seleccionar una opción--</option>
-											<option value="carrado">Cerrado</option>
-											<option value="abierto">Abierto</option>
-											<option value="escalera">Escalera</option>
-										</select>
-									</label>
-								</div>
-								<div class="btn_form">
-									<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
-									<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 			<script src="js/application.js">
 			</script>
 		</body>

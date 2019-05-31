@@ -91,27 +91,25 @@
 	}
 }
 
+
  .action_modal {
 	display: grid;
-	grid-template-areas: "title__form title__form"
-											 "side__left side__right"
-											 "btn_form btn_form";
+	grid-template-areas: "side__left side__right"
+						 "btn_form btn_form";
+
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em 1fr 4em;
+	grid-template-rows:  1fr 4em;
 	grid-gap:20px;
 	padding: 16px;
-	background-color:white;
-	border:1px solid #273b47;
 	border-radius: .8em;
-	width: 520px;
-	height: 470px;
 	text-align: center;
-	@media(--extra-small) {
+	@media(--small) {
 		width: auto;
 		display: block;
 		overflow: auto;
 	}
 }
+
 
 
 .header-logo{
@@ -246,14 +244,14 @@
 }
 
 
-.ico-roda,
-.title_rodamiento{
+.icon-title,
+.main_title{
 	font-weight: 700;
 	font-size: 1.8em;
 	color:var(--principalColor);
 }
 
-.ico-roda{
+.icon-title{
 	margin-right: 10px;
 }
 

@@ -2367,18 +2367,14 @@ tbody:nth-child(even){
 
 .action_modal {
 	display: grid;
-	grid-template-areas: "title__form title__form"
-											 "side__left side__right"
-											 "btn_form btn_form";
+	grid-template-areas: "side__left side__right"
+						 "btn_form btn_form";
+
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3em 1fr 4em;
+	grid-template-rows:  1fr 4em;
 	grid-gap:20px;
 	padding: 16px;
-	background-color:white;
-	border:1px solid #273b47;
 	border-radius: .8em;
-	width: 520px;
-	height: 470px;
 	text-align: center;
 }
 
@@ -2500,14 +2496,14 @@ tbody:nth-child(even){
 
 }
 
-.ico-roda,
-.title_rodamiento{
+.icon-title,
+.main_title{
 	font-weight: 700;
 	font-size: 1.8em;
 	color:#273b47;
 }
 
-.ico-roda{
+.icon-title{
 	margin-right: 10px;
 }
 
@@ -2815,8 +2811,9 @@ tbody:nth-child(even){
 	text-align: center;
 	border:1px solid #9C9C9C;
 	border-radius: 6px;
-	padding:3px 17px;
+	padding:5px 30px;
 	margin: 5px auto;
+	font-size: .8em;
 
 }
 
@@ -2828,6 +2825,11 @@ tbody:nth-child(even){
 .action_modal select {
 	display: block;
 	margin: 5px auto;
+	border:1px solid #9C9C9C;
+	border-radius: 6px;
+	padding:5px 30px;
+	margin: 5px auto;
+	font-size: .8em;
 
 }
 
@@ -2867,7 +2869,8 @@ tbody:nth-child(even){
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	text-transform: uppercase;
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px;
+	margin-left: 15px;
 	padding: .6em;
 	border: 1px solid #57717F;
 	color:#273b47;;
@@ -2941,7 +2944,7 @@ tbody:nth-child(even){
 		        box-shadow:  0 .1rem rgba(0, 0, 0, .3);
 }
 
-.form_rodamiento {
+.general_from {
 	background-color: #DFE5E8;
 }
 
@@ -2954,17 +2957,7 @@ tbody:nth-child(even){
 	padding: 0 10px;
 }
 
-.rodamiento-container form{
-	border:1px solid red;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-
-.sub_rodamiento_title {
+.sub_title {
 	text-transform: uppercase;
 	border: 1px solid #57717F;
 	border-radius: 8px 8px 0 0;
@@ -2972,12 +2965,12 @@ tbody:nth-child(even){
 	padding: 15px ;
 }
 
-.form_rodamiento-content {
+.form_general-content {
 	margin-left: 30px;
 	padding: 10px;
 }
 
-.input-rodamiento{
+.general_input{
 	padding: 8px;
 	border-radius: 5px;
 	border: 1px solid #273b47;
@@ -2985,12 +2978,12 @@ tbody:nth-child(even){
 	width: 350px
 }
 
-.input-rodamiento:hover {
+.general_input:hover {
 	background-color:#DFE5E8;
 
 }
 
-.label-rodamiento {
+.general_label {
 	display: block;
 	font-size: 1.2em;
 	color: #273b47;
@@ -3129,6 +3122,13 @@ tbody:nth-child(even){
 
 	}
 
+	.action_modal {
+		width: auto;
+		display: block;
+		overflow: auto;
+
+	}
+
 	.header-nav {
 		position:static;
 		padding:0;
@@ -3212,13 +3212,6 @@ tbody:nth-child(even){
 
 	}
 
-	.action_modal {
-		width: auto;
-		display: block;
-		overflow: auto;
-
-	}
-
 	.header-logo a{
 		font-size: 2em;
 
@@ -3269,7 +3262,7 @@ tbody:nth-child(even){
 
 	}
 
-	.input-rodamiento{
+	.general_input{
 		width:auto;
 
 	}

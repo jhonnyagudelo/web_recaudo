@@ -25,7 +25,8 @@
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px;
+	margin-left: 15px;
 	padding: .6em;
 	border: 1px solid var(--contrans);
 	color:var(--principalColor);;
@@ -99,7 +100,7 @@
 
 
 
-.form_rodamiento {
+.general_from {
 	background-color: var(--ligtTbody);
 }
 
@@ -113,15 +114,7 @@
 }
 
 
-.rodamiento-container form{
-	border:1px solid red;
-	display: flex;
-	justify-content: space-between;
-}
-
-
-
-.sub_rodamiento_title {
+.sub_title {
 	text-transform: uppercase;
 	border: 1px solid var(--contrans);
 	border-radius: 8px 8px 0 0;
@@ -130,11 +123,11 @@
 }
 
 
-.form_rodamiento-content {
+.form_general-content {
 	margin-left: 30px;
 	padding: 10px;
 }
-.input-rodamiento{
+.general_input{
 	@apply --form_input;
 	width: 350px;
 	&:hover {
@@ -146,7 +139,7 @@
 	}
 }
 
-.label-rodamiento {
+.general_label {
 	display: block;
 	font-size: 1.2em;
 	color: var(--letters);
