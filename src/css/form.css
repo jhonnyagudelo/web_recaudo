@@ -42,35 +42,35 @@
 
 
 .form_time {
-	display: grid;
-	grid-template: 50px 120px 50px / 1fr;
-	grid-gap: 5px;
-	justify-content: center;
+	text-align: center;
 	padding: .5em;
 		& .select_vehi {
-			width: 104px;
+			/*width: 104px;*/
 			border-radius: 5px;
 			padding: 5px;
 			border: 1px solid var(--principalColor);
+				margin-left: 5px;
+			@media (--small) {
+				width: 100px;
+			}
 		}
+
 			& input {
+				width: 95px;
+				margin-left: 5px;
 				border-radius: 5px;
 				padding: 5px;
 				border: 1px solid var(--principalColor);
+			@media (--small) {
+				width: 100px;
+				}
 			}
 
 			& label {
 				text-align: center;
-				margin: 5px;
+				margin-left:  8px;
 			}
-	@media(--small) {
-		display: grid;
-		grid-template: 50px 170px 50px / 1fr;
-	}
-	@media(--extra-small) {
-		display: grid;
-		grid-template: 70px 260px 50px / 1fr;
-	}
+
 }
 
 
@@ -82,23 +82,33 @@
 	align-items: center;
 	text-align: center;
 	flex-wrap:wrap;
+	padding: 15px 0;
 	justify-content: center;
 	@media(--small) {
 		display: grid;
 		grid-template-columns:  repeat(2, 1fr);
+		justify-content: center;
 			&.save_button{
-				display:unset;
+				display:flex;
+				justify-content: center;
 			}
 	}
-
 }
 
 .horario {
-
 		box-shadow:  0 .1rem rgba(0, 0, 0, .3);
+		@media(--small){
+		padding-bottom: 10px;
+		}
+		@media(--extra-small) {
+			box-shadow: none;
+
+	}
 }
 
-
+.oneRow input, label{
+	margin-bottom: 10px;
+}
 
 .general_from {
 	background-color: var(--ligtTbody);

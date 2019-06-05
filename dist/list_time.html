@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>SUIC | Insertar tiempos</title>
+		<title>SUIC | Agregar tiempos</title>
 		<link rel="stylesheet" type="text/css" href="css/home.css">
 	</head>
 	<body>
@@ -23,36 +23,36 @@
 							<i class="nav__icon icon-truck"></i><a href="#">Vehículos</a>
 						</li>
 						<ul class="sub__menu">
-							<li id="add_vehicle" ><a href="#">Insertar vehículo</a></li>
-							<li><a href="list_vehicle.html">Listar vehículos</a></li>
+							<li id="add_vehicle" ><a href="#">Agregar vehículo</a></li>
+							<li><a href="listVehicle.html">Listar vehículos</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-road "></i><a href="#">Rodamiento</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a class="insert_tread" href="#">Insertar rodamiento</a></li>
+							<li><a class="add_tread" href="#">Agregar rodamiento</a></li>
 							<li><a href="#">Listar rodamiento</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link">
 							<i class="nav__icon icon-stopwatch"></i><a href="#">Tiempos</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="insert_time.html">Insertar Tiempos</a></li>
-							<li><a href="time.html">Ver Tiempos</a></li>
-							<li><a href="search_time.html">Consultar Tiempo</a></li>
+							<li><a href="caidas.html">Agregar Tiempos</a></li>
+							<li><a href="caidas.html">Mirar Tiempos</a></li>
+							<li><a href="#">Consultar Tiempo</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-user"></i><a href="#">Operadores</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="#">Insertar operador</a></li>
+							<li><a href="#">Agregar operador</a></li>
 							<li><a href="#">Listar operador</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
 							<i class="nav__icon icon-spinner10"></i><a href="#">Turnos</a>
 						</li>
 						<ul class="sub__menu">
-							<li><a href="#">Insertar turno</a></li>
+							<li><a href="#">Agregar turno</a></li>
 							<li><a href="#">Listar turno</a></li>
 						</ul>
 						<li class = "nav_link" id="nav__link" >
@@ -77,88 +77,35 @@
 				</article>
 			</section>
 			<section class="content">
-				<div class="add_time ">
-					<form action="time_cali_cost_submit" class="form_time add_candelaria" method="get" accept-charset="utf-8">
-						<div class="horario">
-							<label for="num_turno">Numero turno</label>
-							<input type="number" required name="num_turno">
-							<label for="label_vehi">Vehiculo:</label>
-							<select class="select_vehi" id="list_vehi" name="label_vehi">
-								<option value="8046">5200</option>
-								<option value="8016">5216</option>
-								<option value="8036">5278</option>
-								<option value="8048">5100</option>
-								<option value="8004">5118</option>
-								<option value="65000">5138</option>
-								<option value="8018">5102</option>
-							</select>
-						</div>
-						<div class="oneRow">
-							<label for="time_legal">Me.legal:</label>
-								<input type="time" name="time_legal" value="03:00" min="03:00" max="23:00">
-							<label for="time_refe">Referencia: </label>
-								<input  type="time" name="time_refe" value="03:00"min="03:00" max="23:00">
-							<label for="time_gale">Galeria: </label>
-								<input type="time" name="time_gale" value="03:00"min="03:00" max="23:00">
-							<label for="time_eds">EDS terpel: </label>
-								<input type="time" name="time_eds" value="03:00"min="03:00" max="23:00">
-							<label for="time_parque">Parque: </label>
-								<input type="time" name="time_parque" value="03:00"min="03:00" max="23:00">
-							<label for="time_cole">Colegio: </label>
-								<input type="time" name="time_cole" value="03:00" min="03:00" max="23:00">
-							<label for="time_cente">Centenario: </label>
-								<input type="time" name="time_cente" value="03:00" min="03:00" max="23:00">
-							<label for="observacion">Observación: </label>
-								<input type="text" name="observacion">
-						</div>
-						<div class="form_button save_button">
-							<button class="btn btn__add " type="submit">Guardar</button>
-						</div>
+				<div class="dataFilter">
+					<form class="dataFilter-from">
+						<label for="fecha_search">fecha:</label>
+						<input type="date" >
+						<label class="search-label">Search: </label>
+						<input class=" from-search" type="search" placeholder="Search..."	>
 					</form>
 				</div>
 				<article class="info__content" >
 					<table class="info__frame"> <!-- tabla -->
 						<thead> <!-- cabecera -->
-							<tr>
+							<tr> <!-- fila -->
 								<th>Salida</th> <!-- celda cabecera -->
-								<th>Num turno</th> <!-- celda cabecera -->
 								<th>Vehículo</th>
-								<th>Me.legal</th>
-								<th>Caida</th>
-								<th>Referencia</th>
-								<th>Caida</th>
-								<th>Galeria</th>
-								<th>Caida</th>
-								<th>EDS terpel</th>
-								<th>Caida</th>
-								<th>Parque</th>
-								<th>Caida</th>
-								<th>Colegio</th>
-								<th>Caida</th>
-								<th>Centenario</th>
-								<th>Caida</th>
+								<th>Mio</th>
+								<th>42-48</th>
+								<th>Reforma</th>
+								<th>Reloj Ginebra</th>
 								<th>Observación</th>
 							</tr>
 						</thead>
 						<tbody> <!-- cuerpo -->
 							<tr>
 								<td>4:50</td>
-								<td>1</td>
 								<td>6005</td>
-								<td>4:55</td>
-								<td>4</td>
-								<td>5:10</td>
-								<td>3</td>
-								<td>5:20</td>
 								<td>1</td>
-								<td>5:40</td>
+								<td>-2</td>
 								<td>0</td>
-								<td>5:50</td>
-								<td>-1</td>
-								<td>6:00</td>
-								<td>-3</td>
-								<td>5:10</td>
-								<td>-8</td>
+								<td>0</td>
 								<td>Debe</td>
 								<td class="delite-ico">
 									<div class="acciones_icon ">
@@ -190,13 +137,13 @@
 						</ul>
 					</div>
 				</section>
-				<footer class="copyright">
-					<div class="copy-div">
-						<p class="copy-p">
-							COPYRIGHT© SISTEMA SUIC 1.1 | DESARROLLO DE SOFTWARE
-						</p>
-					</div>
-				</footer>
+			<footer class="copyright">
+				<div class="copy-div">
+					<p class="copy-p">
+						COPYRIGHT© SISTEMA SUIC 1.1 | DESARROLLO DE SOFTWARE
+					</p>
+				</div>
+			</footer>
 			<script src="js/application.js"></script>
 		</div>
 	</body>

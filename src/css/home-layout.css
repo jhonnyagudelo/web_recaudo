@@ -11,9 +11,9 @@
 .content {
 	grid-area: content;
 	margin: 50px 20px;
+	max-width: 960px;
 	@media(--small){
-		height: calc(100% - 10%);
-		max-width: 525px;
+		max-width: 430px;
 		margin: 20px 20px;
 	}
 }
@@ -23,7 +23,8 @@
 	display: grid;
 	grid-template: 100px 1fr / 300px 1fr;
 	grid-template-areas: "header info"
-						 "header content";
+						 "header content"
+						 "copyright copyright";
 	height: 100vh;
 	@media(--extra-small) {
 		display: initial;
@@ -34,7 +35,7 @@
 
 .header{
 	grid-area: header;
-	background-color: #23475B;
+	background-color: var(--principalColor);
 	color:white;
 	overflow: auto;
 
@@ -90,6 +91,7 @@
 		}
 	}
 }
+
 
 
  .action_modal {
@@ -277,4 +279,17 @@
 		justify-content: center;
 		padding-top: 10px;
 	}
+}
+
+
+.copyright {
+	grid-area: copyright;
+	background-color: var(--principalColor);
+	color: var(--lightColor)
+}
+
+.copy-p {
+	display: flex;
+	justify-content: center;
+
 }

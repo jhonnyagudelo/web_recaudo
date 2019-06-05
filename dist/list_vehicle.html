@@ -84,237 +84,88 @@
 				</div>
 				<div class="info__content" >
 					<table class="info__frame"> <!-- tabla -->
-					<thead> <!-- cabecera -->
-					<tr> <!-- fila -->
-					<th>Numero interno</th>
-					<th>Placa</th>
-					<th>Marca</th>
-					<th>Carrocería</th>
-					<th>Consumo</th>
-					<th>Activo</th>
-					<th>Acciones</th>
-				</tr>
-			</thead>
-			<tbody> <!-- cuerpo -->
-			<tr>
-				<td>6001</td>
-				<td>hgt-965</td>
-				<td>chevt</td>
-				<td>cerrada</td>
-				<td>35Gal</td>
-				<td>
-					<form class="onoffswitch__form" action="listVehicle_submit" method="get" accept-charset="utf-8">
-						<div class="onoffswitch">
-							<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-							<label class="onoffswitch-label" for="myonoffswitch">
-								<span class="onoffswitch-inner"></span>
-								<span class="onoffswitch-switch"></span>
-							</label>
-						</div>
-					</form>
-				</td>
-				<td>
-					<div class="acciones_icon">
-						<i class="edit__bus icon-pencil"></i>
-						<i class="delete__bus icon-bin"></i>
+						<thead> <!-- cabecera -->
+							<tr> <!-- fila -->
+								<th>Numero interno</th>
+								<th>Placa</th>
+								<th>Marca</th>
+								<th>Carrocería</th>
+								<th>Consumo</th>
+								<th>Activo</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody> <!-- cuerpo -->
+							<tr>
+								<td>6001</td>
+								<td>hgt-965</td>
+								<td>chevt</td>
+								<td>cerrada</td>
+								<td>35Gal</td>
+								<td>
+									<form class="onoffswitch__form" action="listVehicle_submit" method="get" accept-charset="utf-8">
+										<div class="onoffswitch">
+											<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+											<label class="onoffswitch-label" for="myonoffswitch">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
+										</div>
+									</form>
+								</td>
+								<td>
+									<div class="acciones_icon">
+										<i class="edit__bus icon-pencil"></i>
+										<i class="delete__bus icon-bin"></i>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="dataTable_paginate">
+					<ul class="pagination">
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Anterior</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >1</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >2</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >3</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Siguiente</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="remove_vehicle">
+				<div class="moda__vehicle-remove">
+					<div class="remove__vehicle" id="modal-remove">
+						<form class= "form-remove" action="listVehicle.html" method="get" accept-charset="utfclass=-8">
+							<p class="modal__vehicle-parag">
+								¿Esta seguro que desea eliminar el vehiculo?
+							</p>
+							<div class="btn_form">
+								<button class="btn btn__add" id="hiden-add" type="submit" value="agregar"  >Eliminar</button>
+								<button class="btn btn__close" id="remove-cancel" type="submit" value="cencelar">Cancelar</button>
+							</div>
+						</form>
 					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="dataTable_paginate">
-	<ul class="pagination">
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >Anterior</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >1</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >2</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >3</a>
-		</li>
-		<li class="paginate_button page-item">
-			<a class="page_link" href="#" >Siguiente</a>
-		</li>
-	</ul>
-</div>
-</section>
-<section class="formulario add_vehicle">
-<div class="form_modal" id="form_modal">
-	<div class="modal" id="modal">
-		<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
-			<div class="title__form">
-				<h1 class="">Registrar vehículo</h1>
+				</div>
+			</section>
+			<footer class="copyright">
+			<div class="copy-div">
+				<p class="copy-p">
+					COPYRIGHT© SISTEMA SUIC 1.1 | DESARROLLO DE SOFTWARE
+				</p>
 			</div>
-			<div class="side__left">
-				<label for="numero_interno">Ingresar numero interno
-					<input type="text" required placeholder="numero interno" name="numero_interno" value="">
-				</label>
-				<label for="placa">Ingresar placa
-					<input type="text" required placeholder="Ingresar placa" name="placa" value="">
-				</label>
-				<label for="marca">Ingresar modelo
-					<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
-				</label>
-				<label for="numero_interno"> Numero interno
-					<input type="text" required placeholder="Numero interno" name="numero_interno" value="">
-				</label>
-				<label for="capacidad">Capacidad</label>
-				<input type="text" required name="capacidad" placeholder="capacidad">
-				<label for="consumo_galon">Consumo por galón</label>
-				<input type="text" required name="consumo_galon" placeholder="consumo galon">
-			</div>
-			<div class="side__right">
-				<label for="clase_bus">Clase bus</label>
-				<select required id="clase_bus" name="clase_bus" >
-					<option value="">--Seleccionar una opción--</option>
-					<option value="buseta">Buseta</option>
-					<option value="bus">Bus</option>
-					<option value="microbus">Micro bus</option>
-					<option value="busetaNPR">NPR</option>
-				</select>
-				<label for="ruta">Ruta</label>
-				<select required id="ruta" name="ruta" >
-					<option value="">--Seleccionar una opción--</option>
-					<option value="buga">Buga</option>
-					<option value="florida">Florida</option>
-					<option value="pradera">Pradera</option>
-					<option value="costa_rica">Costa rica</option>
-					<option value="candelario">Candelaria</option>
-				</select>
-				<label for="marcas">Marcas
-					<select required id="marca" name="marca">
-						<option value="">--Seleccionar una opcion--</option>
-						<option value="chev">Chev</option>
-						<option value="ford">Ford</option>
-						<option value="stud">Stud</option>
-						<option value="daihat">Daihat</option>
-						<option value="merc">Merc</option>
-						<option value="dog">Dog</option>
-						<option value="hino">Hino</option>
-						<option value="NonPlusUltra">Non plus ultra</option>
-						<option value="nissa">Nissan</option>
-						<option value="novie">Novie</option>
-						<option value="iveco">Iveco</option>
-						<option value="volsk">Volsk</option>
-						<option value="tl">TL</option>
-						<option value="jac">JAC</option>
-					</select>
-				</label>
-				<label for="marcas">Carrocería
-					<select  required id="carroceria" name="carroceria">
-						<option value="">--Seleccionar una opción--</option>
-						<option value="carrado">Cerrado</option>
-						<option value="abierto">Abierto</option>
-						<option value="escalera">Escalera</option>
-					</select>
-				</label>
-			</div>
-			<div class="btn_form">
-				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
-				<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
-			</div>
-		</form>
-	</div>
-</div>
-</section>
-<section class="formulario edit_vehicle">
-<div class="form_modalEdit" id="form_modalEdit">
-	<div class="moda" id="modalEdit">
-		<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
-			<div class="title__form">
-				<h1 class="">Editar Vehículo</h1>
-			</div>
-			<div class="side__left">
-				<label for="numero_interno">Actualizar numero interno
-					<input type="text" required placeholder="numero interno" name="numero_interno" value="">
-				</label>
-				<label for="placa">Actualizar placa
-					<input type="text" required placeholder="Actualizar placa" name="placa" value="">
-				</label>
-				<label for="marca">Actualizar modelo
-					<input type="text" required autofocus placeholder="Actualizar modelo" name="modelo" value="">
-				</label>
-				<label for="capacidad">Capacidad</label>
-				<input type="text" required name="capacidad" placeholder="capacidad">
-				<label for="consumo_galon">Consumo por galón</label>
-				<input type="text" required name="consumo_galon" placeholder="consumo galon">
-			</div>
-			<div class="side__right">
-				<label for="clase_bus">Clase bus</label>
-				<select required id="clase_bus" name="clase_bus" >
-					<option value="">--Seleccionar una opción--</option>
-					<option value="buseta">Buseta</option>
-					<option value="bus">Bus</option>
-					<option value="microbus">Micro bus</option>
-					<option value="busetaNPR">NPR</option>
-				</select>
-				<label for="ruta">Ruta</label>
-				<select required id="ruta" name="ruta" >
-					<option value="">--Seleccionar una opción--</option>
-					<option value="buga">Buga</option>
-					<option value="florida">Florida</option>
-					<option value="pradera">Pradera</option>
-					<option value="costa_rica">Costa rica</option>
-					<option value="candelario">Candelaria</option>
-				</select>
-				<label for="marcas">Marcas
-					<select required id="marca" name="marca">
-						<option value="">--Seleccionar una opcion--</option>
-						<option value="chev">Chev</option>
-						<option value="ford">Ford</option>
-						<option value="stud">Stud</option>
-						<option value="daihat">Daihat</option>
-						<option value="merc">Merc</option>
-						<option value="dog">Dog</option>
-						<option value="hino">Hino</option>
-						<option value="NonPlusUltra">Non plus ultra</option>
-						<option value="nissa">Nissan</option>
-						<option value="novie">Novie</option>
-						<option value="iveco">Iveco</option>
-						<option value="volsk">Volsk</option>
-						<option value="tl">TL</option>
-						<option value="jac">JAC</option>
-					</select>
-				</label>
-				<label for="marcas">Carrocería
-					<select  required id="carroceria" name="carroceria">
-						<option value="">--Seleccionar una opción--</option>
-						<option value="carrado">Cerrado</option>
-						<option value="abierto">Abierto</option>
-						<option value="escalera">Escalera</option>
-					</select>
-				</label>
-			</div>
-			<div class="btn_form">
-				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Guardar</button>
-				<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
-			</div>
-		</form>
-	</div>
-</div>
-</section>
-<section class="remove_vehicle">
-<div class="moda__vehicle-remove">
-	<div class="remove__vehicle" id="modal-remove">
-		<form class= "form-remove" action="listVehicle.html" method="get" accept-charset="utfclass=-8">
-			<p class="modal__vehicle-parag">
-				¿Esta seguro que desea eliminar el vehiculo?
-			</p>
-			<div class="btn_form">
-				<button class="btn btn__add" id="hiden-add" type="submit" value="agregar"  >Eliminar</button>
-				<button class="btn btn__close" id="remove-cancel" type="submit" value="cencelar">Cancelar</button>
-			</div>
-		</form>
-	</div>
-</div>
-</section>
-</div>
-<script src="js/application.js">
-</script>
-</body>
+			</footer>
+			<script src="js/application.js"></script>
+		</div>
+	</body>
 </html>

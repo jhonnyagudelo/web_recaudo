@@ -80,10 +80,9 @@
 				<div class="add_time">
 					<form action="time_cali_cost_submit" class="form_time" method="get" accept-charset="utf-8">
 						<div class="horario">
-							<label for="time">Salida:
-								<input type="time" name="time" value="03:00" min="03:00" max="23:00" >
-							</label>
-							<label for="label_vehi">Vehiculo:
+								<label for="num_turno">Numero turno:</label>
+								<input type="number" required name="num_turno">
+								<label for="label_vehi">Vehiculo:</label>
 								<select class="select_vehi" id="list_vehi" name="label_vehi">
 									<option value="8046">5200</option>
 									<option value="8016">5216</option>
@@ -93,157 +92,92 @@
 									<option value="65000">5138</option>
 									<option value="8018">5102</option>
 								</select>
-							</label>
 						</div>
 						<div class="oneRow">
-							<label for="time_31">31 Con 32:
-								<input type="time" name="time_31" value="03:00" min="03:00" max="23:00">
-							</label>
-							<label for="time_32">32 Con 27:
-								<input type="time" name="time_32" value="03:00"min="03:00" max="23:00"></label>
-								<label for="time_maranatha">Maranatha:
-									<input type="time" name="time_maranatha" value="03:00"
-								min="03:00" max="23:00"></label>
-								<label for="time_cai">Cai:
-									<input type="time" name="time_cai" value="03:00"
-								min="03:00" max="23:00"></label>
-								<label for="time_concordia">Concordia:
-									<input type="time" name="time_concordia" value="03:00"
-								min="03:00" max="23:00"></label>
-								<label for="observacion">Observación: <input type="text" name="observacion"></label>
-							</div>
-							<div class="form_button save_button">
-								<button class="btn btn__add " type="submit">Guardar</button>
-							</div>
-						</form>
-					</div>
-					<article class="info__content" >
-						<table class="info__frame"> <!-- tabla -->
-						<thead> <!-- cabecera -->
-						<th>Salida</th> <!-- celda cabecera -->
-						<th>Vehículo</th>
-						<th>Colegio</th>
-						<th>Cementerio</th>
-						<th>Bolo</th>
-						<th>Observación</th>
-					</tr>
-				</thead>
-				<tbody> <!-- cuerpo -->
-				<tr>
-					<td>4:50</td>
-					<td>6005</td>
-					<td>1</td>
-					<td>-2</td>
-					<td>0</td>
-					<td>Debe</td>
-					<td class="delite-ico">
-						<div class="acciones_icon ">
-							<i class="edit__bus icon-pencil" id=""></i>
-							<i class="delete__bus icon-bin" id="delete__bus"></i>
+							<label for="time_31">31 Con 32:</label>
+							<input type="time" name="time_31" value="03:00" min="03:00" max="23:00">
+							<label for="time_32">32 Con 27:</label>
+							<input type="time" name="time_32" value="03:00"min="03:00" max="23:00">
+							<label for="time_maranatha">Maranatha:</label>
+							<input type="time" name="time_maranatha" value="03:00" min="03:00" max="23:00">
+							<label for="time_cai">Cai:</label>
+							<input type="time" name="time_cai" value="03:00" min="03:00" max="23:00">
+							<label for="time_concordia">Concordia:</label>
+							<input type="time" name="time_concordia" value="03:00" min="03:00" max="23:00">
+							<label for="observacion">Observación: </label>
+							<input type="text" name="observacion">
 						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</article>
-	<div class="dataTable_paginate">
-		<ul class="pagination">
-			<li class="paginate_button page-item">
-				<a class="page_link" href="#" >Anterior</a>
-			</li>
-			<li class="paginate_button page-item">
-				<a class="page_link" href="#" >1</a>
-			</li>
-			<li class="paginate_button page-item">
-				<a class="page_link" href="#" >2</a>
-			</li>
-			<li class="paginate_button page-item">
-				<a class="page_link" href="#" >3</a>
-			</li>
-			<li class="paginate_button page-item">
-				<a class="page_link" href="#" >Siguiente</a>
-			</li>
-		</ul>
-	</div>
-</section>
-<section class="formulario add_vehicle">
-	<div class="form_modal" id="form_modal">
-		<div class="modal" id="modal">
-			<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
-				<div class="title__form">
-					<h1 class="">Insertar Vehículo</h1>
+						<div class="form_button save_button">
+							<button class="btn btn__add " type="submit">Guardar</button>
+						</div>
+					</form>
 				</div>
-				<div class="side__left">
-					<label for="placa">Ingresar placa
-						<input type="text" required placeholder="Ingresar placa" name="placa" value="">
-					</label>
-					<label for="marca">Ingresar modelo
-						<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
-					</label>
-					<label for="numero_interno"> Numero interno
-						<input type="text" required placeholder="Numero interno" name="numero_interno" value="">
-					</label>
-					<label for="capacidad">Capacidad</label>
-					<input type="text" required name="capacidad" placeholder="capacidad">
-					<label for="consumo_galon">Consumo por galón</label>
-					<input type="text" required name="consumo_galon" placeholder="consumo galon">
+				<article class="info__content" >
+					<table class="info__frame"> <!-- tabla -->
+						<thead> <!-- cabecera -->
+							<tr>
+								<th>Salida</th> <!-- celda cabecera -->
+								<th>Num turno</th> <!-- celda cabecera -->
+								<th>Vehículo</th>
+								<th>Colegio</th>
+								<th>Caida</th>
+								<th>Cementerio</th>
+								<th>Caida</th>
+								<th>Bolo</th>
+								<th>Caida</th>
+								<th>Observación</th>
+							</tr>
+						</thead>
+						<tbody> <!-- cuerpo -->
+							<tr>
+								<td>4:50</td>
+								<td>4</td>
+								<td>6005</td>
+								<td>6:00</td>
+								<td>1</td>
+								<td>6:00</td>
+								<td>-2</td>
+								<td>6:00</td>
+								<td>0</td>
+								<td>Debe</td>
+								<td class="delite-ico">
+									<div class="acciones_icon ">
+										<i class="edit__bus icon-pencil" id=""></i>
+										<i class="delete__bus icon-bin" id="delete__bus"></i>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<div class="dataTable_paginate">
+					<ul class="pagination">
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Anterior</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >1</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >2</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >3</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Siguiente</a>
+						</li>
+					</ul>
 				</div>
-				<div class="side__right">
-					<label for="clase_bus">Clase bus</label>
-					<select required id="clase_bus" name="clase_bus" >
-						<option value="">--Seleccionar una opción--</option>
-						<option value="buseta">Buseta</option>
-						<option value="bus">Bus</option>
-						<option value="microbus">Micro bus</option>
-						<option value="busetaNPR">NPR</option>
-					</select>
-					<label for="ruta">Ruta</label>
-					<select required id="ruta" name="ruta" >
-						<option value="">--Seleccionar una opción--</option>
-						<option value="buga">Buga</option>
-						<option value="florida">Florida</option>
-						<option value="pradera">Pradera</option>
-						<option value="costa_rica">Costa rica</option>
-						<option value="candelario">Candelaria</option>
-					</select>
-					<label for="marcas">Marcas
-						<select required id="marca" name="marca">
-							<option value="">--Seleccionar una opcion--</option>
-							<option value="chev">Chev</option>
-							<option value="ford">Ford</option>
-							<option value="stud">Stud</option>
-							<option value="daihat">Daihat</option>
-							<option value="merc">Merc</option>
-							<option value="dog">Dog</option>
-							<option value="hino">Hino</option>
-							<option value="NonPlusUltra">Non plus ultra</option>
-							<option value="nissa">Nissan</option>
-							<option value="novie">Novie</option>
-							<option value="iveco">Iveco</option>
-							<option value="volsk">Volsk</option>
-							<option value="tl">TL</option>
-							<option value="jac">JAC</option>
-						</select>
-					</label>
-					<label for="marcas">Carrocería
-						<select  required id="carroceria" name="carroceria">
-							<option value="">--Seleccionar una opción--</option>
-							<option value="carrado">Cerrado</option>
-							<option value="abierto">Abierto</option>
-							<option value="escalera">Escalera</option>
-						</select>
-					</label>
+			</section>
+			<footer class="copyright">
+				<div class="copy-div">
+					<p class="copy-p">
+						COPYRIGHT© SISTEMA SUIC 1.1 | DESARROLLO DE SOFTWARE
+					</p>
 				</div>
-				<div class="btn_form">
-					<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
-					<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
-				</div>
-			</form>
+			</footer>
+			<script src="js/application.js"></script>
 		</div>
-	</div>
-</section>
-</div>
-<script src="js/application.js">
-</script>
-</body>
+	</body>
 </html>

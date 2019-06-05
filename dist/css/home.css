@@ -2300,20 +2300,22 @@ tbody:nth-child(even){
 .content {
 	grid-area: content;
 	margin: 50px 20px;
+	max-width: 960px;
 }
 
 .container {
 	display: grid;
 	grid-template: 100px 1fr / 300px 1fr;
 	grid-template-areas: "header info"
-						 "header content";
+						 "header content"
+						 "copyright copyright";
 	height: 100vh;
 
 }
 
 .header{
 	grid-area: header;
-	background-color: #23475B;
+	background-color: #273b47;
 	color:white;
 	overflow: auto;
 }
@@ -2519,6 +2521,22 @@ tbody:nth-child(even){
 	margin-left: 15px;
 	padding: 20px 0;
 	font-weight: 700;
+}
+
+.copyright {
+	grid-area: copyright;
+	background-color: #273b47;
+	color: white
+}
+
+.copy-p {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+
 }
 
 /*login*/
@@ -2889,24 +2907,24 @@ tbody:nth-child(even){
 }
 
 .form_time {
-	display: grid;
-	grid-template: 50px 120px 50px / 1fr;
-	grid-gap: 5px;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	text-align: center;
 	padding: .5em
+
 }
 
 .form_time .select_vehi {
-	width: 104px;
+
+	/*width: 104px;*/
 	border-radius: 5px;
 	padding: 5px;
 	border: 1px solid #273b47;
+	margin-left: 5px;
 
 }
 
 .form_time input {
+	width: 95px;
+	margin-left: 5px;
 	border-radius: 5px;
 	padding: 5px;
 	border: 1px solid #273b47;
@@ -2915,7 +2933,7 @@ tbody:nth-child(even){
 
 .form_time label {
 	text-align: center;
-	margin: 5px;
+	margin-left:  8px;
 
 }
 
@@ -2931,17 +2949,19 @@ tbody:nth-child(even){
 	text-align: center;
 	-ms-flex-wrap:wrap;
 	    flex-wrap:wrap;
+	padding: 15px 0;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-
 }
 
 .horario {
-
 		-webkit-box-shadow:  0 .1rem rgba(0, 0, 0, .3);
-
 		        box-shadow:  0 .1rem rgba(0, 0, 0, .3);
+}
+
+.oneRow input, label{
+	margin-bottom: 10px;
 }
 
 .general_from {
@@ -3116,8 +3136,7 @@ tbody:nth-child(even){
 	}
 
 	.content {
-		height: 90%;
-		max-width: 525px;
+		max-width: 430px;
 		margin: 20px 20px;
 
 	}
@@ -3165,9 +3184,13 @@ tbody:nth-child(even){
 
 	}
 
-	.form_time {
-		display: grid;
-		grid-template: 50px 170px 50px / 1fr;
+	.form_time .select_vehi {
+		width: 100px;
+
+	}
+
+	.form_time input {
+		width: 100px;
 
 	}
 
@@ -3176,11 +3199,24 @@ tbody:nth-child(even){
 ,.save_button {
 		display: grid;
 		grid-template-columns:  repeat(2, 1fr);
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 
 	}
 
 	.horario.save_button,.oneRow.save_button,.save_button.save_button{
-		display:unset;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+
+	}
+
+	.horario {
+		padding-bottom: 10px;
 
 	}
 
@@ -3256,9 +3292,9 @@ tbody:nth-child(even){
 
 	}
 
-	.form_time {
-		display: grid;
-		grid-template: 70px 260px 50px / 1fr;
+	.horario {
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 
 	}
 
