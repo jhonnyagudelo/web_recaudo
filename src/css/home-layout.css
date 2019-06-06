@@ -21,7 +21,7 @@
 
 .container {
 	display: grid;
-	grid-template: 100px 1fr 4em / 300px 1fr ;
+	grid-template: 100px 1fr 3.2em / 300px 1fr ;
 	grid-template-areas: "header info"
 						 "header content"
 						 "header footer";
@@ -287,6 +287,11 @@ footer {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	@media(--extra-small) {
+		position: relative;
+		bottom: 0;
+		height: 10%;
+	}
 }
 
 
