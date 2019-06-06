@@ -2302,6 +2302,14 @@ tbody:nth-child(even){
   background-color: #DFE5E8;
 }
 
+input
+,select{
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #273b47;
+	font-size: 1em;
+}
+
 .info{
 	grid-area: info;
 	text-align: center;
@@ -2623,11 +2631,7 @@ footer {
 }
 
 .btn-save{
-	margin: 5px ;
 	background-color: #273b47;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
 }
 
 .btn-search {
@@ -3030,10 +3034,6 @@ footer {
 }
 
 .general_input{
-	padding: 8px;
-	border-radius: 5px;
-	border: 1px solid #273b47;
-	font-size: 1em;
 	width: 350px
 }
 
@@ -3046,6 +3046,23 @@ footer {
 	display: block;
 	font-size: 1.2em;
 	color: #273b47;
+}
+
+.form_search {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center
+}
+
+.form_search input {
+	margin:0 5px;
+
 }
 
 /*animation*/
@@ -3253,6 +3270,19 @@ footer {
 
 	.horario {
 		padding-bottom: 10px;
+
+	}
+
+	.form_search {
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:column;
+		        flex-direction:column;
+
+	}
+
+	.form_search label{
+		margin:5px 0;
 
 	}
 

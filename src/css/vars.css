@@ -31,7 +31,7 @@
 	};
 
 --form_input: {
-	padding: 8px;
+	padding: 5px;
 	border-radius: 5px;
 	border: 1px solid var(--principalColor);
 	font-size: 1em;

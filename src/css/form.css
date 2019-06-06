@@ -167,7 +167,6 @@
 	padding: 10px;
 }
 .general_input{
-	@apply --form_input;
 	width: 350px;
 	&:hover {
 		background-color:var(--ligtTbody);
@@ -184,10 +183,20 @@
 	color: var(--letters);
 }
 
-
-
-
-
+.form_search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& input {
+		margin:0 5px;
+	}
+	@media(--small){
+		flex-direction:column;
+		& label{
+			margin:5px 0;
+		}
+	}
+}
 
 
 

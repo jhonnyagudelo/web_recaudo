@@ -43,22 +43,22 @@ setInterval(printTime);
 
 
 //modal_remove
-const $removeButton = document.querySelector('.delete__bus');
-const $modalRemove = document.querySelector('.moda__vehicle-remove');
-const $removeBus = document.getElementById('modal-remove')
-const $cancelRemove = document.getElementById('remove-cancel');
+// const $removeButton = document.querySelector('.delete__bus');
+// const $modalRemove = document.querySelector('.moda__vehicle-remove');
+// const $removeBus = document.getElementById('modal-remove')
+// const $cancelRemove = document.getElementById('remove-cancel');
 
-$removeButton.addEventListener('click', showModalremove);
-function showModalremove(){
-  $modalRemove.classList.add('active');
-  $removeBus.style.animation = 'animationIn 1s forwards'
-};
+// $removeButton.addEventListener('click', showModalremove);
+// function showModalremove(){
+//   $modalRemove.classList.add('active');
+//   $removeBus.style.animation = 'animationIn 1s forwards'
+// };
 
-$cancelRemove.addEventListener('click', hideModalremove);
-function hideModalremove(){
-  $modalRemove.classList.remove('active');
-  $removeBus.style.animation = 'animationOut 1s forwards';
-}
+// $cancelRemove.addEventListener('click', hideModalremove);
+// function hideModalremove(){
+//   $modalRemove.classList.remove('active');
+//   $removeBus.style.animation = 'animationOut 1s forwards';
+// }
 
 
 // modal
@@ -75,11 +75,11 @@ function showModal(){
   $modal.style.animation = 'animationIn 1s forwards'
 };
 
-$cancelButton.addEventListener('click', hideModal);
-function hideModal(){
-  $form_modal.classList.remove('active');
-  $modal.style.animation = 'animationOut 3s forwards';
-}
+// $cancelButton.addEventListener('click', hideModal);
+// function hideModal(){
+//   $form_modal.classList.remove('active');
+//   $modal.style.animation = 'animationOut 3s forwards';
+// }
 
 
 //menu
