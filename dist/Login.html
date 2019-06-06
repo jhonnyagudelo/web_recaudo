@@ -9,14 +9,20 @@
 	</head>
 	<body>
 		<div class="container__login">
-			<form  action="listVehicle.html" method="get" accept-charset="utf-8">
+			<form  action="index.html" method="get" accept-charset="utf-8">
 				<div class="formLogin" id="form">
 					<h1 class="formLogin-title">SUIC | Sistema unificado de información consolidada</h1>
 					<div class="dateUser">
 						<label for="name" class="dateUser-label_name">Usuario</label>
-						<input type="text" required class="dateUser-input_name" id="name" name="name">
+						<div class="form-user">
+							<i class="icon-user"></i>
+							<input type="text" required class="dateUser-input_name" id="name" name="name">
+						</div>
 						<label for="password" class="dateUser-label_password" >Password</label>
-						<input type="password" required class="dateUser-input_password" id="password" name="password">
+						<div class="password-user">
+							<i class="icon-key2"></i>
+							<input type="password" required class="dateUser-input_password" id="password" name="password">
+						</div>
 						<label><input type="checkbox" name="recordar" value="recordar">Recordar</label>
 						<div class="btn__form">
 							<button class="btn btn_login" type="submit" value="login">Iniciar sesión</button>

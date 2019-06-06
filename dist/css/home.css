@@ -2553,8 +2553,11 @@ footer {
 
 .copy-p {
 	margin:0;
+}
 
-
+.tabla-turno {
+	width:400px;
+	overflow: auto;
 }
 
 /*login*/
@@ -3062,6 +3065,37 @@ footer {
 
 .form_search input {
 	margin:0 5px;
+
+}
+
+.dateUser-input_name
+,.dateUser-input_password{
+	border-radius: 0 5px  5px 0;
+	border-left: none
+}
+
+.dateUser-input_name:focus, .dateUser-input_password:focus {
+	background-color:#6C7880;
+
+}
+
+.form-user
+,.password-user {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center
+}
+
+.form-user i, .password-user i {
+	background-color: white;
+	color:#273b47;
+	border-radius:5px 0 0 5px;
+	padding: 6px;
+	border:1px solid #273b47;
+	border-right: none;
 
 }
 

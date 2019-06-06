@@ -209,17 +209,17 @@
 
 .paginate_button{
 	margin-top:5px;
-	border: 1px solid var(--letters);
+	border: 1px solid var(--principalColor);
 	padding: .3em .5em;
 	border-right: none;
 	& a {
 	 	text-decoration: none;
-	 	color: var(--letters);
+	 	color: var(--principalColor);
 	}
 }
 
 .paginate_button:nth-child(5){
-	border-right: 1px solid var(--letters);
+	border-right: 1px solid var(--principalColor);
 }
 
 .save_button{
@@ -298,6 +298,9 @@ footer {
 
 .copy-p {
 	margin:0;
+}
 
-
+.tabla-turno {
+	width:400px;
+	overflow: auto;
 }

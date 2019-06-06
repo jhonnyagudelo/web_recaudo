@@ -180,7 +180,7 @@
 .general_label {
 	display: block;
 	font-size: 1.2em;
-	color: var(--letters);
+	color: var(--principalColor);
 }
 
 .form_search {
@@ -199,5 +199,28 @@
 }
 
 
+.dateUser-input_name
+,.dateUser-input_password{
+	border-radius: 0 5px  5px 0;
+	border-left: none;
+	&:focus {
+		background-color:#6C7880;
+	}
+}
 
+.form-user
+,.password-user {
+	display: flex;
+	justify-content: center;
+
+	& i {
+		background-color: var(--lightColor);
+		color:var(--principalColor);
+		border-radius:5px 0 0 5px;
+		padding: 6px;
+		border:1px solid var(--principalColor);
+		border-right: none;
+
+	}
+}
 
