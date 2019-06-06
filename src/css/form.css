@@ -4,7 +4,34 @@
 .dataFilter-from{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom:10px;
+	@media(--small) {
+		justify-content:space-between;
+	}
+}
+
+
+.from-fecha {
+	display: inherit;
+	& label{
+		color:var(--principalColor);
+		margin-right: 5px;
+	}
+		& input {
+			border: 1px solid var(--principalColor);
+			border-radius: 5px;
+			padding: 5px;
+	}
+
+}
+
+
+
+.search-from{
+	display:inherit;
+	justify-content: flex-end;
 }
 
 .search__icon{
@@ -12,7 +39,6 @@
 	position: relative;
 	padding: 5px;
 	color: var(--lightColor);
-	z-index: 1;
 	border: 1px solid var(--principalColor);
 	border-radius: 5px 0 0 5px;
 	background-color: var(--principalColor);
@@ -25,18 +51,17 @@
 	display: flex;
 	justify-content: center;
 	text-transform: uppercase;
-	border-radius: 5px;
-	margin-left: 15px;
+	border-radius: 0 5px 5px 0;
 	padding: .6em;
 	border: 1px solid var(--contrans);
 	color:var(--principalColor);;
-	width: 50%;
-	transition: .6s;
+	width: 40%;
+	transition: 1s;
 	cursor: pointer;
 	&:focus{
 		border:1px solid var(--borderhover);
 		box-shadow: 0 0 0 .1rem rgba(68, 113, 188, .4);
-		width: 100%;
+		width: 70%;
 	}
 }
 
@@ -106,7 +131,11 @@
 	}
 }
 
-.oneRow input, label{
+.oneRow input{
+	margin-bottom: 10px;
+}
+
+.oneRow label{
 	margin-bottom: 10px;
 }
 
