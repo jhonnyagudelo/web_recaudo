@@ -35,6 +35,7 @@
 	border-radius: 5px;
 	border: 1px solid var(--principalColor);
 	font-size: 1em;
+	margin-right: 10px;
 }
 
 /*@custom-media --small screen and (max-width: 768px);*/
