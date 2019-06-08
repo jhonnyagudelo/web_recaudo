@@ -27,7 +27,9 @@
 						 "header footer";
 	height: 100vh;
 	@media(--extra-small) {
-		display: initial;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 }

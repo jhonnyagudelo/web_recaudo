@@ -231,12 +231,20 @@
 
 .input-turn{
 	width: 50px;
+	@media(--small) {
+		width: inherit;
+	}
 }
 
 .turn-primary {
 	margin-bottom: 10px;
 	& label {
 		margin-right: 8px;
+	}
+	@media(--small) {
+		display:flex;
+		flex-flow:column wrap;
+		text-aling:center;
 	}
 }
 
@@ -245,5 +253,10 @@
 	align-items: center;
 	& label {
 		margin-right: 8px;
+	}
+	@media(--small) {
+		flex-flow:column wrap;
+		align-items:normal;
+		width:auto;
 	}
 }
