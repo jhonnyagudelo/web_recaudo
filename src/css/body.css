@@ -19,6 +19,7 @@ h1
 	margin:0;
 }
 
+
 ol
 ,ul{
 	margin: 0;
@@ -52,6 +53,11 @@ td{
 tbody:nth-child(even){
   background-color: var(--ligtTbody);
 }
+
+footer {
+  grid-area: footer;
+}
+
 
 input
 ,select{

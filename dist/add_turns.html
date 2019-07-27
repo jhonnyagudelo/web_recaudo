@@ -86,12 +86,11 @@
 						<h2 class="info_general">Informacion turno</h2>
 						<div class="form_general-content info_turn">
 							<form action="list_turn.html" class="insert-turn" method="get" accept-charset="utf-8">
-								<div class="turn-primary">
-
+								<div class="">
 									<label class="general_label label-ruta"
 										for="select-ruta"
 									class="road" id="road"> Ruta: </label>
-									<select class="select_vehi" id="list_vehi" name="label_vehi">
+									<select class="select_ruta" id="list_vehi" name="label_ruta">
 										<option value="">--Elija un destino--</option>
 										<option value="palmi-cande">Palmira-Candelaria</option>
 										<option value="cande-palmi">Candelaria-Palmira</option>
@@ -119,8 +118,6 @@
 										<option value="65000">65000</option>
 										<option value="8018">8018</option>
 									</select>
-								</div>
-								<div class="turn-second">
 									<label class="general_label label-num_turno"
 										for="num_turno"
 									class="check">Turno:</label>
@@ -136,7 +133,6 @@
 									required>
 									<label class="general_label label-mensaje" for="mensaje">Mensaje:</label>
 									<textarea name="mensaje"></textarea>
-								</div>
 								<div class="div_btn">
 									<input type="submit" class="btn-save" name="" value="Guardar">
 								</div>

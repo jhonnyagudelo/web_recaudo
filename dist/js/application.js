@@ -62,10 +62,10 @@ setInterval(printTime);
 
 
 // modal
-const $addButton = document.getElementById('add_vehicle');
+const $addButton = document.querySelector('.btn-consulta');
 const $cancelButton = document.getElementById('hiden-cancel');
-const $modal = document.getElementById('modal');
-const $form_modal = document.getElementById('form_modal');
+const $modal = document.querySelector('.modal');
+const $form_modal = document.querySelector('.form_modal');
 
 
 

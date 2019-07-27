@@ -246,8 +246,6 @@
 
 	/*boton*/
 
-/*@custom-media --small screen and (max-width: 768px);*/
-
 }
 
 @font-face {
@@ -2302,6 +2300,10 @@ tbody:nth-child(even){
   background-color: #DFE5E8;
 }
 
+footer {
+  grid-area: footer;
+}
+
 input
 ,select{
 	padding: 5px;
@@ -2384,19 +2386,6 @@ input
 .sub__menu li:hover{
 	background-color: #57717F;
 
-}
-
-.action_modal {
-	display: grid;
-	grid-template-areas: "side__left side__right"
-						 "btn_form btn_form";
-
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows:  1fr 4em;
-	grid-gap:20px;
-	padding: 16px;
-	border-radius: .8em;
-	text-align: center;
 }
 
 .header-logo{
@@ -2495,15 +2484,7 @@ input
 }
 
 .icon_title{
-	display: inline-block;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
 	margin-bottom: 10px;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-
 }
 
 .icon-title,
@@ -2511,6 +2492,7 @@ input
 	font-weight: 700;
 	font-size: 1.8em;
 	color:#273b47;
+	display: inline-block;
 }
 
 .icon-title{
@@ -2529,10 +2511,6 @@ input
 	margin-left: 15px;
 	padding: 20px 0;
 	font-weight: 700;
-}
-
-footer {
-	grid-area: footer;
 }
 
 .copyright{
@@ -2559,6 +2537,53 @@ footer {
 .tabla-turno {
 	width:400px;
 	overflow: auto;
+}
+
+.form_view {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.print {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.x-close {
+	color:#e52325;
+	font-size: 1.2em;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor:pointer
+}
+
+.x-close:active{
+	-webkit-transform:scale(.9);
+	        transform:scale(.9);
+
+}
+
+.registro-persona label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.registro-persona input
+,.registro-persona select {
+	width: 80%;
+	text-align: center;
 }
 
 /*login*/
@@ -2634,10 +2659,6 @@ footer {
 
 }
 
-.btn-save{
-	background-color: #273b47;
-}
-
 .btn-search {
 	color: #273b47;
 	font-weight: 580;
@@ -2649,8 +2670,14 @@ footer {
 	background-color:#6C7880;
 }
 
-.btn__add, .btn__close{
+.btn-print
+,.btn-save
+,.btn__add{
 	background-color: #273b47;
+}
+
+.btn__close{
+	background-color: #e52325;
 }
 
 .btn_form {
@@ -2807,8 +2834,6 @@ footer {
 
 /*SWITCH*/
 
-.form_modalEdit,
-.moda__vehicle-remove,
 .form_modal {
 	background-color: rgba(0, 0, 0, .8);
 	color:#273b47 ;
@@ -2817,8 +2842,8 @@ footer {
 	right: 0;
 	bottom: 0;
 	top:0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	visibility: hidden;
 	opacity: 1;
 	display: -webkit-box;
@@ -2834,39 +2859,17 @@ footer {
 	transition: all 1s ease-out;
 }
 
-.form_modalEdit.active,
-.moda__vehicle-remove.active,
 .form_modal.active {
 	opacity: 1;
 	visibility: visible;
 }
 
-.action_modal input{
-	display: block;
-	width: 	10.8em;
-	text-align: center;
-	border:1px solid #9C9C9C;
-	border-radius: 6px;
-	padding:5px 30px;
-	margin: 5px auto;
-	font-size: .8em;
-
-}
-
-.action_modal input:focus{
-	background-color: #9C9C9C;
-
-}
-
-.action_modal select {
-	display: block;
-	margin: 5px auto;
-	border:1px solid #9C9C9C;
-	border-radius: 6px;
-	padding:5px 30px;
-	margin: 5px auto;
-	font-size: .8em;
-
+.modal-table {
+	position: relative;
+	width: auto;
+	background-color: white;
+	padding: 25px;
+	border-radius: 8px;
 }
 
 /*FORMULARIOS*/
@@ -3128,6 +3131,20 @@ footer {
 
 }
 
+.register{
+		display: grid;
+		grid-template-areas: "side__left side__right"
+						 "btn_form btn_form";
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:  1fr 4em;
+	grid-gap:10px;
+	padding: 16px;
+	border-radius: .8em;
+	text-align: center;
+
+}
+
 /*animation*/
 
 @-webkit-keyframes animationIn{
@@ -3260,13 +3277,6 @@ footer {
 
 	}
 
-	.action_modal {
-		width: auto;
-		display: block;
-		overflow: auto;
-
-	}
-
 	.header-nav {
 		position:static;
 		padding:0;
@@ -3280,16 +3290,6 @@ footer {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
-
-	}
-
-	.action_modal{
-		max-width:400px;
-
-	}
-
-	.action_modal input {
-		width: auto;
 
 	}
 
@@ -3375,6 +3375,27 @@ footer {
 		    -ms-flex-align:normal;
 		        align-items:normal;
 		width:auto;
+
+	}
+
+	.form_entry {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: initial;
+		    -ms-flex-align: initial;
+		        align-items: initial;
+
+	}
+
+	.register{
+		width: auto;
+		display: block;
+		overflow: auto;
 
 	}
 

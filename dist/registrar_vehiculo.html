@@ -88,38 +88,40 @@
 					<div class="general_from">
 						<h2 class="info_general">Informacion general</h2>
 						<div class="form_general-content">
-							<form class="action_modal" action="listVehicle.html" method="get" accept-charset="utf-8">
-								<div class="side__left">
-									<label class="general_label" for="placa">Ingresar placa</label>
-									<input type="text" required placeholder="Ingresar placa" name="placa" value="">
-									<label class="general_label" for="marca">Ingresar modelo</label>
-									<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
-									<label class="general_label" for="numero_interno"> Numero interno</label>
-									<input type="text" required placeholder="Numero interno" name="numero_interno" value="">
-									<label class="general_label" for="capacidad">Capacidad</label>
-									<input type="text" required name="capacidad" placeholder="capacidad">
-									<label class="general_label" for="consumo_galon">Consumo por galón</label>
-									<input type="text" required name="consumo_galon" placeholder="consumo galon">
-								</div>
-								<div class="side__right">
-									<label class="general_label" for="clase_bus">Clase bus</label>
-									<select required id="clase_bus" name="clase_bus" >
-										<option value="">--Seleccionar una opción--</option>
-										<option value="buseta">Buseta</option>
-										<option value="bus">Bus</option>
-										<option value="microbus">Micro bus</option>
-										<option value="busetaNPR">NPR</option>
-									</select>
-									<label class="general_label" for="ruta">Ruta</label>
-									<select required id="ruta" name="ruta" >
-										<option value="">--Seleccionar una opción--</option>
-										<option value="buga">Buga</option>
-										<option value="florida">Florida</option>
-										<option value="pradera">Pradera</option>
-										<option value="costa_rica">Costa rica</option>
-										<option value="candelario">Candelaria</option>
-									</select>
-									<label class="general_label" for="marcas">Marcas
+							<form   action="listVehicle.html" method="get" accept-charset="utf-8">
+								<div class="register">
+
+									<div class="side__left">
+										<label class="general_label" for="placa">Ingresar placa</label>
+										<input type="text" required placeholder="Ingresar placa" name="placa" value="">
+										<label class="general_label" for="marca">Ingresar modelo</label>
+										<input type="text" required autofocus placeholder="Ingresar modelo" name="modelo" value="">
+										<label class="general_label" for="numero_interno"> Numero interno</label>
+										<input type="text" required placeholder="Numero interno" name="numero_interno" value="">
+										<label class="general_label" for="capacidad">Capacidad</label>
+										<input type="text" required name="capacidad" placeholder="capacidad">
+										<label class="general_label" for="consumo_galon">Consumo por galón</label>
+										<input type="text" required name="consumo_galon" placeholder="consumo galon">
+									</div>
+									<div class="side__right">
+										<label class="general_label" for="clase_bus">Clase bus</label>
+										<select required id="clase_bus" name="clase_bus" >
+											<option value="">--Seleccionar una opción--</option>
+											<option value="buseta">Buseta</option>
+											<option value="bus">Bus</option>
+											<option value="microbus">Micro bus</option>
+											<option value="busetaNPR">NPR</option>
+										</select>
+										<label class="general_label" for="ruta">Ruta</label>
+										<select required id="ruta" name="ruta" >
+											<option value="">--Seleccionar una opción--</option>
+											<option value="buga">Buga</option>
+											<option value="florida">Florida</option>
+											<option value="pradera">Pradera</option>
+											<option value="costa_rica">Costa rica</option>
+											<option value="candelario">Candelaria</option>
+										</select>
+										<label class="general_label" for="marcas">Marcas</label>
 										<select required id="marca" name="marca">
 											<option value="">--Seleccionar una opcion--</option>
 											<option value="chev">Chev</option>
@@ -137,19 +139,18 @@
 											<option value="tl">TL</option>
 											<option value="jac">JAC</option>
 										</select>
-									</label>
-									<label class="general_label" for="marcas">Carrocería
+										<label class="general_label" for="marcas">Carrocería</label>
 										<select  required id="carroceria" name="carroceria">
 											<option value="">--Seleccionar una opción--</option>
 											<option value="carrado">Cerrado</option>
 											<option value="abierto">Abierto</option>
 											<option value="escalera">Escalera</option>
 										</select>
-									</label>
-								</div>
-								<div class="btn_form">
-									<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
-									<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
+									</div>
+									<div class="btn_form">
+										<button class="btn btn__add" id="hiden-add" type="submit" value="agregar" target="_blank" >Agregar</button>
+										<button class="btn btn__close" id="hiden-cancel" type="submit" value="cencelar">Cancelar</button>
+									</div>
 								</div>
 							</form>
 						</div>

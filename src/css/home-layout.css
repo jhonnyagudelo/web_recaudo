@@ -98,27 +98,6 @@
 }
 
 
-
- .action_modal {
-	display: grid;
-	grid-template-areas: "side__left side__right"
-						 "btn_form btn_form";
-
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows:  1fr 4em;
-	grid-gap:20px;
-	padding: 16px;
-	border-radius: .8em;
-	text-align: center;
-	@media(--small) {
-		width: auto;
-		display: block;
-		overflow: auto;
-	}
-}
-
-
-
 .header-logo{
 		display: block;
 		text-align: center;
@@ -232,11 +211,7 @@
 
 
 .icon_title{
-	display: inline-block;
-	display: flex;
 	margin-bottom: 10px;
-	align-items: center;
-
 }
 
 
@@ -245,6 +220,7 @@
 	font-weight: 700;
 	font-size: 1.8em;
 	color:var(--principalColor);
+	display: inline-block;
 }
 
 .icon-title{
@@ -276,9 +252,7 @@
 }
 
 
-footer {
-	grid-area: footer;
-}
+
 
 .copyright{
 	background-color: var(--principalColor);
@@ -305,4 +279,39 @@ footer {
 .tabla-turno {
 	width:400px;
 	overflow: auto;
+}
+
+.form_view {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.print {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.x-close {
+	color:var(--btn-close);
+	font-size: 1.2em;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor:pointer;
+	&:active{
+		transform:scale(.9);
+	}
+}
+
+
+.registro-persona label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.registro-persona input
+,.registro-persona select {
+	width: 80%;
+	text-align: center;
 }

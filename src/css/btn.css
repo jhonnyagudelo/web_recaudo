@@ -8,11 +8,6 @@
 }
 
 
-.btn-save{
-	background-color: var(--principalColor);
-}
-
-
 
 .btn-search {
 	color: var(--principalColor);
@@ -25,9 +20,17 @@
 	background-color:var(--btnLogin);
 }
 
-.btn__add, .btn__close{
+.btn-print
+,.btn-save
+,.btn__add{
 	background-color: var(--principalColor);
 }
+
+.btn__close{
+	background-color: var(--btn-close);
+}
+
+
 
 .btn_form {
 	grid-area:btn_form;

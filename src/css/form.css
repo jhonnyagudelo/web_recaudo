@@ -260,3 +260,33 @@
 		width:auto;
 	}
 }
+
+
+.form_entry {
+	@media(--small){
+
+		display: flex;
+		flex-direction: column;
+		align-items: initial;
+	}
+}
+
+
+.register{
+		display: grid;
+		grid-template-areas: "side__left side__right"
+						 "btn_form btn_form";
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:  1fr 4em;
+	grid-gap:10px;
+	padding: 16px;
+	border-radius: .8em;
+	text-align: center;
+	@media(--small) {
+		width: auto;
+		display: block;
+		overflow: auto;
+	}
+
+}

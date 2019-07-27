@@ -1,5 +1,3 @@
-.form_modalEdit,
-.moda__vehicle-remove,
 .form_modal {
 	background-color: rgba(0,0,0,0.8);
 	color:var(--principalColor) ;
@@ -8,8 +6,8 @@
 	right: 0;
 	bottom: 0;
 	top:0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	visibility: hidden;
 	opacity: 1;
 	display: flex;
@@ -18,42 +16,17 @@
 	transition: all 1s ease-out;
 }
 
-.form_modalEdit.active,
-.moda__vehicle-remove.active,
 .form_modal.active {
 	opacity: 1;
 	visibility: visible;
 }
 
 
-
-.action_modal{
-	& input{
-	display: block;
-	width: 	10.8em;
-	text-align: center;
-	border:1px solid var(--switchOff);
-	border-radius: 6px;
-	padding:5px 30px;
-	margin: 5px auto;
-	font-size: .8em;
-		&:focus{
-		background-color: var(--switchOff);
-		}
-	}
-	& select {
-		display: block;
-		margin: 5px auto;
-		border:1px solid var(--switchOff);
-		border-radius: 6px;
-		padding:5px 30px;
-		margin: 5px auto;
-		font-size: .8em;
-	}
-	@media(--small){
-		max-width:400px;
-		& input {
-			width: auto;
-		}
-	}
+.modal-table {
+	position: relative;
+	width: auto;
+	background-color: white;
+	padding: 25px;
+	border-radius: 8px;
 }
+
