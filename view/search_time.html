@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>consultar marcadas</title>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+	</head>
+	<body>
+		<i class=" burger-button icon-menu" id="burger-button"></i>
+		<div class="container">
+			<header class="header" id="header">
+				<div class="header-logo">
+					<a href="#">suic</a>
+				</div>
+				<nav class="header-nav">
+					<ul class="header__nav-ul">
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-home "></i><a href="#">Principal</a>
+						</li>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-truck"></i><a href="#">Vehículos</a>
+						</li>
+						<ul class="sub__menu">
+							<li id="add_vehicle" ><a href="#">Agregar vehículo</a></li>
+							<li><a href="listVehicle.html">Listar vehículos</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-road "></i><a href="#">Rodamiento</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a class="add_tread" href="#">Agregar rodamiento</a></li>
+							<li><a href="#">Listar rodamiento</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link">
+							<i class="nav__icon icon-stopwatch"></i><a href="#">Tiempos</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="caidas.html">Mirar Tiempos</a></li>
+							<li><a href="search_time.html">Consultar Tiempo</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-user"></i><a href="#">Operadores</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="#">Agregar operador</a></li>
+							<li><a href="#">Listar operador</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-spinner10"></i><a href="#">Turnos</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="#">Agregar turno</a></li>
+							<li><a href="#">Listar turno</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-exit "></i><a href="#">Cerrar sesión</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<section class ="info" id="info">
+				<article class = "departure">
+					<div class="location">
+						<h1 class="title__control">Control</h1>
+					</div>
+					<div class="date">
+						<h1 class="title__date">Fecha</h1>
+						<div class = "info__date" id="info__date"></div>
+					</div>
+					<div class="time">
+						<h1 class="title__time">Hora</h1>
+						<div class = "info__time" id="info__time"></div>
+					</div>
+				</article>
+			</section>
+			<section class="content">
+				<div class="form_busqueda">
+					<form  class="form_search" action="search">
+						<label for="vehiculo"> Vehiculo:</label>
+						<input type="text" name="vehiculo" required placeholder="Ingresar vehiculo" value="">
+						<label form="numero_turno">Numero turno:</label>
+						<input type="number" name="numero_turno" min="1" max="18" requiered placeholder="Numero turno" value="">
+						<label form="fecha_marcada">Fecha:</label>
+						<input type="date" name="fecha_marcada" requiered  value="">
+						<input class="btn btn-search" type="submit" name="guardar" value="Buscar">
+					</form>
+				</div>
+						<h1 class="title_marcada_search">Consulta tiempos</h1>
+				<article class="info__content">
+					<table>
+						<thead>
+							<tr>
+								<th>Vehiculo</th>
+								<th>Hora salida</th>
+								<th>Numero turno</th>
+								<th>Nombre reloj</th>
+								<th>Tiempo marcada</th>
+								<th>Numero caida</th>
+								<th>Total caidas</th>
+								<th>Total cancelar</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+								<td>data</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+			</section>
+			<footer class="copyright">
+				<div class="copy-div">
+					<p class="copy-p">
+						COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+					</p>
+				</div>
+			</footer>
+			<script src="js/application.js">
+			</script>
+		</div>
+	</body>
+</html>

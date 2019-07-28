@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SUIC | Insertar tiempos</title>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+	</head>
+	<body>
+		<div class="container">
+			<i class=" burger-button icon-menu" id="burger-button"></i>
+			<header class="header" id="header">
+				<div class="header-logo">
+					<a href="#">suic</a>
+				</div>
+				<nav class="header-nav">
+					<ul class="header__nav-ul">
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-home "></i><a href="#">Principal</a>
+						</li>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-truck"></i><a href="#">Vehículos</a>
+						</li>
+						<ul class="sub__menu">
+							<li id="add_vehicle" ><a href="#">Insertar vehículo</a></li>
+							<li><a href="list_vehicle.html">Listar vehículos</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-road "></i><a href="#">Rodamiento</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a class="insert_tread" href="#">Insertar rodamiento</a></li>
+							<li><a href="#">Listar rodamiento</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link">
+							<i class="nav__icon icon-stopwatch"></i><a href="#">Tiempos</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="insert_time.html">Insertar Tiempos</a></li>
+							<li><a href="time.html">Ver Tiempos</a></li>
+							<li><a href="search_time.html">Consultar Tiempo</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-user"></i><a href="#">Operadores</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="#">Insertar operador</a></li>
+							<li><a href="#">Listar operador</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-spinner10"></i><a href="#">Turnos</a>
+						</li>
+						<ul class="sub__menu">
+							<li><a href="#">Insertar turno</a></li>
+							<li><a href="#">Listar turno</a></li>
+						</ul>
+						<li class = "nav_link" id="nav__link" >
+							<i class="nav__icon icon-exit "></i><a href="#">Cerrar sesión</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<section class ="info" id="info">
+				<article class = "departure">
+					<div class="location">
+						<h1 class="title__control">Control</h1>
+					</div>
+					<div class="date">
+						<h1 class="title__date">Fecha</h1>
+						<div class = "info__date" id="info__date"></div>
+					</div>
+					<div class="time">
+						<h1 class="title__time">Hora</h1>
+						<div class = "info__time" id="info__time"></div>
+					</div>
+				</article>
+			</section>
+			<section class="content">
+				<div class="add_time">
+					<form action="time_cali_cost_submit" class="form_time" method="get" accept-charset="utf-8">
+						<div class="horario">
+							<label for="num_turno">Numero turno</label>
+							<input type="number" required name="num_turno">
+							<label for="label_vehi">Vehiculo:</label>
+							<select class="select_vehi" id="list_vehi" name="label_vehi">
+								<option value="8046">5200</option>
+								<option value="8016">5216</option>
+								<option value="8036">5278</option>
+								<option value="8048">5100</option>
+								<option value="8004">5118</option>
+								<option value="65000">5138</option>
+								<option value="8018">5102</option>
+							</select>
+						</div>
+						<div class="oneRow">
+							<label for="time_cole">Colegio:</label>
+							<input type="time" name="time_cole" value="03:00" min="03:00" max="23:00">
+							<label for="time_cemen">Cementerio:</label>
+							<input type="time" name="time_cemen" value="03:00"min="03:00" max="23:00">
+							<label for="time_bolo">Bolo:</label>
+							<input type="time" name="time_bolo" value="03:00" min="03:00" max="23:00">
+							<label for="observacion">Observación:</label>
+							<input type="text" name="observacion">
+						</div>
+						<div class="form_button save_button">
+							<button class="btn btn__add " type="submit">Guardar</button>
+						</div>
+					</form>
+				</div>
+				<article class="info__content" >
+					<table class="info__frame"> <!-- tabla -->
+						<thead> <!-- cabecera -->
+							<tr>
+								<th>Hora salida</th> <!-- celda cabecera -->
+								<th>Numero turno</th> <!-- celda cabecera -->
+								<th>Vehículo</th>
+								<th>Colegio</th>
+								<th>Caida</th>
+								<th>Cementerio</th>
+								<th>Caida</th>
+								<th>Bolo</th>
+								<th>Caida</th>
+								<th>Observación</th>
+							</tr>
+						</thead>
+						<tbody> <!-- cuerpo -->
+							<tr>
+								<td>4:50</td>
+								<td>1</td>
+								<td>6005</td>
+								<td>5:00</td>
+								<td>1</td>
+								<td>5:10</td>
+								<td>-2</td>
+								<td>5:30</td>
+								<td>0</td>
+								<td>Debe</td>
+								<td class="delite-ico">
+									<div class="acciones_icon ">
+										<i class="edit__bus icon-pencil" id=""></i>
+										<i class="delete__bus icon-bin" id="delete__bus"></i>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<div class="dataTable_paginate">
+					<ul class="pagination">
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Anterior</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >1</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >2</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >3</a>
+						</li>
+						<li class="paginate_button page-item">
+							<a class="page_link" href="#" >Siguiente</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<footer class="copyright">
+				<div class="copy-div">
+					<p class="copy-p">
+						COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+					</p>
+				</div>
+			</footer>
+			<script src="js/application.js"></script>
+		</div>
+	</body>
+</html>
