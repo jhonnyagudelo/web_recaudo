@@ -2304,6 +2304,25 @@ footer {
   grid-area: footer;
 }
 
+header ul li {
+  height: 20px;
+}
+
+header ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+
+header li {
+  height: inherit;
+}
+
+header ul{
+  display: block;
+}
+
 input
 ,select{
 	padding: 5px;
