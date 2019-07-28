@@ -26,21 +26,15 @@ document.getElementById('info__time').innerHTML = hours + ":" + mins + ":"+ secs
 }
 setInterval(printTime);
 
-  let nav = document.getElementsByClassName("nav_link");
-  let i;
-
-  for (i = 0; i < nav.length; i++) {
-    nav[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
+const $delailsList = document.querySelectorAll('details')
+  $delailsList.forEach(function($delailsList){
+    $delailsList.querySelector('summary').addEventListener('click', expand)
+  })
+  function expand() {
+    $delailsList.forEach(function($delailsList){
+      $delailsList.removeAttribute('open')
+    })
   }
-
 
 //modal_remove
 // const $removeButton = document.querySelector('.delete__bus');
