@@ -1,6 +1,5 @@
 <?php
 
-
 ini_set('display_errors', 1); //inicializa errores
 ini_set('display_starup_error', 1); //inicializa errores
 error_reporting(E_ALL);//mostrar errores en pantalla
@@ -46,3 +45,11 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
     $_COOKIE,
     $_FILES
 );
+
+$routerContainer = new Aura\Router\RouterContainer();
+$map = $routerContainer->getMap();
+
+
+
+
+
