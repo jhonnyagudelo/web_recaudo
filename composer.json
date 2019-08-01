@@ -4,7 +4,6 @@
             "App\\":"app/"
         }
     },
-    "requiere":{},
     "require": {
         "illuminate/database": "^5.8",
         "zendframework/zend-diactoros": "^2.1",
