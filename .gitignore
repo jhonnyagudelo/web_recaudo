@@ -1,6 +1,6 @@
 node_modules
 .DS_Store
-
+vendor
 
 
 # Created by https://www.gitignore.io/api/node
