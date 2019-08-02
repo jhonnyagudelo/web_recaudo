@@ -25,10 +25,7 @@ $capsule->addConnection([
     'prefix'    => '',
     ]);
 
-// Set the event dispatcher used by Eloquent models... (optional)
-use Illuminate\Events\Dispatcher;
-use Illuminate\Container\Container;
-$capsule->setEventDispatcher(new Dispatcher(new Container));
+
 
 // Make this Capsule instance available globally via static methods... (optional)
 $capsule->setAsGlobal();
@@ -46,10 +43,52 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
     $_FILES
 );
 
-$routerContainer = new Aura\Router\RouterContainer();
+$routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
+$map->get('index', '/web-coodetrans/', [
+    'controller' => 'App\Controllers\IndexController',
+    'action' => 'indexAction'
+]);
+
+$map->get('addJob', '/curso-php/jobs/add', [
+    'controller' => 'App\Controllers\JobsController',
+    'action' => 'getAddJobAction'
+]);
+
+$map->post('saveJob', '/curso-php/jobs/add', [
+    'controller' => 'App\Controllers\JobsController',
+    'action' => 'getAddJobAction'
+]);
 
 
+$map->get('addProject', '/curso-php/project/add',[
+    'controller' => 'App\Controllers\ProjectController',
+    'action' => 'getAddProjectAction'
+]);
+
+$map->post('saveProject', '/curso-php/project/add',[
+    'controller' => 'App\Controllers\ProjectController',
+    'action' => 'getAddProjectAction'
+]);
+
+$matcher = $routerContainer->getMatcher();
+$route = $matcher->match($request);
+
+
+if(!$route) {
+    echo 'No route found';
+    exit;
+} else {
+    $handlerData = $route->handler;
+    $controllerName = $handlerData['controller']; //va a instanciar el contenido de la variable
+    $actionName = $handlerData['action'];
+
+    $controller = new $controllerName();
+    $response = $controller->$actionName($request);
+
+    echo $response->getBody();
+
+}
 
 
 

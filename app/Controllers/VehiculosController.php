@@ -5,7 +5,9 @@
     use Respect\Validation\Validator as V;
     use Illuminate\Support\Facades\Request;
 
-    clas
+    class VehiculosController extends BaseController {
+        
+    }
 
 
 ?>

@@ -26,6 +26,7 @@ document.getElementById('info__time').innerHTML = hours + ":" + mins + ":"+ secs
 }
 setInterval(printTime);
 
+const $borderLine = document.querySelector('.nav_link')
 const $delailsList = document.querySelectorAll('details')
   $delailsList.forEach(function($delailsList){
     $delailsList.querySelector('summary').addEventListener('click', expand)

@@ -2304,25 +2304,6 @@ footer {
   grid-area: footer;
 }
 
-header ul li {
-  height: 20px;
-}
-
-header ul{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: inherit;
-}
-
-header li {
-  height: inherit;
-}
-
-header ul{
-  display: block;
-}
-
 input
 ,select{
 	padding: 5px;
@@ -2345,7 +2326,7 @@ input
 
 .container {
 	display: grid;
-	grid-template: 100px 1fr 3.2em / 300px 1fr ;
+	grid-template: 100px 1fr 3.2em / 250px 1fr ;
 	grid-template-areas: "header info"
 						 "header content"
 						 "header footer";
@@ -2388,25 +2369,6 @@ input
 	background-color:#57717F;
 }
 
-.sub__menu {
-	overflow: hidden;
-	max-height: 0;
-	background-color: #273b47;
-	-webkit-transition: .2s cubic-bezier(.17,.67,.83,.67);
-	transition: .2s cubic-bezier(.17,.67,.83,.67)
-}
-
-.sub__menu li {
-	padding: 1em 0;
-	border-bottom: 1px solid #C2C2C2;
-
-}
-
-.sub__menu li:hover{
-	background-color: #57717F;
-
-}
-
 .header-logo{
 		display: block;
 		text-align: center
@@ -2422,10 +2384,11 @@ input
 }
 
 .header-nav {
-	text-align: center;
-	padding: 15px 0;
 	position: relative;
-	top: 2em
+	padding: 15px 0;
+	top: 2em;
+	left: 3em;
+	width: 190px
 }
 
 .header-nav a{
@@ -2436,14 +2399,32 @@ input
 
 .nav_link{
 	padding: 15px 0;
-	border-bottom: 1px solid #C2C2C2;
 	cursor: pointer
 
 }
 
 .nav_link:hover {
 	background-color:#57717F;
+	border-radius:5px;
 
+}
+
+.nav__details ul li {
+	padding: .5em;
+	position: relative;
+	width: 150px;
+	left: 1.6em
+}
+
+.nav__details ul li:hover {
+	background-color: #57717F;
+	border-radius:5px;
+
+}
+
+.main-title{
+	font-weight: 300;
+	font-size: 1.8em;
 }
 
 .nav__icon {

@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>SUIC | Insertar tiempos</title>
-		<link rel="stylesheet" type="text/css" href="css/home.css">
+			<link rel="stylesheet" type="text/css" href="../public/dist/css/home.css">
 	</head>
 	<body>
 		<i class=" burger-button icon-menu" id="burger-button"></i>
@@ -14,50 +14,58 @@
 				<div class="header-logo">
 					<a href="#">suic</a>
 				</div>
-				<nav class="header-nav">
-					<ul class="header__nav-ul">
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-home "></i><a href="#">Principal</a>
-						</li>
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-truck"></i><a href="#">Vehículos</a>
-						</li>
-						<ul class="sub__menu">
-							<li id="add_vehicle" ><a href="#">Insertar vehículo</a></li>
+				<nav class="header-nav ">
+					<div class="main-title">
+						<a href="#">PRINCIPAL</a>
+					</div>
+					<details class="nav__details">
+						<summary class="nav_link">
+							VEHICULOS
+						</summary>
+						<ul>
+							<li id="add_vehicle"><a href="registrar_vehiculo.html">Registrar vehículo</a></li>
 							<li><a href="list_vehicle.html">Listar vehículos</a></li>
 						</ul>
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-road "></i><a href="#">Rodamiento</a>
-						</li>
-						<ul class="sub__menu">
-							<li><a class="insert_tread" href="#">Insertar rodamiento</a></li>
-							<li><a href="#">Listar rodamiento</a></li>
+					</details>
+					<details class="nav__details">
+						<summary class="nav_link">
+							RODAMIENTOS
+						</summary>
+						<ul>
+							<li><a class="insert_tread" href="add_road.html">Insertar rodamiento</a></li>
+							<li><a href="list_road.html">Listar rodamiento</a></li>
 						</ul>
-						<li class = "nav_link" id="nav__link">
-							<i class="nav__icon icon-stopwatch"></i><a href="#">Tiempos</a>
-						</li>
-						<ul class="sub__menu">
+					</details>
+					<details class="nav__details">
+						<summary class="nav_link">
+							TIEMPOS
+						</summary>
+						<ul>
 							<li><a href="insert_time.html">Insertar Tiempos</a></li>
 							<li><a href="time.html">Ver Tiempos</a></li>
 							<li><a href="search_time.html">Consultar Tiempo</a></li>
 						</ul>
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-user"></i><a href="#">Operadores</a>
-						</li>
-						<ul class="sub__menu">
+					</details>
+					<details class="nav__details">
+						<summary class="nav_link">
+							OPERADORES
+						</summary>
+						<ul>
 							<li><a href="#">Insertar operador</a></li>
 							<li><a href="#">Listar operador</a></li>
 						</ul>
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-spinner10"></i><a href="#">Turnos</a>
-						</li>
-						<ul class="sub__menu">
+					</details>
+					<details class="nav__details">
+						<summary class="nav_link">
+							TURNOS
+						</summary>
+						<ul>
 							<li><a href="#">Insertar turno</a></li>
 							<li><a href="#">Listar turno</a></li>
 						</ul>
-						<li class = "nav_link" id="nav__link" >
-							<i class="nav__icon icon-exit "></i><a href="#">Cerrar sesión</a>
-						</li>
+					</details>
+					<ul>
+						<i c class="nav_link" lass="nav__icon icon-exit "></i><a href="#">Cerrar sesión</a>
 					</ul>
 				</nav>
 			</header>
@@ -197,7 +205,7 @@
 						</p>
 					</div>
 				</footer>
-			<script src="js/application.js"></script>
+			<script src="../public/dist/js/application.js"></script></script>
 		</div>
 	</body>
 </html>
