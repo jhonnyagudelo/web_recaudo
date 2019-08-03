@@ -38,6 +38,13 @@
 	display: flex;
 	justify-content: center;
 }
+
+.header-logo a{
+	color:var(--principalColor);
+	text-decoration: none;
+}
+
+
 .logotipo {
 	margin:0;
 	text-align: center;
@@ -53,16 +60,13 @@
 	color:var(--lightColor);
 	@media(--extra-small){
 		display: block;
-		height: auto
+		height: auto;
+		padding:.8em;
 		
 		;
 	}
 }
 
-.header-logo a{
-	color:var(--principalColor);
-	text-decoration: none;
-}
 
 
 .info__content{
@@ -113,12 +117,13 @@
 	@media(--small){
 		position:static;
 		padding:0;
+		left: 3em;
 	}
 }
 
 .header__nav-ul {
 	@media(--extra-small) {
-		position: static;
+		position: relative;
 		display: none;
 	}
 	&.is-active{

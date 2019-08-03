@@ -2343,6 +2343,11 @@ input
 	        justify-content: center;
 }
 
+.header-logo a{
+	color:#273b47;
+	text-decoration: none;
+}
+
 .logotipo {
 	margin:0;
 	text-align: center;
@@ -2356,11 +2361,6 @@ input
 	grid-area: header;
 	background-color: #273b47;
 	color:white;
-}
-
-.header-logo a{
-	color:#273b47;
-	text-decoration: none;
 }
 
 .info__content{
@@ -2647,7 +2647,7 @@ input
 .btn-save
 ,.btn-search
 ,.btn {
-  padding: .6em .8em .8em;
+  padding: .3em .5em .5em;
   border:none;
   color: white;
   margin:5px;
@@ -3289,6 +3289,7 @@ input
 	.header-nav {
 		position:static;
 		padding:0;
+		left: 3em;
 
 	}
 
@@ -3429,6 +3430,7 @@ input
 	.header{
 		display: block;
 		height: auto;
+		padding:.8em;
 
 	}
 
@@ -3450,7 +3452,7 @@ input
 	}
 
 	.header__nav-ul {
-		position: static;
+		position: relative;
 		display: none;
 
 	}
