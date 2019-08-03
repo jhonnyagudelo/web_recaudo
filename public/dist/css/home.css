@@ -2420,7 +2420,10 @@ input
 	padding: .5em;
 	position: relative;
 	width: 150px;
-	left: 1.6em
+	left: 1.6em;
+	-webkit-transition: all 3s ease-out;
+	transition: all 3s ease-out;
+	will-change:transform
 }
 
 .nav__details ul li:hover {
@@ -2798,7 +2801,8 @@ input
 	width: 200%;
 	margin-left: -100%;
 	-webkit-transition: margin .3s ease-out;
-	transition: margin .3s ease-out
+	transition: margin .3s ease-out;
+	will-change:transform
 }
 
 .onoffswitch-inner:after {
@@ -2866,6 +2870,7 @@ input
 	        align-items: center;
 	-webkit-transition: all 1s ease-out;
 	transition: all 1s ease-out;
+	will-change:transform;
 }
 
 .form_modal.active {
