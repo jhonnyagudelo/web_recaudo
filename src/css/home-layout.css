@@ -34,19 +34,35 @@
 
 }
 
+.header-logo{
+	display: flex;
+	justify-content: center;
+}
+.logotipo {
+	margin:0;
+	text-align: center;
+}
+
+.logotipo img {
+	padding: .8em;
+}
 
 .header{
 	grid-area: header;
 	background-color: var(--principalColor);
-	color:white;
-	overflow: auto;
-
+	color:var(--lightColor);
 	@media(--extra-small){
 		display: block;
-		height: auto;
+		height: auto
+		
+		;
 	}
 }
 
+.header-logo a{
+	color:var(--principalColor);
+	text-decoration: none;
+}
 
 
 .info__content{
@@ -85,29 +101,9 @@
 
 
 
-.header-logo{
-		display: block;
-		text-align: center;
-	& a{
-		font-family: 'Poppins', system-ui;
-		font-size: 3em;
-		text-decoration: none;
-		color:var(--lightColor);
-		text-transform: uppercase;
-		@media(--extra-small){
-				font-size: 2em;
-			}
-		}
-		@media(--extra-small){
-			text-align:initial;
-			margin-left:15px;
-		}
-}
-
 .header-nav {
 	position: relative;
 	padding: 15px 0;
-	top: 2em;
 	left: 3em;
 	width: 190px;
 	& a{
@@ -156,6 +152,7 @@
 .main-title{
 	font-weight: 300;
 	font-size: 1.8em;
+	transform: translateX(-1.5em);
 }
 
 .nav__icon {

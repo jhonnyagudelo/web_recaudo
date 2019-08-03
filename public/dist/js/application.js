@@ -64,11 +64,11 @@ const $form_modal = document.querySelector('.form_modal');
 
 
 
-$addButton.addEventListener('click', showModal);
-function showModal(){
-  $form_modal.classList.add('active');
-  $modal.style.animation = 'animationIn 1s forwards'
-};
+// $addButton.addEventListener('click', showModal);
+// function showModal(){
+//   $form_modal.classList.add('active');
+//   $modal.style.animation = 'animationIn 1s forwards'
+// };
 
 // $cancelButton.addEventListener('click', hideModal);
 // function hideModal(){
