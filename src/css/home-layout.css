@@ -62,8 +62,6 @@
 		display: block;
 		height: auto;
 		padding:.8em;
-		
-		;
 	}
 }
 
@@ -124,7 +122,7 @@
 .header__nav-ul {
 	@media(--extra-small) {
 		position: relative;
-		display: none;
+		display: none;	
 	}
 	&.is-active{
 		@media(--extra-small){
@@ -148,8 +146,6 @@
 	position: relative;
 	width: 150px;
 	left: 1.6em;
-	transition: all 3s ease-out;
-	will-change:transform;
 	&:hover {
 		background-color: var(--navColor);
 		border-radius:5px;
