@@ -96,9 +96,6 @@ validation($movil);
       if($menu.classList.contains('is-active')) {
   console.log(event)
         $menu.classList.remove('is-active');
-        $menu.style.transition = "all 3s ease-out";
-
-
       }else{
         $menu.classList.add('is-active');
       }
