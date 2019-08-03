@@ -2306,8 +2306,8 @@ footer {
 
 input
 ,select{
-	padding: 5px;
-	border-radius: 5px;
+	padding: 2px;
+	border-radius: 6px;
 	border: 1px solid #273b47;
 	font-size: 1em;
 	margin-right: 10px;
@@ -2442,10 +2442,12 @@ input
 
 .side__left{
 	grid-area: side__left;
+	width: 80%;
 }
 
 .side__right {
 	grid-area: side__right;
+	width: 80%;
 }
 
 .remove__vehicle{
@@ -2582,17 +2584,6 @@ input
 	-webkit-transform:scale(.9);
 	        transform:scale(.9);
 
-}
-
-.registro-persona label {
-	display: block;
-	margin-bottom: 8px;
-}
-
-.registro-persona input
-,.registro-persona select {
-	width: 80%;
-	text-align: center;
 }
 
 /*login*/
@@ -2970,8 +2961,7 @@ input
 }
 
 .form_time .select_vehi {
-
-	/*width: 104px;*/
+	width: 104px;
 	border-radius: 5px;
 	padding: 5px;
 	border: 1px solid #273b47;
@@ -3051,17 +3041,6 @@ input
 	padding: 10px;
 }
 
-.general_input:hover {
-	background-color:#DFE5E8;
-
-}
-
-.general_label {
-	display: block;
-	font-size: 1.2em;
-	color: #273b47;
-}
-
 .form_search {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -3110,15 +3089,6 @@ input
 
 }
 
-.insert-turn label{
-	display: inline-block;
-
-}
-
-.input-turn{
-	width: 50px;
-}
-
 .turn-primary {
 	margin-bottom: 10px
 }
@@ -3153,7 +3123,20 @@ input
 	padding: 16px;
 	border-radius: .8em;
 	text-align: center;
+}
 
+.register label {
+	display:block;
+	margin-bottom:.4em;
+
+}
+
+.register 
+input 
+,select
+,textarea {
+	width: 100%;
+	text-align: center;
 }
 
 /*animation*/
@@ -3361,11 +3344,6 @@ input
 
 	}
 
-	.input-turn{
-		width: inherit;
-
-	}
-
 	.turn-primary {
 		display:-webkit-box;
 		display:-ms-flexbox;
@@ -3406,7 +3384,13 @@ input
 
 	.register{
 		width: auto;
-		display: block;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:column;
+		        flex-direction:column;
 		overflow: auto;
 
 	}
@@ -3495,11 +3479,6 @@ input
 	.horario {
 		-webkit-box-shadow: none;
 		        box-shadow: none;
-
-	}
-
-	.general_input{
-		width:auto;
 
 	}
 

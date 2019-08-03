@@ -70,7 +70,7 @@
 	text-align: center;
 	padding: .5em;
 		& .select_vehi {
-			/*width: 104px;*/
+			width: 104px;
 			border-radius: 5px;
 			padding: 5px;
 			border: 1px solid var(--principalColor);
@@ -166,21 +166,7 @@
 	margin-left: 30px;
 	padding: 10px;
 }
-.general_input{
-	&:hover {
-		background-color:var(--ligtTbody);
-	}
-	@media(--extra-small){
-		width:auto;
 
-	}
-}
-
-.general_label {
-	display: block;
-	font-size: 1.2em;
-	color: var(--principalColor);
-}
 
 .form_search {
 	display: flex;
@@ -220,19 +206,6 @@
 		border:1px solid var(--principalColor);
 		border-right: none;
 
-	}
-}
-
-.insert-turn {
-	& label{
-		display: inline-block;
-	}
-}
-
-.input-turn{
-	width: 50px;
-	@media(--small) {
-		width: inherit;
 	}
 }
 
@@ -285,8 +258,20 @@
 	text-align: center;
 	@media(--small) {
 		width: auto;
-		display: block;
+		display: flex;
+		flex-direction:column;
 		overflow: auto;
 	}
+	& label {
+		display:block;
+		margin-bottom:.4em;
+	}
+}
 
+.register 
+input 
+,select
+,textarea {
+	width: 100%;
+	text-align: center;
 }

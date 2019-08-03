@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>SUIC | Registrar persona </title>
-			<link rel="stylesheet" type="text/css" href="../public/dist/css/home.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="../public/dist/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../public/dist/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../public/dist/favicon/favicon-16x16.png">
+		<link rel="manifest" href="../public/dist/favicon/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<title>SUIC | Insertar tiempos</title>
+		<link rel="stylesheet" type="text/css" href="../public/dist/css/home.css">
 	</head>
 	<body>
 		<i class=" burger-button icon-menu" id="burger-button"></i>
@@ -99,39 +106,39 @@
 							<form action="list_turn.html" class="insert-user" method="post" accept-charset="utf-8">
 								<div class="register registro-persona">
 									<div class="side__left">
-										<label class="label-nombre" for="nombre">Nombres:</label>
-										<input type="text" name="nombre" required>
-										<label class="label-apellido" for="apellido">Apellidos:</label>
-										<input type="text" name="apellido" required>
-										<label for="tipo_cedula">Tipo documento:</label>
+										<label class="label-nombre" for="nombre">Nombres:
+										<input type="text" name="nombre" required></label>
+										<label class="label-apellido" for="apellido">Apellidos:
+										<input type="text" name="apellido" required></label>
+										<label for="tipo_cedula">Tipo documento:
 										<select name="tipo_cedula" required>
 											<option value="">------</option>
 											<option value="cc">C.c</option>
 											<option value="pasaporte">Pasaporte</option>
-										</select>
-										<label for="cedula">Numero cedula:</label>
-										<input type="text" name="cedula" required>
+										</select></label>
+										<label for="cedula">Numero cedula:
+										<input type="text" name="cedula" required></label>
 									</div>
 									<div class="side__rigth">
-										<label for="direccion">Direccion:</label>
-										<input type="text" name="direccion" required>
-										<label for="telefono">telefono:</label>
-										<input type="tel" name="telefono">
-										<label for="celular">Celular:</label>
-										<input type="tel" name="celular"required placeholder="310-050-0900" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-										<label for="email">Email:</label>
-										<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-										<label for="genero">Genero:</label>
+										<label for="direccion">Direccion:
+										<input type="text" name="direccion" required></label>
+										<label for="telefono">telefono:
+										<input type="tel" name="telefono"></label>
+										<label for="celular">Celular:
+										<input type="tel" name="celular"required placeholder="310-050-0900" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label>
+										<label for="email">Email:
+										<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></label>
+										<label for="genero">Genero:
 										<select name="genero" required>
 											<option value="">------</option>
 											<option value="m">M</option>
 											<option value="f">F</option>
 											<option value="otro">Otro</option>
-										</select>
+										</select></label>
 									</div>
-								</div>
-								<div class="btn_form div_btn">
-									<input type="submit" class="btn-save" name="" value="Guardar">
+									<div class="btn_form  div_btn">
+										<input type="submit" class="btn-save" name="" value="Guardar">
+									</div>
 								</div>
 							</form>
 						</div>
