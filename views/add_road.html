@@ -21,8 +21,7 @@
 		<header class="header " id="header">
 			<div class="header-logo">
 				<figure class="logotipo">
-					<a href="index.html"><img src="../public/dist/images/LogoSuic.png" alt="Logo"
-							width="120"></a>
+					<a href="index.html"><img src="../public/dist/images/LogoSuic.png" alt="Logo" width="120"></a>
 				</figure>
 			</div>
 			<nav class="header-nav header__nav-ul ">
@@ -104,16 +103,14 @@
 				<div class="sub_title">
 					<h2 class="title_sub">Registrar rodamiento</h2>
 				</div>
-				<div class="general_from">
+				<div>
 					<h2 class="info_general">Informacion general</h2>
-					<div class="form_general-content">
+					<div class="form_general-content from_road">
 						<form action="list_road.html" method="get" accept-charset="utf-8">
-							<label class="general_label label-rodamiento" for="planilla_road" class="planilla"
-								id="planilla"> Planilla: </label>
-							<input class="general_input input-rodamiento" type="number" name="planilla_road" value="">
-							<label class="general_label label-rodamiento" for="despacho" class="check">
-								Despacho:</label>
-							<select class="general_input input-rodamiento" name="despacho" required>
+							<label class="label-rodamiento" id="planilla"> Planilla: 
+							<input class=" input-rodamiento" type="number" name="planilla_road" value=""></label>
+							<label class="label-rodamiento">Despacho:
+							<select class="select-rodamiento" name="despacho" required>
 								<option value="">-------</option>
 								<option value="">Versalles</option>
 								<option value="">Piso 1</option>
@@ -121,9 +118,8 @@
 								<option value="">Rozo</option>
 								<option value="">Buga</option>
 								<option value="">La maria</option>
-							</select>
-							<label class="general_label label-rodamiento" for="roda_vehiculo" required
-								class="vehiculo_road"> Vehiculo:</label>
+							</select></label>
+							<label class="label-rodamiento" required> Vehiculo:
 							<select class="select_vehi" id="list_vehi" name="label_vehi">
 								<option value="8046">8046</option>
 								<option value="8016">8016</option>
@@ -132,7 +128,7 @@
 								<option value="8004">8004</option>
 								<option value="65000">65000</option>
 								<option value="8018">8018</option>
-							</select>
+							</select></label>
 							<div class="div_btn">
 								<input type="submit" class="btn-save" name="" value="Guardar">
 							</div>

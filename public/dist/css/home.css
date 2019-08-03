@@ -2660,9 +2660,10 @@ input
 }
 
 .btn-search {
-	color: #273b47;
+	background-color: #273b47;
+	color:white;
 	font-weight: 580;
-	font-size: .7em;
+	font-size: 1em;
 	margin-left: 10px;
 }
 
@@ -3026,6 +3027,10 @@ input
 	font-weight: 800;
 	color: inherit;
 	padding: 0 10px;
+}
+
+.from_road select {
+	width: 20%;
 }
 
 .sub_title {

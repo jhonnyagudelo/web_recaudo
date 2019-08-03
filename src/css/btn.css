@@ -10,9 +10,10 @@
 
 
 .btn-search {
-	color: var(--principalColor);
+	background-color: var(--principalColor);
+	color:var(--lightColor);
 	font-weight: 580;
-	font-size: .7em;
+	font-size: 1em;
 	margin-left: 10px;
 }
 

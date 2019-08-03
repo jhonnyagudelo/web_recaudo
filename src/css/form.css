@@ -152,6 +152,10 @@
 	padding: 0 10px;
 }
 
+.from_road select {
+	width: 20%;
+}
+
 
 .sub_title {
 	text-transform: uppercase;
