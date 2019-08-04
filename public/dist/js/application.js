@@ -26,6 +26,10 @@ document.getElementById('info__time').innerHTML = hours + ":" + mins + ":"+ secs
 }
 setInterval(printTime);
 
+<<<<<<< HEAD
+=======
+const $borderLine = document.querySelector('.nav_link')
+>>>>>>> 909a4074f455ea7205d878e2b8271ffd8239400c
 const $delailsList = document.querySelectorAll('details')
   $delailsList.forEach(function($delailsList){
     $delailsList.querySelector('summary').addEventListener('click', expand)
@@ -63,11 +67,19 @@ const $form_modal = document.querySelector('.form_modal');
 
 
 
+<<<<<<< HEAD
 $addButton.addEventListener('click', showModal);
 function showModal(){
   $form_modal.classList.add('active');
   $modal.style.animation = 'animationIn 1s forwards'
 };
+=======
+// $addButton.addEventListener('click', showModal);
+// function showModal(){
+//   $form_modal.classList.add('active');
+//   $modal.style.animation = 'animationIn 1s forwards'
+// };
+>>>>>>> 909a4074f455ea7205d878e2b8271ffd8239400c
 
 // $cancelButton.addEventListener('click', hideModal);
 // function hideModal(){
@@ -95,7 +107,10 @@ validation($movil);
       if($menu.classList.contains('is-active')) {
   console.log(event)
         $menu.classList.remove('is-active');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 909a4074f455ea7205d878e2b8271ffd8239400c
       }else{
         $menu.classList.add('is-active');
       }

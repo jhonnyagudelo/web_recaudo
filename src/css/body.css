@@ -45,6 +45,7 @@ th{
 }
 
 
+
 td{
   width: 7.3em;
   padding: .1em;
@@ -57,25 +58,6 @@ tbody:nth-child(even){
 footer {
   grid-area: footer;
 }
-
-header ul li {
-  height: 20px;
-}
-
-header ul{
-  display: flex;
-  height: inherit;
-}
-
-header li {
-  height: inherit;
-}
-
-header ul{
-  display: block;
-}
-
-
 
 
 input
