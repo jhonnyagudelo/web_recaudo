@@ -6,7 +6,7 @@ class Rodamiento extends Model {
     protected $table = 'rodamientos';
     protected $primaryKey = 'id_rodamiento';
     const CREATED_AT = 'create_at';
-    const UPDATE_AT = 'update_at';
+    const UPDATED_AT = 'update_at';
 }
 
 ?>

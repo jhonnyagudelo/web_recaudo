@@ -1,0 +1,69 @@
+ {% extends "layout.twig" %}
+
+{% block content %}
+		<section class="info" id="info">
+			<article class="departure">
+				<div class="location">
+					<h1 class="title__control">Control</h1>
+				</div>
+				<div class="date">
+					<h1 class="title__date">Fecha</h1>
+					<div class="info__date" id="info__date"></div>
+				</div>
+				<div class="time">
+					<h1 class="title__time">Hora</h1>
+					<div class="info__time" id="info__time"></div>
+				</div>
+			</article>
+		</section>
+		<section class="content">
+			<div class="rodamiento_add">
+				<div class="icon_title">
+					<i class="icon-road icon-title "></i>
+					<h1 class="main_title">Rodamientos</h1>
+				</div>
+				<div class="sub_title">
+					<h2 class="title_sub">Registrar rodamiento</h2>
+				</div>
+				<div>
+					<h2 class="info_general">Informacion general</h2>
+					<div class="form_general-content from_road">
+						<form action="list_road.html" method="post" accept-charset="utf-8">
+							<label class="label-rodamiento" id="planilla"> Planilla: 
+							<input class=" input-rodamiento" type="number" name="planilla" value=""></label>
+							<label class="label-rodamiento">Control:
+							<select class="select-rodamiento" name="control" required>
+								<option value="">-------</option>
+								<option value="">Versalles</option>
+								<option value="">Piso 1</option>
+								<option value="">Piso 2</option>
+								<option value="">Rozo</option>
+								<option value="">Buga</option>
+								<option value="">La maria</option>
+							</select></label>
+							<label class="label-rodamiento" required> Vehiculo:
+							<select class="select_vehi" id="vehiculo" name="vehiculo">
+								<option value="8046">8046</option>
+								<option value="8016">8016</option>
+								<option value="8036">8036</option>
+								<option value="8048">8048</option>
+								<option value="8004">8004</option>
+								<option value="65000">65000</option>
+								<option value="8018">8018</option>
+							</select></label>
+							<div class="div_btn">
+								<input type="submit" class="btn-save" name="" value="Guardar">
+							</div>
+						</form>
+					</div>
+				</div>
+		</section>
+		<footer class="copyright">
+			<div class="copy-div">
+				<p class="copy-p">
+					COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+				</p>
+			</div>
+		</footer>
+	</div>
+{% endblock %}

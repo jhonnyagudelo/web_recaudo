@@ -1,4 +1,4 @@
-,.btn-save
+.btn-save
 ,.btn-search
 ,.btn {
 	@apply --button;
@@ -22,8 +22,7 @@
 }
 
 .btn-print
-,.btn-save
-,.btn__add{
+,.btn-save{
 	background-color: var(--principalColor);
 }
 

@@ -1,5 +1,5 @@
 $.ajax({
-  url: "http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-04-10 06:00:00&fin=2019-04-10 13:00:00",
+  url: "http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-08-03 04:00:00&fin=2019-08-03 22:00:00",
   context: document.body
 }).done(function(e) {
 	if(e.viajes) {

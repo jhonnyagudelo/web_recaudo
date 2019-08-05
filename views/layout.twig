@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="../public/dist/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="../public/dist/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="../public/dist/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+        <link href="../public/dist/favicon/site.webmanifest" rel="manifest">
+        <meta content="#da532c" name="msapplication-TileColor">
+        <meta content="#ffffff" name="theme-color">
+        <title>SUIC | Insertar rodamiento</title>
+        <link href="../public/dist/css/home.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <i class=" burger-button icon-menu" id="burger-button"></i>
+        <div class="container">
+            <header class="header " id="header">
+                <div class="header-logo">
+                    <figure class="logotipo">
+                        <a href="index.html"><img alt="Logo" src="../public/dist/images/LogoSuic.png" width="120"></a>
+                    </figure>
+                </div>
+                <nav class="header-nav header__nav-ul ">
+                    <div class="main-title">
+                        <a href="#">PRINCIPAL</a>
+                    </div>
+                    <details class="nav__details">
+                        <summary class="nav_link">
+                            VEHICULOS
+                        </summary>
+                        <ul>
+                            <li id="add_vehicle">
+                                <a href="registrar_vehiculo.html">Registrar vehículo</a>
+                            </li>
+                            <li>
+                                <a href="list_vehicle.html">Listar vehículos</a>
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="nav__details">
+                        <summary class="nav_link">
+                            RODAMIENTOS
+                        </summary>
+                        <ul>
+                            <li><a class="insert_tread" href="add_road.html">Insertar rodamiento</a></li>
+                            <li><a href="list_road.html">Listar rodamiento</a></li>
+                        </ul>
+                    </details>
+                    <details class="nav__details">
+                        <summary class="nav_link">
+                            TIEMPOS
+                        </summary>
+                        <ul>
+                            <li><a href="insert_time.html">Insertar Tiempos</a></li>
+                            <li><a href="time.html">Ver Tiempos</a></li>
+                            <li><a href="search_time.html">Consultar Tiempo</a></li>
+                        </ul>
+                    </details>
+                    <details class="nav__details">
+                        <summary class="nav_link">
+                            OPERADORES
+                        </summary>
+                        <ul>
+                            <li><a href="#">Insertar operador</a></li>
+                            <li><a href="#">Listar operador</a></li>
+                        </ul>
+                    </details>
+                    <details class="nav__details">
+                        <summary class="nav_link">
+                            TURNOS
+                        </summary>
+                        <ul>
+                            <li><a href="#">Insertar turno</a></li>
+                            <li><a href="#">Listar turno</a></li>
+                        </ul>
+                    </details>
+                    <ul>
+                        <i c class="nav_link" lass="nav__icon icon-exit "></i>
+                        <a href="#">Cerrar sesión</a>
+                    </ul>
+                </nav>
+            </header>
+            {% block content %}{% endblock %}
+        </div>
+        <script src="../public/dist/js/application.js"></script>
+    </body>
+
+</html>

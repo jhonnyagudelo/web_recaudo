@@ -2,11 +2,9 @@
 
 ini_set('display_errors', 1); //inicializa errores
 ini_set('display_starup_error', 1); //inicializa errores
-error_reporting(E_ALL);//mostrar errores en pantalla
+error_reporting(E_ALL); //mostrar errores en pantalla
 
 require_once '../vendor/autoload.php';
-
-
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
@@ -23,10 +21,7 @@ $capsule->addConnection([
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
-    ]);
-
-
-
+]);
 // Make this Capsule instance available globally via static methods... (optional)
 $capsule->setAsGlobal();
 
@@ -45,37 +40,45 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
-$map->get('index', '/web-coodetrans/', [
+$map->get('index', '/web-coodetrans/index/inicio', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
 
-$map->get('addJob', '/curso-php/jobs/add', [
-    'controller' => 'App\Controllers\JobsController',
-    'action' => 'getAddJobAction'
+$map->get('rodamientos', '/web-coodetrans/rodamiento/add', [
+    'controller' => 'App\Controllers\RodamientoController',
+    'action' => 'getAddRodamientoAction'
 ]);
 
-$map->post('saveJob', '/curso-php/jobs/add', [
-    'controller' => 'App\Controllers\JobsController',
-    'action' => 'getAddJobAction'
+$map->post('guardarRodamientos', '/web-coodetrans/rodamiento/add', [
+    'controller' => 'App\Controllers\RodamientoController',
+    'action' => 'getAddRodamientoAction'
+]);
+
+$map->get('listaVehiculos', '/web-coodetrans/vehiculos/lista', [
+    'controller' => 'App\Controllers\VehiculoController',
+    'action' => 'getListVehiculoAction'
+]);
+
+$map->get('Vechicle', '/web-coodetrans/vehiculos/add', [
+    'controller' => 'App\Controllers\VehiculoController',
+    'action' => 'getAddVehiculoAction'
 ]);
 
 
-$map->get('addProject', '/curso-php/project/add',[
-    'controller' => 'App\Controllers\ProjectController',
-    'action' => 'getAddProjectAction'
+$map->post('addVechicle', '/web-coodetrans/vehiculos/add', [
+    'controller' => 'App\Controllers\VehiculoController',
+    'action' => 'getAddVehiculoAction'
 ]);
 
-$map->post('saveProject', '/curso-php/project/add',[
-    'controller' => 'App\Controllers\ProjectController',
-    'action' => 'getAddProjectAction'
-]);
+
+
+
 
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
-
-if(!$route) {
+if (!$route) {
     echo 'No route found';
     exit;
 } else {
@@ -87,8 +90,4 @@ if(!$route) {
     $response = $controller->$actionName($request);
 
     echo $response->getBody();
-
 }
-
-
-

@@ -106,9 +106,9 @@
 						<form action="list_turn.html" class="insert-turn" method="get" accept-charset="utf-8">
 							<div class="register">
 								<div class="side__left">
-									<label class="general_label label-ruta" for="select-ruta" class="road" id="road">
+									<label class="general_label label-ruta" id="road">
 										Ruta: 
-									<select class="select_ruta" id="list_vehi" name="label_ruta">
+									<select  required class="select_ruta" id="list_vehi" >
 										<option value="">--Elija un destino--</option>
 										<option value="palmi-cande">Palmira-Candelaria</option>
 										<option value="cande-palmi">Candelaria-Palmira</option>
@@ -126,9 +126,8 @@
 										<option value="pal-coro">Palmira-Coronado</option>
 										<option value="coro-rozo">Coronado-Palmira</option>
 									</select></label>
-									<label class="general_label label-vehiculo" for="turn_vehiculo" required
-										class="vehiculo_turn"> Vehiculo:
-									<select class="select_vehi" id="list_vehi" name="label_vehi">
+									<label class="general_label label-vehiculo"> Vehiculo:
+									<select required class="select_vehi" id="list_vehi">
 										<option value="8046">8046</option>
 										<option value="8016">8016</option>
 										<option value="8036">8036</option>
@@ -143,8 +142,8 @@
 									<input type="number" class="input-turn" name="num_turno" required=""></label>
 									<label class="general_label label-salida" for="salida" class="check">Salida:
 									<input type="time" name="salida" required></label>
-									<label class="general_label label-mensaje" for="mensaje">Mensaje:
-									<textarea name="mensaje"></textarea></label>
+									<label class="general_label label-mensaje">Novedad:
+									<textarea></textarea></label>
 								</div>
 								<div class="div_btn btn_form ">
 									<input type="submit" class="btn-save" name="" value="Guardar">

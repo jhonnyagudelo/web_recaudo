@@ -2586,6 +2586,22 @@ input
 
 }
 
+.alert {
+	position: relative;
+	padding: 12px 20px;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+  }
+
+.alert-primary {
+	color: #004085;
+	background-color: #cce5ff;
+	border-color: #b8daff;
+  }
+
 /*login*/
 
 .container__login	{
@@ -2672,8 +2688,7 @@ input
 }
 
 .btn-print
-,.btn-save
-,.btn__add{
+,.btn-save{
 	background-color: #273b47;
 }
 
