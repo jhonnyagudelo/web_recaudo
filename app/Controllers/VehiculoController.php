@@ -1,18 +1,16 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\Vehiculo;
 use Respect\Validation\Validator as V;
 use Illuminate\Support\Facades\Request;
 
 class VehiculoController extends BaseController
 {
-/*=============================================
-AGREGAR VEHICULOS
-=============================================*/
     public function getAddVehiculoAction($request)
     {
-        if ($request->getMethod() == 'POST') {
+        if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
             $VehiculoValidation = V::key('numero', V::intVal()->notEmpty())
                 ->key('placa', V::stringType()->notEmpty())
@@ -23,9 +21,10 @@ AGREGAR VEHICULOS
                 ->key('ruta', V::stringType()->notEmpty())
                 ->key('clase_bus', V::intVal()->notEmpty()->validate(0))
                 ->key('carroceria', V::stringType()->notEmpty());
+
             try {
                 $VehiculoValidation->assert($postData);
-                $postData->$request->getParsedBody();
+                $postData = $request->getParsedBody();
 
                 $vehiculo = new Vehiculo();
                 $vehiculo->numero_interno = $postData['numero'];
@@ -42,8 +41,8 @@ AGREGAR VEHICULOS
             } catch (\Exception $e) {
                 echo $e->getMessage();
             }
-            return $this->renderHTML('ingreso_vehiculo.twig');
         }
+        return $this->renderHTML('ingreso_vehiculo.twig');
     }
 
 /*=============================================
@@ -56,4 +55,5 @@ LISTAR VEHICULOS
             'vehiculos' => $vehiculos
         ]);
     }
+
 }

@@ -1,0 +1,109 @@
+{% extends "layout.twig" %}
+{% block content %}
+    <section class="info" id="info">
+        <article class="departure">
+            <div class="location">
+                <h1 class="title__control">Control</h1>
+            </div>
+            <div class="date">
+                <h1 class="title__date">Fecha</h1>
+                <div class="info__date" id="info__date"></div>
+            </div>
+            <div class="time">
+                <h1 class="title__time">Hora</h1>
+                <div class="info__time" id="info__time"></div>
+            </div>
+        </article>
+    </section>
+    <section class="content tread">
+        <form class="dataFilter-from">
+            <div class="from-fecha">
+                <label for="fecha_search">Fecha:</label>
+                <input name="fecha_search" type="date">
+            </div>
+            <div class="search-from">
+                <i class="search__icon icon-search "></i>
+                <input class=" from-search" name="search-label" type="search">
+            </div>
+        </form>
+        <article class="info__content">
+            <table
+                class="info__frame">
+                <!-- tabla -->
+                <thead>
+                    <!-- cabecera -->
+                    <tr>
+                        <!-- fila -->
+                        <th>Numero planilla</th>
+                        <th>Numero interno</th>
+                        <th>despacho</th>
+                        <th>Activo</th>
+                        <th>Informacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rodamiento in rodamientos %}
+                        <!-- cuerpo -->
+                        <tr>
+                            <td>{{rodamiento.numero_planilla}}</td>
+                            <td>{{rodamiento.numero_interno}}</td>
+                            <td>{{rodamiento.despacho_id}}</td>
+
+                            <td>
+                                <form accept-charset="utf-8" action="listVehicle_submit" class="onoffswitch__form" method="get">
+                                    <div class="onoffswitch">
+                                        <input checked class="onoffswitch-checkbox" id="myonoffswitch" name="onoffswitch" type="checkbox">
+                                        <label class="onoffswitch-label" for="myonoffswitch">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <div class="acciones_icon">
+                                    <i class="edit__bus icon-pencil" id=""></i>
+                                    <i class="delete__bus icon-bin" id="delete__bus"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </article>
+        <div class="dataTable_paginate">
+            <ul class="pagination">
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">Anterior</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">1</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">2</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">3</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="remove_vehicle">
+        <div class="form_modal">
+            <div class="remove__vehicle" id="modal-remove">
+                <form accept-charset="utfclass=-8" action="listVehicle.html" class="form-remove" method="get">
+                    <p class="modal__vehicle-parag">
+                        ¿Esta seguro que desea eliminar el vehiculo?
+                    </p>
+                    <div class="btn_form">
+                        <button class="btn btn__add" id="hiden-add" type="submit" value="eliminar">Eliminar</button>
+                        <button class="btn btn__close" id="remove-cancel" type="submit" value="cencelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

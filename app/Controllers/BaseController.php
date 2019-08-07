@@ -3,7 +3,9 @@
 namespace App\Controllers;
 use Zend\Diactoros\Response\HtmlResponse;
 
-class BaseController {
+
+class BaseController 
+{
     protected $templateEngine;
     public function __construct() {
         $loader = new \Twig\Loader\FilesystemLoader('../views');

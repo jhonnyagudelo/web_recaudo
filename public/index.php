@@ -55,6 +55,12 @@ $map->post('guardarRodamientos', '/web-coodetrans/rodamiento/add', [
     'action' => 'getAddRodamientoAction'
 ]);
 
+$map->get('listaRodamiento', '/web-coodetrans/rodamiento/lista', [
+    'controller' => 'App\Controllers\RodamientoController',
+    'action' => 'getListRodamientoAction'
+]);
+
+
 $map->get('listaVehiculos', '/web-coodetrans/vehiculos/lista', [
     'controller' => 'App\Controllers\VehiculoController',
     'action' => 'getListVehiculoAction'
@@ -66,7 +72,7 @@ $map->get('Vechicle', '/web-coodetrans/vehiculos/add', [
 ]);
 
 
-$map->post('addVechicle', '/web-coodetrans/vehiculos/add', [
+$map->post('addVehicle', '/web-coodetrans/vehiculos/add', [
     'controller' => 'App\Controllers\VehiculoController',
     'action' => 'getAddVehiculoAction'
 ]);

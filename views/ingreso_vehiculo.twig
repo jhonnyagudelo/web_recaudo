@@ -27,21 +27,74 @@
             </div>
             <div>
                 <h2 class="info_general">Informacion general</h2>
-                <div class="form_general-content from_road">
+                <div class="form_general-content ">
                     <form accept-charset="utf-8" action="/web-coodetrans/vehiculos/lista" method="post">
-                        <label>placa:<input required  type="text" name="placa"></label>
-                        <label>numero interno:<input required  type="number" name="numero_interno"></label>
-                        <input class="btn-save" name="" type="submit" value="Guardar">
-                    </form>
+                        <label>Numero interno:
+                            <input name="interno" required type="number"></label>
+                        <label>Placa:
+                            <input name="placa" required type="text"></label>
+                        <label class="">Marcar:
+                            <select class="" name="marca" required>
+                                <option value="">-------</option>
+                                <option value="agrale">Agrale</option>
+                                <option value="chev">Chev</option>
+                                <option value="ford">Ford</option>
+                                <option value="stud">Stud</option>
+                                <option value="daihat">Daihat</option>
+                                <option value="merc">Merc</option>
+                                <option value="hino">Hino</option>
+                                <option value="non_plus_ultra">Non plus ultra</option>
+                                <option value="nissan">Nissan</option>
+                                <option value="novie">Novie</option>
+                                <option value="iveco">Iveco</option>
+                                <option value="volks">Volks</option>
+                                <option value="tl">Tl</option>
+                                <option value="jac">Jac</option>
+                            </select>
+                        </label>
+                        <label>Modelo:
+                            <input name="modelo" required type="number"></label>
+                        <label class="">Ruta:
+                            <select class="" name="ruta" required>
+                                <option value="">-------</option>
+                                <option value="pradera">Pradera</option>
+                                <option value="candelaria">Candelaria</option>
+                                <option value="buga">Buga</option>
+                                <option value="florida">Florida</option>
+                                <option value="costarica">Costarica</option>
+                                <option value="rozo">Rozo</option>
+                            </select>
+                        </label>
+                        <label>Capacidad:
+                            <input name="capacidad" required type="number"></label>
+                        <label class="">carroceria:
+                            <select class="" name="carroceria" required>
+                                <option value="">-------</option>
+                                <option value="cerrada">Cerrada</option>
+                                <option value="abierto">Abierto</option>
+                                <option value="escalera">Escalera</option>
+                            </select>
+                            <label class="">clase buseta:
+                                <select class="" name="clase_bus" required>
+                                    <option value="">-------</option>
+                                    <option value="buseta">Buseta</option>
+                                    <option value="bus">Bus</option>
+                                    <option value="microbus">Microbus</option>
+                                    <option value="npr">BusetaNPR</option>
+                                </select>
+                                <label>Consumo:
+                                    <input name="consumo" required type="number"></label>
+                                <input class="btn-save" name="" type="submit" value="Guardar">
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <footer class="copyright">
-        <div class="copy-div">
-            <p class="copy-p">
-                COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
-            </p>
-        </div>
-    </footer>
-{% endblock %}
+            </section>
+            <footer class="copyright">
+                <div class="copy-div">
+                    <p class="copy-p">
+                        COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+                    </p>
+                </div>
+            </footer>
+        {% endblock %}
