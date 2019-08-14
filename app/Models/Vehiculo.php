@@ -6,8 +6,8 @@ use illuminate\Database\Eloquent\Model;
 class Vehiculo extends Model {
     protected $table = 'vehiculos';
     protected $primaryKey = 'vehiculo_id';
-    const CREATED_AD = 'create_at';
-    const UPDATED_AD = 'update_at';
+    const CREATED_AT = 'create_at';
+    const UPDATED_AT = 'update_at';
 }
 
 ?>

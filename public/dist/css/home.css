@@ -2602,6 +2602,22 @@ input
 	border-color: #b8daff;
   }
 
+.fielset-cargo {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+  }
+
+.select2-dropdown
+  ,.select3-dropdown {
+	  display: none;
+  }
+
+.mk:checked + .select1-dropdown {
+		background-color: red;
+		display: none;
+  }
+
 /*login*/
 
 .container__login	{
@@ -2731,6 +2747,17 @@ input
 
 .icon-bin {
 	margin-left: 5px;
+}
+
+.btn-info {
+	width: 115px;
+	position: relative;
+}
+
+.btn-on {
+	position: absolute;
+	top: 6px;
+	left: 47em;
 }
 
 .waves{
@@ -3146,7 +3173,8 @@ input
 }
 
 .register label {
-	display:block;
+
+	/*display:block;*/
 	margin-bottom:.4em;
 
 }
@@ -3308,6 +3336,22 @@ input
 
 	}
 
+	.fielset-cargo{
+		display: inline;
+		display: initial;
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+		text-align:left;
+		text-align:initial;
+
+	}
+
+	.fielset-cargo input {
+		width: auto;
+
+	}
+
 	.dataFilter-from{
 		-webkit-box-pack:justify;
 		    -ms-flex-pack:justify;
@@ -3412,6 +3456,9 @@ input
 		    -ms-flex-direction:column;
 		        flex-direction:column;
 		overflow: auto;
+		-webkit-box-align:center;
+		    -ms-flex-align:center;
+		        align-items:center;
 
 	}
 

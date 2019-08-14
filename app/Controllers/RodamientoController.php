@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 use App\Models\Rodamiento;
 use Respect\Validation\Validator as v;
-// use Illuminate\Support\Facades\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Request;
+// use Illuminate\Support\Facades\DB;
 
 class RodamientoController extends BaseController
 {
@@ -21,11 +21,11 @@ class RodamientoController extends BaseController
                 $RodamientoValidator->assert($postData);
                 $postData = $request->getParsedBody();
 
-                $rodamiento = new Rodamiento();
-                $rodamiento->numero_planilla = $postData['planilla'];
-                $rodamiento->despacho_id = $postData['control'];
-                $rodamiento->numero_interno = $postData['vehiculo'];
-                $rodamiento->save();
+                $rodamientos = new Rodamientos();
+                $rodamientos->numero_planilla = $postData['planilla'];
+                $rodamientos->despacho_id = $postData['control'];
+                $rodamientos->numero_interno = $postData['vehiculo'];
+                $rodamientos->save();
                 echo 'Guardado';
             } catch (\Exception $e) {
                 echo $e->getMessage();

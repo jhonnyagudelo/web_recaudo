@@ -327,3 +327,32 @@
 	background-color: #cce5ff;
 	border-color: #b8daff;
   }
+
+  .fielset-cargo {
+	  display: flex;
+  }
+
+
+ 
+  .select2-dropdown
+  ,.select3-dropdown {
+	  display: none;
+  }
+
+  .fielset-cargo{
+	  @media(--small){
+		display: initial;
+		width: max-content;
+		text-align:initial;
+	  & input {
+		  width: auto;
+	  }
+	}
+  }
+  
+
+
+  .mk:checked + .select1-dropdown {
+		background-color: red;
+		display: none;
+  }

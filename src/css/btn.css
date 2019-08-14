@@ -70,3 +70,15 @@
 .icon-bin {
 	margin-left: 5px;
 }
+
+
+.btn-info {
+	width: 115px;
+	position: relative;
+}
+
+.btn-on {
+	position: absolute;
+	top: 6px;
+	left: 47em;
+}

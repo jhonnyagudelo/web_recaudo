@@ -40,11 +40,17 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
+/**
+ * sesion de los index
+ */
 $map->get('index', '/web-coodetrans/index/inicio', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
 
+/**
+ * sesion de los rodamiento
+ */
 $map->get('rodamientos', '/web-coodetrans/rodamiento/add', [
     'controller' => 'App\Controllers\RodamientoController',
     'action' => 'getAddRodamientoAction'
@@ -60,17 +66,19 @@ $map->get('listaRodamiento', '/web-coodetrans/rodamiento/lista', [
     'action' => 'getListRodamientoAction'
 ]);
 
-
-$map->get('listaVehiculos', '/web-coodetrans/vehiculos/lista', [
-    'controller' => 'App\Controllers\VehiculoController',
-    'action' => 'getListVehiculoAction'
-]);
+/**
+ * sesion de los vehiculos
+ */
 
 $map->get('Vechicle', '/web-coodetrans/vehiculos/add', [
     'controller' => 'App\Controllers\VehiculoController',
     'action' => 'getAddVehiculoAction'
 ]);
 
+$map->get('listaVehiculos', '/web-coodetrans/vehiculos/lista', [
+    'controller' => 'App\Controllers\VehiculoController',
+    'action' => 'getListVehiculoAction'
+]);
 
 $map->post('addVehicle', '/web-coodetrans/vehiculos/add', [
     'controller' => 'App\Controllers\VehiculoController',

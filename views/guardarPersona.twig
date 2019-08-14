@@ -1,0 +1,110 @@
+{% extends "layout.twig" %}
+  {% block comment %}
+      <section class="info" id="info">
+        <article class="departure">
+          <div class="date">
+            <h1 class="title__date">Fecha</h1>
+            <div class="info__date" id="info__date"></div>
+          </div>
+          <div class="time">
+            <h1 class="title__time">Hora</h1>
+            <div class="info__time" id="info__time"></div>
+          </div>
+        </article>
+      </section>
+      <section class="content">
+        <div class="user_add">
+          <div class="icon_title">
+            <i class="icon-user-plus icon-title "></i>
+            <h1 class="main_title">Personas</h1>
+          </div>
+          <div class="sub_title">
+            <h2 class="title_sub">Registrar persona</h2>
+          </div>
+          <div class="general_from ">
+            <h2 class="info_general">Informacion persona</h2>
+            <div class="form_general-content info_people">
+              <form
+                action="list_turn.html"
+                class="insert-user"
+                method="post"
+                accept-charset="utf-8"
+              >
+                <div class="register registro-persona">
+                  <div class="side__left">
+                    <label class="label-nombre" for="nombre"
+                      >Nombres: <input type="text" name="nombre" required
+                    /></label>
+
+                    <label class="label-apellido" for="apellido"
+                      >Apellidos: <input type="text" name="apellido" required
+                    /></label>
+
+                    <label for="tipo_documento"
+                      >Tipo documento:
+                      <select name="tipo_documento" required>
+                        <option value="">------</option>
+                        <option value="C.c">C.c</option>
+                        <option value="Nit">Nit</option>
+                        <option value="PEP">PEP</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                      </select></label
+                    >
+                    <label for="cedula"
+                      >Numero cedula: <input type="text" name="cedula" required
+                    /></label>
+                  </div>
+                  <div class="side__rigth">
+                    <label for="direccion"
+                      >Direccion: <input type="text" name="direccion" required
+                    /></label>
+
+                    <label for="telefono"
+                      >telefono:
+                      <input type="tel" pattern="^[2][0-9]{8}$" name="telefono"
+                    /></label>
+
+                    <label for="celular"
+                      >Celular:
+                      <input
+                        type="tel"
+                        name="celular"
+                        required
+                        placeholder="Numero celular"
+                        title="Un elemplo de como insertar 310-050-0900"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    /></label>
+
+                    <label for="email"
+                      >Email:
+                      <input
+                        type="email"
+                        name="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    /></label>
+
+                    <label for="genero"
+                      >Genero:
+                      <select name="genero" required>
+                        <option value="">------</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                        <option value="Otro">Otro</option>
+                      </select></label
+                    >			
+                  </div>
+                  <div class="btn_form  div_btn btn-info">
+                    <input
+                      type="submit"
+                      class="btn-save btn-on"
+                      name=""
+                      value="Siguiente"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endblock %}

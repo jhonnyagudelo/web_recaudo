@@ -12,14 +12,14 @@ class VehiculoController extends BaseController
     {
         if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
-            $VehiculoValidation = V::key('numero', V::intVal()->notEmpty())
+            $VehiculoValidation = V::key('interno', V::intVal()->notEmpty())
                 ->key('placa', V::stringType()->notEmpty())
-                ->key('marca', V::intVal()->notEmpty()->validate(0))
-                ->key('modelo', V::intVal()->notEmpty()->validate(0))
-                ->key('capacidad', V::intVal()->notEmpty()->validate(0))
-                ->key('consumo', V::intVal()->notEmpty()->validate(0))
+                ->key('marca', V::intVal()->notEmpty())
+                ->key('modelo', V::intVal()->notEmpty())
+                ->key('capacidad', V::intVal()->notEmpty())
+                ->key('consumo', V::intVal()->notEmpty())
                 ->key('ruta', V::stringType()->notEmpty())
-                ->key('clase_bus', V::intVal()->notEmpty()->validate(0))
+                ->key('clase_bus', V::stringType()->notEmpty())
                 ->key('carroceria', V::stringType()->notEmpty());
 
             try {
@@ -27,13 +27,13 @@ class VehiculoController extends BaseController
                 $postData = $request->getParsedBody();
 
                 $vehiculo = new Vehiculo();
-                $vehiculo->numero_interno = $postData['numero'];
+                $vehiculo->numero_interno = $postData['interno'];
                 $vehiculo->placa_vehiculo = $postData['placa'];
                 $vehiculo->id_marca = $postData['marca'];
                 $vehiculo->modelo = $postData['modelo'];
+                $vehiculo->ruta = $postData['ruta'];
                 $vehiculo->capacidad = $postData['capacidad'];
                 $vehiculo->consumo_galon = $postData['consumo'];
-                $vehiculo->ruta = $postData['ruta'];
                 $vehiculo->clase_bus = $postData['clase_bus'];
                 $vehiculo->carroceria = $postData['carroceria'];
                 $vehiculo->save();
