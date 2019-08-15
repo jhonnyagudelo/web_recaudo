@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Rodamiento;
+use App\Models\{Rodamiento,Control,Vehiculo};
 use Respect\Validation\Validator as v;
 use Illuminate\Support\Facades\Request;
 // use Illuminate\Support\Facades\DB;
@@ -11,6 +11,9 @@ class RodamientoController extends BaseController
 {
     public function getAddRodamientoAction($request)
     {
+        $control = Control::all();
+        $vehiculo = Vehiculo::all();
+        
         if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
             $RodamientoValidator = v::key('vehiculo', v::intval()->notEmpty())
@@ -21,10 +24,10 @@ class RodamientoController extends BaseController
                 $RodamientoValidator->assert($postData);
                 $postData = $request->getParsedBody();
 
-                $rodamientos = new Rodamientos();
+                $rodamientos = new Rodamiento();
                 $rodamientos->numero_planilla = $postData['planilla'];
-                $rodamientos->despacho_id = $postData['control'];
-                $rodamientos->numero_interno = $postData['vehiculo'];
+                $rodamientos->control_id = $postData['control'];
+                $rodamientos->vehiculo_id = $postData['vehiculo'];
                 $rodamientos->save();
                 echo 'Guardado';
             } catch (\Exception $e) {
@@ -32,7 +35,10 @@ class RodamientoController extends BaseController
             }
         }
 
-        return $this->renderHTML('add_road.twig');
+        return $this->renderHTML('agregarRodamiento.twig', [
+            'controles' => $control,
+            'vehiculos' => $vehiculo
+        ]);
     }
 
 
@@ -41,9 +47,11 @@ class RodamientoController extends BaseController
     =============================================*/
     public function getListRodamientoAction()
     {
+        $vehiculo = Vehiculo::all();
         $rodamientos = Rodamiento::all();
-        return $this->renderHTML('list_road.twig', [
-            'rodamientos' => $rodamientos
-        ]);
+        return $this->renderHTML('listaRodamiento.twig', [
+            'rodamientos' => $rodamientos,
+            'vehiculos' => $vehiculo
+        ]); 
     }
 }

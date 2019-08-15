@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Vehiculo;
+use App\Models\{Vehiculo,Marca};
 use Respect\Validation\Validator as V;
 use Illuminate\Support\Facades\Request;
 
@@ -10,12 +10,13 @@ class VehiculoController extends BaseController
 {
     public function getAddVehiculoAction($request)
     {
+        $marcas = Marca::all();
         if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
-            $VehiculoValidation = V::key('interno', V::intVal()->notEmpty())
+            $VehiculoValidation = V::key('interno', V::intVal()->notEmpty()->Positive())
                 ->key('placa', V::stringType()->notEmpty())
                 ->key('marca', V::intVal()->notEmpty())
-                ->key('modelo', V::intVal()->notEmpty())
+                ->key('modelo', V::intVal()->notEmpty()->Positive())
                 ->key('capacidad', V::intVal()->notEmpty())
                 ->key('consumo', V::intVal()->notEmpty())
                 ->key('ruta', V::stringType()->notEmpty())
@@ -42,7 +43,9 @@ class VehiculoController extends BaseController
                 echo $e->getMessage();
             }
         }
-        return $this->renderHTML('ingreso_vehiculo.twig');
+        return $this->renderHTML('ingreso_vehiculo.twig', [
+            'marcas' => $marcas
+        ]);
     }
 
 /*=============================================
@@ -51,8 +54,10 @@ LISTAR VEHICULOS
     public function getListVehiculoAction()
     {
         $vehiculos = Vehiculo::all();
+
         return $this->renderHTML('list_vehicle.twig', [
             'vehiculos' => $vehiculos
+
         ]);
     }
 

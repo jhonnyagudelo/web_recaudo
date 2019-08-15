@@ -29,15 +29,26 @@
                 <h2 class="info_general">Informacion general</h2>
                 <div class="form_general-content from_road">
                     <form accept-charset="utf-8" action="/web-coodetrans/rodamiento/add" method="post">
-                        <label class="label-rodamiento" id="planilla">
+                        <label class="" id="planilla">
                             Planilla:
-                            <input class=" input-rodamiento" name="planilla" type="number" value=""></label>
-                        <label class="label-rodamiento">Control:
-                            <input class=" input-rodamiento" name="control" type="number" value="">
+                            <input class=" input-rodamiento" min="1" name="planilla" type="number" value=""></label>
+                        <label class="">Control:
+                            <select name="control" required>
+                                <option value="">Seleccione:</option>
+                                {% for control in controles %}
+                                    <option value={{control.control_id}}>{{control.nombre}}</option>
+                                {% endfor %}
+                            </select>
                         </label>
-                        <label class="label-rodamiento" required>
+                        <label class="">
                             Vehiculo:
-                            <input class=" input-rodamiento" name="vehiculo" type="number" value=""></label>
+                            <input list="vehiculo" name="vehiculo" required type="search">
+                            <datalist id="vehiculo">
+                                {% for vehiculo in vehiculos %}
+                                    <option value={{vehiculo.vehiculo_id}}>{{vehiculo.numero_interno}}</option>
+                                {% endfor %}
+                            </datalist>
+                        </label>
                         <div class="div_btn">
                             <input class="btn-save" name="" type="submit" value="Guardar">
                         </div>

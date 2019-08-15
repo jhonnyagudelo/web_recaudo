@@ -85,8 +85,39 @@ $map->post('addVehicle', '/web-coodetrans/vehiculos/add', [
     'action' => 'getAddVehiculoAction'
 ]);
 
+/**lista personas */
 
+$map->get('personas', '/web-coodetrans/persona/add', [
+    'controller' => 'App\Controllers\PersonasController',
+    'action' => 'getAddPersonasAction'
+]);
 
+$map->get('listPersonas', '/web-coodetrans/persona/lista', [
+    'controller' => 'App\Controllers\PersonasController',
+    'action' => 'getListPersonAction'
+]);
+
+$map->post('addPersona', '/web-coodetrans/persona/add', [
+    'controller' => 'App\Controllers\PersonasController',
+    'action' => 'getAddPersonasAction'
+]);
+
+/**Listar turnos */
+
+$map->get('turnos', '/web-coodetrans/turno/add', [
+    'controller' => 'App\Controllers\TurnoController',
+    'action' => 'getAddTurnoAction'
+]);
+
+$map->get('listTurnos', '/web-coodetrans/turno/lista', [
+    'controller' => 'App\Controllers\TurnoController',
+    'action' => 'getListTurnoAction'
+]);
+
+$map->post('addTurnos', '/web-coodetrans/turno/add', [
+    'controller' => 'App\Controllers\TurnoController',
+    'action' => 'getAddTurnoAction'
+]);
 
 
 $matcher = $routerContainer->getMatcher();

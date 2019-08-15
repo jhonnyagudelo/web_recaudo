@@ -25,40 +25,29 @@
             <div class="sub_title">
                 <h2 class="title_sub">Registrar vehiculo</h2>
             </div>
-            <div>
+            <div class="general_from">
                 <h2 class="info_general">Informacion general</h2>
                 <div class="form_general-content ">
                     <form accept-charset="utf-8" action="/web-coodetrans/vehiculos/add" method="post">
                         <div class="register">
                             <div class="side__left">
                                 <label>Numero interno:
-                                    <input name="interno" required type="number"></label>
+                                    <input name="interno" required min="1" type="number"></label>
                                 <label>Placa:
-                                    <input name="placa" required pattern="^[A-Z0-9]{5}$"  type="text"></label>
+                                    <input name="placa" pattern="^[AZ-09]{7}$" required type="text"></label>
                                 <label class="">Marcar:
                                     <select class="" name="marca" required>
-                                        <option value="">-------</option>
-                                        <option value="1">Agrale</option>
-                                        <option value="Chev">Chev</option>
-                                        <option value="Ford">Ford</option>
-                                        <option value="Stud">Stud</option>
-                                        <option value="Daihat">Daihat</option>
-                                        <option value="Merc">Merc</option>
-                                        <option value="Hino">Hino</option>
-                                        <option value="Non_plus_ultra">Non plus ultra</option>
-                                        <option value="Nissan">Nissan</option>
-                                        <option value="Novie">Novie</option>
-                                        <option value="Iveco">Iveco</option>
-                                        <option value="Volks">Volks</option>
-                                        <option value="Tl">Tl</option>
-                                        <option value="Jac">Jac</option>
+                                        <option value="">Seleccione:</option>
+                                        {% for marca in marcas  %}
+                                            <option value={{marca.id_marca}}>{{marca.nombre}}</option>
+                                        {% endfor %}
                                     </select>
                                 </label>
                                 <label>Modelo:
-                                    <input name="modelo" required type="number"></label>
+                                    <input name="modelo" required min="1" type="number"></label>
                                 <label class="">Ruta:
                                     <select class="" name="ruta" required>
-                                        <option value="">-------</option>
+                                        <option value="">Seleccione:</option>
                                         <option value="Pradera">Pradera</option>
                                         <option value="Candelaria">Candelaria</option>
                                         <option value="Buga">Buga</option>
@@ -70,24 +59,24 @@
                             </div>
                             <div class="side__right">
                                 <label>Capacidad:
-                                    <input name="capacidad" required type="number"></label>
+                                    <input name="capacidad" min="1" required type="number"></label>
                                 <label class="">Carroceria:
                                     <select class="" name="carroceria" required>
-                                        <option value="">-------</option>
+                                        <option value="">Seleccione:</option>
                                         <option value="Cerrado">Cerrado</option>
                                         <option value="Abierto">Abierto</option>
                                         <option value="Escalera">Escalera</option>
                                     </select>
                                     <label class="">Clase buseta:
                                         <select class="" name="clase_bus" required>
-                                            <option value="">-------</option>
+                                            <option value="">Seleccione:</option>
                                             <option value="Buseta">Buseta</option>
                                             <option value="Bus">Bus</option>
                                             <option value="Microbus">Microbus</option>
                                             <option value="BusetaNPR">BusetaNPR</option>
                                         </select>
                                         <label>Consumo:
-                                            <input name="consumo" required placeholder="consumo por galon" type="number"></label>
+                                            <input name="consumo" min="1" placeholder="consumo por galon" required type="number"></label>
                                     </div>
                                     <div class="btn_form">
                                         <input class="btn-save" name="" type="submit" value="Guardar">

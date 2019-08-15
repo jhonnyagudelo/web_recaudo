@@ -1,0 +1,68 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <section class="info" id="info">
+        <article class="departure">
+            <div class="date">
+                <h1 class="title__date">Fecha</h1>
+                <div class="info__date" id="info__date"></div>
+            </div>
+            <div class="time">
+                <h1 class="title__time">Hora</h1>
+                <div class="info__time" id="info__time"></div>
+            </div>
+        </article>
+    </section>
+    <section class="content">
+        <div class="turns_add">
+            <div class="icon_title">
+                <i class="icon-road icon-title "></i>
+                <h1 class="main_title">Turnos</h1>
+            </div>
+            <div class="sub_title">
+                <h2 class="title_sub">Registrar turnos</h2>
+            </div>
+            <div class="general_from ">
+                <h2 class="info_general">Informacion turno</h2>
+                <div class="form_general-content info_turn">
+                    <form accept-charset="utf-8" action="/web-coodetrans/turno/add" class="insert-turn" method="post">
+                        <div class="register">
+                            <div class="side__left">
+                                <label class="general_label label-ruta" id="road">
+                                    Ruta:
+                                    <select class="select_ruta" id="list_vehi" name="ruta" required>
+                                        <option value="">--Seleccione destino--</option>
+                                        {% for ruta in rutas %}
+                                            <option value={{ruta.id_ruta}}>{{ruta.nombre}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </label>
+                                <label class="general_label label-vehiculo">
+                                    Vehiculo:
+                                    <select class="select_vehi" id="list_vehi" name="vehiculo" required>
+                                        <option value="">Seleccione:</option>
+                                        {% for vehiculo in vehiculos %}
+                                            <option value={{vehiculo.vehiculo_id}}>{{vehiculo.numero_interno}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="side__right">
+                                <label class="check" class="general_label label-num_turno" for="num_turno">Turno:
+                                    <input class="input-turn" max="14" min="1" name="num_turno" required="" type="number"></label>
+                                <label class="check" class="general_label label-salida" for="salida">Salida:
+                                    <input class="time" name="salida" required type="time"></label>
+                                <label class="general_label label-mensaje">Novedad:
+                                    <textarea name="novedad"></textarea>
+                                </label>
+                            </div>
+                            <div class="div_btn btn_form ">
+                                <input class="btn-save" name="" type="submit" value="Guardar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

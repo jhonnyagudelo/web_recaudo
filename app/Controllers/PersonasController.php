@@ -13,8 +13,7 @@ class PersonasController extends BaseController
      */
     public function getAddPersonasAction($request)
     {
-        if (!empty($request->getMethod() == 'POST'))
-        {
+        if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
             $PersonaValidator = v::key('numero_documento', v::intVal()->notEmpty())
                 ->key('nombre', v::stringType()->notEmpty())
@@ -25,34 +24,35 @@ class PersonasController extends BaseController
                 ->key('celular', v::intVal()->notEmpty())
                 ->key('email', v::stringType()->notEmpty())
                 ->key('genero', v::stringType()->notEmpty());
-         try {
-             
-            $PersonaValidator->assert($postData);
-            $postData = $request->getParsedBody();
+            try {
 
-            $persona = new Persona();
-            $persona->numero_documento = $postData['numero_documento'];
-            $persona->nombre = $postData['nombre'];
-            $persona->apellido = $postData['apellido'];
-            $persona->tipo_documento = $postData['tipo_documento'];
-            $persona->direccion = $postData['direccion'];
-            $persona->telefono = $postData['telefono'];
-            $persona->celular = $postData['celular'];
-            $persona->email = $postData['email'];
-            $persona->genero = $postData['genero'];
-        
-        } catch (\Exception $e) {
-           echo $e->getMessage();
+                $PersonaValidator->assert($postData);
+                $postData = $request->getParsedBody();
+
+                $persona = new Persona();
+                $persona->numero_documento = $postData['numero_documento'];
+                $persona->nombre = $postData['nombre'];
+                $persona->apellido = $postData['apellido'];
+                $persona->tipo_documento = $postData['tipo_documento'];
+                $persona->direccion = $postData['direccion'];
+                $persona->telefono = $postData['telefono'];
+                $persona->celular = $postData['celular'];
+                $persona->email = $postData['email'];
+                $persona->genero = $postData['genero'];
+            } catch (\Exception $e) {
+                echo $e->getMessage();
+            }
         }
-    }
 
-        return $this->renderHTML('addPerson.twig');
+        return $this->renderHTML('guardarPersona.twig',[
+
+        ]);
     }
 
     public function getListPersonAction()
     {
         $personas = Persona::all();
-        return $this->renderHTML('listPErson.twig',[
+        return $this->renderHTML('listPErson.twig', [
             'personas' => $persona
         ]);
     }
