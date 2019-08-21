@@ -20,7 +20,7 @@ class PersonasController extends BaseController
                 ->key('apellido', v::stringType()->notEmpty())
                 ->key('tipo_documento', v::stringType()->notEmpty())
                 ->key('direccion', v::stringType()->notEmpty())
-                ->key('telefono', v::intVal()->notEmpty())
+                ->key('telefono', v::intVal());
                 ->key('celular', v::intVal()->notEmpty())
                 ->key('email', v::stringType()->notEmpty())
                 ->key('genero', v::stringType()->notEmpty());

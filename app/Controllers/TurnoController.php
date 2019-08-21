@@ -1,11 +1,12 @@
 <?php
+
 namespace App\Controllers;
 
-use App\Models\{Turno,Ruta,Vehiculo};
+use App\Models\{Turno, Ruta, Vehiculo};
 use Respect\Validation\Validator as v;
 use Illuminate\Support\Facades\Request;
 
-Class  TurnoController extends BaseController
+class  TurnoController extends BaseController
 {
 
     public function getAddTurnoAction($request)
@@ -13,13 +14,13 @@ Class  TurnoController extends BaseController
         $ruta = Ruta::all();
         $vehiculos = Vehiculo::all();
 
-        if(!empty($request->getMethod() == 'POST')){
+        if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
             $TurnoValidator = v::key('ruta', v::intval()->notEmpty())
                 ->key('vehiculo', v::intval()->notEmtpy())
                 ->key('num_turno', v::intval()->notEmtpy()->Positive()->min(1, true)->validate(1)->max(14, true)->validate(14))
                 ->key('novedad', v::stringType()->notEmpty());
-            try{
+            try {
                 $TurnoValidator->assert($postData);
                 $postData = $request->getParsedBody();
 
@@ -28,10 +29,9 @@ Class  TurnoController extends BaseController
                 $turnos->vehiculo = $postData['vehiculo'];
                 $turnos->numero_turno = $postData['num_turno'];
                 $turnos->novedad = $postData['novedad'];
-                $turnos->save(); 
+                $turnos->save();
                 echo 'Guardado';
-
-            }catch (\Exception $e){
+            } catch (\Exception $e) {
                 echo $e->getMessage();
             }
         }
@@ -44,12 +44,11 @@ Class  TurnoController extends BaseController
         LISTAR TURNOS
      ===============================*/
 
-        public function getListTurnoAction()
-        {
-            $turnos = Turno::all();
-            return $this->renderHTML('List_turnos.twig',[
-                'turnos'=>$turnos
-            ]);
-        }
-
-} 
+    public function getListTurnoAction()
+    {
+        $turnos = Turno::all();
+        return $this->renderHTML('List_turnos.twig', [
+            'turnos' => $turnos
+        ]);
+    }
+}

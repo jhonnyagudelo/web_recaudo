@@ -119,6 +119,22 @@ $map->post('addTurnos', '/web-coodetrans/turno/add', [
     'action' => 'getAddTurnoAction'
 ]);
 
+/**Listar rutas */
+
+$map->get('Ruta', '/web-coodetrans/ruta/add', [
+    'controller' => 'App\Controllers\RutasController',
+    'action' => 'getAddRutasAction'
+]);
+
+$map->get('listRuta', '/web-coodetrans/turno/lista', [
+    'controller' => 'App\Controllers\RutasController',
+    'action' => 'getListTurnoAction'
+]);
+
+$map->post('addRuta', '/web-coodetrans/turno/add', [
+    'controller' => 'App\Controllers\RutasController',
+    'action' => 'getAddRutasAction'
+]);
 
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);

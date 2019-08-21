@@ -1,0 +1,96 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <section class="info" id="info">
+        <article class="departure">
+            <div class="date">
+                <h1 class="title__date">Fecha</h1>
+                <div class="info__date" id="info__date"></div>
+            </div>
+            <div class="time">
+                <h1 class="title__time">Hora</h1>
+                <div class="info__time" id="info__time"></div>
+            </div>
+        </article>
+    </section>
+    <section class="content">
+        <div class="agregarRuta">
+            <div class="icon_title">
+                <i class="icon-user-plus icon-title "></i>
+                <h1 class="main_title">Rutas</h1>
+            </div>
+            <div class="sub_title">
+                <h2 class="title_sub">Registrar ruta</h2>
+            </div>
+            <div class="general_from ">
+                <h2 class="info_general">Informacion ruta</h2>
+                <div class="form_general-content">
+                    <form accept-charset="utf-8" action="" class="insertarRuta" method="post">
+                        <div class="register registro-ruta">
+                            <div class="side__left">
+                                <label class="label-nombre" for="nombre">Nombre:
+                                    <input name="nombre" required type="text"/></label>
+
+                                <label for="ayudante">Bono ayudante:
+                                    <select name="ayudante">
+                                        <option value="">Seleccione:</option>
+                                        {% for ayudante in ayudas %}
+                                            <option value={{ayudante.id_ayuda}}>{{ayudante.nombre_ruta}}
+                                                {{ayudante.precio}}
+                                            {% endfor %}
+                                        </select>
+                                    </label>
+                                    <label for="tarifa">Tarifa positivo:
+                                        <select name="tarifa">
+                                            <option value="">Seleccione:</option>
+                                            {% for tarifa in tarifas %}
+                                                <option value={{tarifa.tarifa_positivo_id}}>{{tarifa.nombre_ruta}}
+                                                    |
+                                                    {{tarifa.valor_ruta}}%
+                                                {% endfor %}
+                                            </select>
+                                        </label>
+                                        <label for="salario">Salario:
+                                            <select name="salario" required>
+                                                <option value="">Seleccione:</option>
+                                                {% for ayudante in ayudas %}
+                                                    <option value={{ayudante.id_ayuda}}>{{ayudante.nombre_ruta}}
+                                                        {{ayudante.precio}}
+                                                    {% endfor %}
+                                                </select>
+                                            </label>
+                                            <label for="descuento">Descuento
+                                                <select name="descuento">
+                                                    <option value="">Seleccione:</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="side__rigth">
+                                            <label for="tasa">Tasa
+                                                <select name="tasa">
+                                                    <option value="">Seleccione:</option>
+                                                </select>
+                                            </label>
+                                            <label>Kilometos:
+                                                <input max="100" min="1" name="kilometos" required type="number"/></label>
+                                            <label for="combustible">Combustible
+                                                <select name="combustible" required>
+                                                    <option value="">Seleccione:</option>
+                                                </select>
+                                            </label>
+                                            <label for="peaje">Peaje
+                                                <select name="peaje">
+                                                    <option value="">Seleccione:</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="btn_form  div_btn btn-info">
+                                            <input class="btn-save btn-on" name="" type="submit" value="Siguiente"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endblock %}

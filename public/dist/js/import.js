@@ -3,10 +3,10 @@ var url = "http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7
 
 
 
-var id_viaje = "16994844 ";
+var id_viaje = 17177110;
 
 $.ajax({
-  url: `http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=${id_viaje}`,
+  url: `http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=17177110`,
   context: document.body
 }).done(function(e) {
 	if(e.viajes) {
@@ -37,8 +37,8 @@ $.ajax({
 
 
 
-var f_start = "2019-08-04 05:00:00";
-var f_end = "2019-08-04 20:00:00";
+var f_start = "2019-08-16 01:00:00";
+var f_end = "2019-08-16 20:00:00";
 $.ajax({
   url: `http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=${f_start}&fin=${f_end}`,
   context: document.body
@@ -55,7 +55,7 @@ $.ajax({
 		e.viajes.forEach(function(_item) {
 			var li = document.createElement("li");
 			var span = document.createElement("span");
-			span.innerHTML = "Placa: " + _item.placa + " | numero_interno: " + _item.nro_movil + " | viaje: " + _item.id_viaje  ;
+			span.innerHTML = "Placa: " + _item.placa + " | numero_interno: " + _item.nro_movil + " | viaje: " + _item.id_viaje + " | fecha: " + _item.fecha_inicio ;
 
 			li.appendChild(span);
 			ul.appendChild(li);

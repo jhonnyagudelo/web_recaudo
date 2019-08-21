@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Core;
+namespace App\Service;
 use App\Models\Rodamiento;
 use Illuminate\Support\Facades\DB;
 
-class RodamientoServices
+class RodamientoService
 {
     public function addTread($despacho, $interno, $planilla)
     {

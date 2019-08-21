@@ -58,7 +58,7 @@
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-  margin-left: 0;
+  margin-left: 0px;
   background-color: red;
 }
 
