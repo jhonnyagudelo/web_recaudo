@@ -8,4 +8,12 @@ class Rodamiento extends Model {
     const CREATED_AT = 'create_at';
     const UPDATED_AT = 'update_at';
 
+    public function control() {
+        return $this->belongsTo(Control::class, 'control_id' );
+    }
+
+    public function num_vehiculo() {
+        return $this->belongsTo(Vehiculo::class, 'vehiculo_id');
+    }
+
 }

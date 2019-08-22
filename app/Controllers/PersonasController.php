@@ -20,38 +20,40 @@ class PersonasController extends BaseController
                 ->key('apellido', v::stringType()->notEmpty())
                 ->key('tipo_documento', v::stringType()->notEmpty())
                 ->key('direccion', v::stringType()->notEmpty())
-                ->key('telefono', v::intVal());
-                ->key('celular', v::intVal()->notEmpty())
-                ->key('email', v::stringType()->notEmpty())
+                ->key('telefono', v::stringType())
+                ->key('celular', v::stringType()->notEmpty())
+                ->key('email', v::stringType())
                 ->key('genero', v::stringType()->notEmpty());
             try {
 
                 $PersonaValidator->assert($postData);
                 $postData = $request->getParsedBody();
-
-                $persona = new Persona();
-                $persona->numero_documento = $postData['numero_documento'];
-                $persona->nombre = $postData['nombre'];
-                $persona->apellido = $postData['apellido'];
-                $persona->tipo_documento = $postData['tipo_documento'];
-                $persona->direccion = $postData['direccion'];
-                $persona->telefono = $postData['telefono'];
-                $persona->celular = $postData['celular'];
-                $persona->email = $postData['email'];
-                $persona->genero = $postData['genero'];
+                if (Persona::where('numero_documento', $postData['numero_documento'])->exists()) {
+                    echo '<p>El usuario con este documento ya existe !</p>';
+                } else {
+                    $persona = new Persona();
+                    $persona->numero_documento = $postData['numero_documento'];
+                    $persona->nombre = $postData['nombre'];
+                    $persona->apellido = $postData['apellido'];
+                    $persona->tipo_documento = $postData['tipo_documento'];
+                    $persona->direccion = $postData['direccion'];
+                    $persona->telefono = $postData['telefono'];
+                    $persona->celular = $postData['celular'];
+                    $persona->email = $postData['email'];
+                    $persona->genero = $postData['genero'];
+                    $persona->save();
+                }
             } catch (\Exception $e) {
                 echo $e->getMessage();
             }
         }
 
-        return $this->renderHTML('guardarPersona.twig',[
-
-        ]);
+        return $this->renderHTML('guardarPersona.twig', []);
     }
 
     public function getListPersonAction()
     {
-        $personas = Persona::all();
+        $persona = Persona::all();
         return $this->renderHTML('listPErson.twig', [
             'personas' => $persona
         ]);

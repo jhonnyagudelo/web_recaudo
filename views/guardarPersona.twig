@@ -24,7 +24,7 @@
             <div class="general_from ">
                 <h2 class="info_general">Informacion persona</h2>
                 <div class="form_general-content info_people">
-                    <form accept-charset="utf-8" action="list_turn.html" class="insert-user" method="post">
+                    <form accept-charset="utf-8" action="/web-coodetrans/persona/add" class="insert-user" method="post">
                         <div class="register registro-persona">
                             <div class="side__left">
                                 <label class="label-nombre" for="nombre">Nombres:
@@ -42,8 +42,8 @@
                                         <option value="Pasaporte">Pasaporte</option>
                                     </select>
                                 </label>
-                                <label for="cedula">Numero cedula:
-                                    <input name="cedula" required type="text"/></label>
+                                <label for="cedula">Numero Documento:
+                                    <input name="numero_documento" required type="text"/></label>
                             </div>
                             <div class="side__rigth">
                                 <label for="direccion">Direccion:
@@ -56,7 +56,7 @@
                                     <input name="celular" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Numero celular" required title="Un elemplo de como insertar 310-050-0900" type="tel"/></label>
 
                                 <label for="email">Email:
-                                    <input name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email"/></label>
+                                    <input name="email" type="email"/></label>
 
                                 <label for="genero">Genero:
                                     <select name="genero" required>

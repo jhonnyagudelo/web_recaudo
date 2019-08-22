@@ -4,8 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Persona extends Model {
     protected $table = 'personas';
-    protected $primaryKey = 'numero_documento';
-    public $incrementing = false;
+    protected $primaryKey = 'persona_id';
     const CREATED_AT = 'create_at';
     const UPDATED_AT = 'update_at';
 }

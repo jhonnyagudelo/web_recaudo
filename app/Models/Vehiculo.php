@@ -8,6 +8,13 @@ class Vehiculo extends Model {
     protected $primaryKey = 'vehiculo_id';
     const CREATED_AT = 'create_at';
     const UPDATED_AT = 'update_at';
+
+    public function marca()
+    {
+        return $this->belongsTo(Marca::class, 'id_marca');
+    }
+
+
 }
 
 ?>

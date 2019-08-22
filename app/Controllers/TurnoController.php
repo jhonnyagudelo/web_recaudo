@@ -47,7 +47,7 @@ class  TurnoController extends BaseController
     public function getListTurnoAction()
     {
         $turnos = Turno::all();
-        return $this->renderHTML('List_turnos.twig', [
+        return $this->renderHTML('List_turnoCosta.twig', [
             'turnos' => $turnos
         ]);
     }

@@ -34,28 +34,34 @@
                     <!-- cabecera -->
                     <tr>
                         <!-- fila -->
-                        <th>Numero planilla</th>
-                        <th>Numero interno</th>
-                        <th>despacho</th>
-                        <th>Activo</th>
-                        <th>Informacion</th>
+                        <th>Ruta</th>
+                        <th>Vehiculo</th>
+                        <th>Turno</th>
+                        <th>Salida</th>
+                        <th>novedad</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {% for rodamiento in rodamientos %}
+                {% for turno in turnos %}
+                    <tbody>
                         <!-- cuerpo -->
                         <tr>
-                            <td>{{rodamiento.numero_planilla}}</td>
-                            <td>{{rodamiento.num_vehiculo.numero_interno}}</td>
-                            <td>{{rodamiento.control.nombre}}</td>
+                            <td>{{turno.ruta.nombre}}</td>
+                            <td>{{turno.vehiculo}}</td>
+                            <td>{{turno.numero_turno}}</td>
+                            <td>{{turno.hora_salida}}</td>
+                            <td>{{turno.novedad}}</td>
                             <td>
-                                <div class=" onoffswitch__form onoffswitch">
-                                    <input checked class="onoffswitch-checkbox" id="myonoffswitch" name="onoffswitch" type="checkbox">
-                                    <label class="onoffswitch-label" for="myonoffswitch">
-                                        <span class="onoffswitch-inner"></span>
-                                        <span class="onoffswitch-switch"></span>
-                                    </label>
-                                </div>
+                                <form accept-charset="utf-8" action="listVehicle_submit" class="onoffswitch__form" method="get">
+                                    <div class="onoffswitch">
+                                        <input checked class="onoffswitch-checkbox" id="myonoffswitch" name="onoffswitch" type="checkbox">
+                                        <label class="onoffswitch-label" for="myonoffswitch">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </form>
                             </td>
                             <td>
                                 <div class="acciones_icon">
@@ -88,8 +94,8 @@
             </ul>
         </div>
     </section>
-    <section class="remove_vehicle">
-        <div class="form_modal">
+    <section class="form_modal">
+        <div class="modal">
             <div class="remove__vehicle" id="modal-remove">
                 <form accept-charset="utfclass=-8" action="listVehicle.html" class="form-remove" method="get">
                     <p class="modal__vehicle-parag">

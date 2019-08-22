@@ -53,44 +53,65 @@
                                         <label for="salario">Salario:
                                             <select name="salario" required>
                                                 <option value="">Seleccione:</option>
-                                                {% for ayudante in ayudas %}
-                                                    <option value={{ayudante.id_ayuda}}>{{ayudante.nombre_ruta}}
-                                                        {{ayudante.precio}}
+                                                {% for salario in salarios %}
+                                                    <option value={{salario.salario_id}}>{{salario.nombre}}
+                                                        |
+                                                        {{salario.valor_salario}}
                                                     {% endfor %}
                                                 </select>
                                             </label>
                                             <label for="descuento">Descuento
                                                 <select name="descuento">
                                                     <option value="">Seleccione:</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="side__rigth">
-                                            <label for="tasa">Tasa
-                                                <select name="tasa">
-                                                    <option value="">Seleccione:</option>
-                                                </select>
-                                            </label>
-                                            <label>Kilometos:
-                                                <input max="100" min="1" name="kilometos" required type="number"/></label>
-                                            <label for="combustible">Combustible
-                                                <select name="combustible" required>
-                                                    <option value="">Seleccione:</option>
-                                                </select>
-                                            </label>
-                                            <label for="peaje">Peaje
-                                                <select name="peaje">
-                                                    <option value="">Seleccione:</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="btn_form  div_btn btn-info">
-                                            <input class="btn-save btn-on" name="" type="submit" value="Siguiente"/>
+                                                    {% for descuento in descuentos %}
+                                                        <option value={{descuento.descuento_id}}>{{descuento.nombre_descuento}}
+                                                            |
+                                                            {{descuento.precio_unico}}
+                                                        {% endfor %}
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="side__rigth">
+                                                <label for="tasa">Tasa
+                                                    <select name="tasa">
+                                                        <option value="">Seleccione:</option>
+                                                        {% for tasa in tasas %}
+                                                            <option value={{tasa.tasa_id}}>{{tasa.nombre}}
+                                                                |
+                                                                {{tasa.precio}}
+                                                            {% endfor %}
+                                                        </select>
+                                                    </label>
+                                                    <label>Kilometos:
+                                                        <input max="100" min="1" name="kilometos" required type="number"/></label>
+                                                    <label for="combustible">Combustible
+                                                        <select name="combustible" required>
+                                                            <option value="">Seleccione:</option>
+                                                            {% for combustible in combustibles %}
+                                                                <option value={{combustible.combustible_id}}>{{combustible.nombre}}
+                                                                    |
+                                                                    {{combustible.precio_galon}}
+                                                                {% endfor %}
+                                                            </select>
+                                                        </label>
+                                                        <label for="peaje">Peaje
+                                                            <select name="peaje">
+                                                                <option value="">Seleccione:</option>
+                                                                {% for peaje in peajes %}
+                                                                    <option value={{peaje.peaje_id}}>{{peaje.nombre_peaje}}
+                                                                        |
+                                                                        ${{peaje.precio_peaje}}
+                                                                    {% endfor %}
+                                                                </select>
+                                                            </label>
+                                                        </div>
+                                                        <div class="btn_form  div_btn btn-info">
+                                                            <input class="btn-save btn-on" name="" type="submit" value="Siguiente"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            {% endblock %}
+                                </section>
+                            {% endblock %}

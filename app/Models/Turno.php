@@ -7,6 +7,15 @@ class Turno extends Model {
     protected $primaryKey = 'id_turno';
     const CREATED_AT = 'create_at';
     const UPDATE_AT = 'update_at';
+
+    public function ruta()
+    {
+        return $this->belongsTo(Ruta::class, 'id_ruta');
+    }
+
+
+
+
 }
 
 ?>

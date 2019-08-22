@@ -43,7 +43,7 @@ $map = $routerContainer->getMap();
 /**
  * sesion de los index
  */
-$map->get('index', '/web-coodetrans/index/inicio', [
+$map->get('index', '/web-coodetrans/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
@@ -70,12 +70,12 @@ $map->get('listaRodamiento', '/web-coodetrans/rodamiento/lista', [
  * sesion de los vehiculos
  */
 
-$map->get('Vechicle', '/web-coodetrans/vehiculos/add', [
+$map->get('Vechicle', '/web-coodetrans/vehiculo/add', [
     'controller' => 'App\Controllers\VehiculoController',
     'action' => 'getAddVehiculoAction'
 ]);
 
-$map->get('listaVehiculos', '/web-coodetrans/vehiculos/lista', [
+$map->get('listaVehiculos', '/web-coodetrans/vehiculo/lista', [
     'controller' => 'App\Controllers\VehiculoController',
     'action' => 'getListVehiculoAction'
 ]);
