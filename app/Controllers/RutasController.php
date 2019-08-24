@@ -44,6 +44,8 @@ class RutasController extends BaseController
                 $rutas->kilometros = $postData['kilometros'];
                 $rutas->combustible_id = $postData['combustible'];
                 $rutas->peaje_id = $postData['peaje'];
+                $rutas->save();
+                echo 'Guardado';
             }catch (\Exeption $e){
                 echo $e->getMessage();
             }     
@@ -63,7 +65,7 @@ class RutasController extends BaseController
     {
         $rutas = Ruta::all();
         return $this->renderHTML('listaRutas.twig', [
-            'rutas' => $rutas,
+            'rutas' => $rutas
         ]);
     }
 }

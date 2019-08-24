@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     protected $table = 'usuarios';
-    protected $primaryKey = 'id_usuario';
-    const CREATED_AT = 'create_at';
-    const UPDATED_AT = 'update_at';
+    protected $primaryKey = 'usuario_id';
+    
+    public function getTipoArea()
+    {
+        return $this->belongsTo(Tipo_area::class, 'tipo_id');
+    }
 }
+
 

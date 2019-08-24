@@ -43,6 +43,7 @@ class PersonasController extends BaseController
                     $persona->genero = $postData['genero'];
                     $persona->save();
                 }
+                echo 'Guardado';
             } catch (\Exception $e) {
                 echo $e->getMessage();
             }

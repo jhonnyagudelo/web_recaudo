@@ -1,5 +1,5 @@
 /*animation*/
-@keyframes animationIn{
+@keyframes modalIn{
   0% {
     transform: translateY(-3000px);
   }
@@ -17,7 +17,7 @@
   }
 }
 
-		@keyframes animationOut{
+		@keyframes modalOut{
   0% {
     transform: translateY(5px);
   }

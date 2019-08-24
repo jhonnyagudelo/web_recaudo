@@ -3,6 +3,7 @@
 .container__login	{
 	display: flex;
 	height: 100vh;
+	/* background-color: var(--principalColor); */
 	background-color: var(--principalColor);
 	overflow: hidden;
 	position: relative;

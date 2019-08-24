@@ -28,7 +28,7 @@
             <div>
                 <h2 class="info_general">Informacion general</h2>
                 <div class="form_general-content from_road">
-                    <form accept-charset="utf-8" action="/web-coodetrans/rodamiento/add" method="post">
+                    <form accept-charset="utf-8" action="/web-coodetrans/rodamiento/add" method="post" enctype="multipart/form-data" >
                         <label class="" id="planilla">
                             Planilla:
                             <input class=" input-rodamiento" min="1" name="planilla" type="number" value=""></label>
@@ -49,6 +49,9 @@
                                 {% endfor %}
                             </datalist>
                         </label>
+                            <label>Recibo
+                                <input class = "imgRecibo" name="imagen" type="file"></input>
+                            </label>
                         <div class="div_btn">
                             <input class="btn-save" name="" type="submit" value="Guardar">
                         </div>

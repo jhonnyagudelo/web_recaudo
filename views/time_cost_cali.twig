@@ -1,0 +1,122 @@
+{% extends "layout.twig" %}
+{% block content %}
+    <section class="info" id="info">
+        <article class="departure">
+            <div class="location">
+                <h1 class="title__control">Control</h1>
+            </div>
+            <div class="date">
+                <h1 class="title__date">Fecha</h1>
+                <div class="info__date" id="info__date"></div>
+            </div>
+            <div class="time">
+                <h1 class="title__time">Hora</h1>
+                <div class="info__time" id="info__time"></div>
+            </div>
+        </article>
+    </section>
+    <section class="content">
+        <div class="add_time">
+            <form accept-charset="utf-8" action="time_cali_cost_submit" class="form_time" method="get">
+                <div class="horario">
+                    <label for="num_turno">Numero turno:</label>
+                    <input name="num_turno" required type="number">
+                    <label for="label_vehi">Vehiculo:</label>
+                    <select class="select_vehi" id="list_vehi" name="label_vehi">
+                        <option value="8046">Seleccione:</option>
+                    </select>
+                </div>
+                <div class="oneRow">
+                    <label for="time_mio">Reloj ginebra:
+                        <input max="23:00" min="03:00" name="time_mio" type="time" value="03:00">
+                    </label>
+                    <label for="time_42-48">EDS viña:
+                        <input max="23:00" min="03:00" name="time_42-48" type="time" value="03:00">
+                    </label>
+                    <label for="time_reforma">Control cerrito:
+                        <input max="23:00" min="03:00" name="time_reforma" type="time" value="03:00">
+                    </label>
+                    <label for="time_reloj">Reforma:
+                        <input max="23:00" min="03:00" name="time_reloj" type="time" value="03:00">
+                    </label>
+                    <label for="observacion">Observación:
+                        <input name="observacion" type="text">
+                    </label>
+                </div>
+                <div class="form_button save_button">
+                    <button class="btn-save" type="submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+        <article class="info__content">
+            <table
+                class="info__frame">
+                <!-- tabla -->
+                <thead>
+                    <!-- cabecera -->
+
+                    <tr>
+                        <!-- fila -->
+                        <th>Salida</th>
+                        <!-- celda cabecera -->
+                        <th>Num turno</th>
+                        <!-- celda cabecera -->
+                        <th>Vehículo</th>
+                        <th>{{tiempos.nombre_marcada}}</th>
+                        <th>Caida</th>
+                        <th>{{tiempos.nombre_marcada}}</th>
+                        <th>Caida</th>
+                        <th>Control cerrito</th>
+                        <th>Caida</th>
+                        <th>Reforma</th>
+                        <th>Caida</th>
+                        <th>Observación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tiempo in tiempos %}
+                        <tr>
+                            <td>{{tiempo.turno.hora_salida}}</td>
+                            <td>{{tiempo.numero_turno}}</td>
+                            <td>{{tiempo.num_vehiculo}}</td>
+                            <td>{{tiempo.nombre_marcada}}</td>
+                            <td>{{tiempo.tiempo_max}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{tiempo.observacion}}</td>
+                            <td class="delite-ico">
+                                <div class="acciones_icon ">
+                                    <i class="edit__bus icon-pencil" id=""></i>
+                                    <i class="delete__bus icon-bin" id="delete__bus"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </article>
+        <div class="dataTable_paginate">
+            <ul class="pagination">
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">Anterior</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">1</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">2</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">3</a>
+                </li>
+                <li class="paginate_button page-item">
+                    <a class="page_link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

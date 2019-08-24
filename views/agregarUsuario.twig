@@ -1,0 +1,66 @@
+{% extends "layout.twig" %}
+{% block content %}
+    <section class="info" id="info">
+        <article class="departure">
+            <div class="date">
+                <h1 class="title__date">Fecha</h1>
+                <div class="info__date" id="info__date"></div>
+            </div>
+            <div class="time">
+                <h1 class="title__time">Hora</h1>
+                <div class="info__time" id="info__time"></div>
+            </div>
+        </article>
+    </section>
+    <section class="content">
+        <div class="user_add">
+            <div class="icon_title">
+                <i class="icon-user-plus icon-title "></i>
+                <h1 class="main_title">usuarios</h1>
+            </div>
+            <div class="sub_title">
+                <h2 class="title_sub">Registrar usuario</h2>
+            </div>
+            <div class="general_from ">
+                <h2 class="info_general">Informacion usuario</h2>
+                <div class="form_general-content info_people">
+                    <form accept-charset="utf-8" action="/web-coodetrans/usuario/add" enctype="multipart/form-data" method="post">
+                        <div class="register registro-usuario">
+                            <div class="side__left">
+                                <label class="label-nombre" for="nombre">Nombres:
+                                    <input name="nombre" required type="text"/></label>
+
+                                <label class="label-apellido" for="apellido">Apellidos:
+                                    <input name="apellido" required type="text"/></label>
+                                <label>
+                                    <label>User name:
+                                        <input name="username" required type="text"></input>
+                                </label>
+                            </div>
+                            <div class="side__rigth">
+                                <label for="direccion">Password:
+                                    <input name="password" required type="password"/></label>
+
+                                <label for="tipoArea">Cargo
+                                    <select name="tipoArea">
+                                        <option value="">Seleccione:</option>
+                                        {% for tipo_area in tipo_areas %}
+                                            <option value={{tipo_area.tipo_id}}>{{tipo_area.nombre}}
+                                            {% endfor %}
+                                        </select>
+                                    </label>
+
+                                    <label>Foto
+                                        <input name="imagen" type="file"></input>
+                                </label>
+                            </div>
+                            <div class="btn_form  div_btn btn-info">
+                                <input class="btn-save btn-on" name="" type="submit" value="guardar"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

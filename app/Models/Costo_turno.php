@@ -8,4 +8,6 @@ class Costo_turno extends Model {
     protected $primaryKey = 'id_costo';
     const CREATED_AT  = 'create_at';
     const UPDATED_AT = 'update_at';
+
+    
 }

@@ -1,0 +1,26 @@
+{% extends "loginLayout.twig" %}
+
+{% block Logear %}
+			<form  action="/web-coodetrans/auth" method="post" accept-charset="utf-8">
+				<div class="formLogin" id="form">
+					<figure>
+						<img src="public/dist/images/LOGO_JHONNYGRANDE.png" alt="" width="350">
+					</figure>
+					<div class="dateUser">
+						<label for="username" class="dateUser-label_name">Usuario</label>
+						<div class="form-user">
+							<i class="icon-user"></i>
+							<input type="text" required class="dateUser-input_name" id="username" name="username">
+						</div>
+						<label for="password" class="dateUser-label_password" >Password</label>
+						<div class="password-user">
+							<i class="icon-key2"></i>
+							<input type="password" required class="dateUser-input_password" id="password" name="password">
+						</div>
+						<div class="btn__form">
+							<button class="btn btn_login" type="submit" value="login">Iniciar sesión</button>
+						</div>
+					</div>
+				</div>
+			</form>
+{% endblock %}
