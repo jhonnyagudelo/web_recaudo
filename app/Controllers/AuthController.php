@@ -19,8 +19,15 @@ class AuthController extends BaseController {
         $user = Usuario::where('username', $postData['username'])->first();
         if($user){
             if(\password_verify($postData['password'], $user->password)){
-                $_SESSION['userID'] = $user->usuario_id;
-                return new RedirectResponse('/web-coodetrans/rodamiento/add');
+                if($user->status == 't'){
+                    $_SESSION['userID'] = $user->usuario_id;
+                    return new RedirectResponse('/web-coodetrans/rodamiento/add');
+                    // date_default_timezone_set('America/Bogota');
+                    // $date->setTimestamp;
+                    // $ultimo_login = $user
+                }else{
+                    echo 'El usuario ha sido desactivado';                    
+                }
             }else {
                 echo 'Nombre ó usuario errados';
             }

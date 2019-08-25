@@ -1,21 +1,9 @@
 {% extends "layout.twig" %}
-
+{% block title %}SUIC | Agregar Rodamiento
+{% endblock %}
+{% block tituloControl %}{% endblock %}
 {% block content %}
-    <section class="info" id="info">
-        <article class="departure">
-            <div class="location">
-                <h1 class="title__control">Control</h1>
-            </div>
-            <div class="date">
-                <h1 class="title__date">Fecha</h1>
-                <div class="info__date" id="info__date"></div>
-            </div>
-            <div class="time">
-                <h1 class="title__time">Hora</h1>
-                <div class="info__time" id="info__time"></div>
-            </div>
-        </article>
-    </section>
+
     <section class="content">
         <div class="rodamiento_add">
             <div class="icon_title">
@@ -28,7 +16,7 @@
             <div>
                 <h2 class="info_general">Informacion general</h2>
                 <div class="form_general-content from_road">
-                    <form accept-charset="utf-8" action="/web-coodetrans/rodamiento/add" method="post" enctype="multipart/form-data" >
+                    <form accept-charset="utf-8" action="/web-coodetrans/rodamiento/add" enctype="multipart/form-data" method="post">
                         <label class="" id="planilla">
                             Planilla:
                             <input class=" input-rodamiento" min="1" name="planilla" type="number" value=""></label>
@@ -49,15 +37,15 @@
                                 {% endfor %}
                             </datalist>
                         </label>
-                            <label>Recibo
-                                <input class = "imgRecibo" name="imagen" type="file"></input>
-                            </label>
-                        <div class="div_btn">
-                            <input class="btn-save" name="" type="submit" value="Guardar">
-                        </div>
-                    </form>
-                </div>
+                        <label>Recibo
+                            <input class="imgRecibo" name="imagen" type="file"></input>
+                    </label>
+                    <div class="div_btn">
+                        <input class="btn-save" name="" type="submit" value="Guardar">
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-    {% endblock %}
+{% endblock %}

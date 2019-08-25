@@ -2,100 +2,126 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <link href="../public/dist/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="../public/dist/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-        <link href="../public/dist/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-        <link href="../public/dist/favicon/site.webmanifest" rel="manifest">
-        <meta content="#da532c" name="msapplication-TileColor">
-        <meta content="#ffffff" name="theme-color">
-        <title>SUIC</title>
-        <link href="../../public/dist/css/home.css" rel="stylesheet" type="text/css">
-        <link href="../public/dist/css/home.css" rel="stylesheet" type="text/css">
-        <link href="public/dist/css/home.css" rel="stylesheet" type="text/css">
+        {% block head %}
+            <meta charset="UTF-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <link href="../public/dist/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+            <link href="../public/dist/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+            <link href="../public/dist/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+            <link href="../public/dist/favicon/site.webmanifest" rel="manifest">
+            <meta content="#da532c" name="msapplication-TileColor">
+            <meta content="#ffffff" name="theme-color">
+            <title>
+                {% block title %}{% endblock %}
+                Suic</title>
+            <link href="../../public/dist/css/home.css" rel="stylesheet" type="text/css">
+            <link href="../public/dist/css/home.css" rel="stylesheet" type="text/css">
+            <link href="public/dist/css/home.css" rel="stylesheet" type="text/css">
+        {% endblock %}
     </head>
 
     <body>
         <i class=" burger-button icon-menu" id="burger-button"></i>
         <div class="container">
-            <header class="header " id="header">
-                <div class="header-logo">
-                    <figure class="logotipo">
-                        <a href="index.html"><img alt="Logo" src="../public/dist/images/LogoSuic.png" width="120"></a>
-                    </figure>
-                </div>
-                <nav class="header-nav header__nav-ul ">
-                    <div class="main-title">
-                        <a href="#">PRINCIPAL</a>
+            {% block header %}
+                <header class="header " id="header">
+                    <div class="header-logo">
+                        <figure class="logotipo">
+                            <a href="index.html"><img alt="Logo" src="../public/dist/images/LogoSuic.png" width="120"></a>
+                        </figure>
                     </div>
-                    <details class="nav__details">
-                        <summary class="nav_link">
-                            VEHICULOS
-                        </summary>
+                    <nav class="header-nav header__nav-ul ">
+                        <div class="main-title">
+                            <a href="#">PRINCIPAL</a>
+                        </div>
+                        <details class="nav__details">
+                            <summary class="nav_link">
+                                VEHICULOS
+                            </summary>
+                            <ul>
+                                <li id="add_vehicle">
+                                    <a href="/web-coodetrans/vehiculo/add">Registrar vehículo</a>
+                                </li>
+                                <li>
+                                    <a href="/web-coodetrans/vehiculo/lista">Listar vehículos</a>
+                                </li>
+                            </ul>
+                        </details>
+                        <details class="nav__details">
+                            <summary class="nav_link">
+                                RODAMIENTOS
+                            </summary>
+                            <ul>
+                                <li><a class="insert_tread" href="/web-coodetrans/rodamiento/add">Insertar rodamiento</a></li>
+                                <li><a href="/web-coodetrans/rodamiento/lista">Listar rodamiento</a></li>
+                            </ul>
+                        </details>
+                        <details class="nav__details">
+                            <summary class="nav_link">
+                                TIEMPOS
+                            </summary>
+                            <ul>
+                                <li><a href="insert_time.html">Insertar Tiempos</a></li>
+                                <li><a href="time.html">Ver Tiempos</a></li>
+                                <li><a href="search_time.html">Consultar Tiempo</a></li>
+                            </ul>
+                        </details>
+                        {% if tipo_id %}
+                            <details class="nav__details">
+                                <summary class="nav_link">
+                                    OPERADORES
+                                </summary>
+                                <ul>
+                                    <li><a href="#">Insertar operador</a></li>
+                                    <li><a href="#">Listar operador</a></li>
+                                </ul>
+                            </details>
+                        {% endif %}
+                        <details class="nav__details">
+                            <summary class="nav_link">
+                                TURNOS
+                            </summary>
+                            <ul>
+                                <li><a href="/web-coodetrans/turno/add">Insertar turno</a></li>
+                                <li><a href="/web-coodetrans/turno/lista">Listar turno</a></li>
+                            </ul>
+                        </details>
                         <ul>
-                            <li id="add_vehicle">
-                                <a href="/web-coodetrans/vehiculo/add">Registrar vehículo</a>
-                            </li>
-                            <li>
-                                <a href="/web-coodetrans/vehiculo/lista">Listar vehículos</a>
-                            </li>
+                            <i c class="nav_link" lass="nav__icon icon-exit "></i>
+                            <a href="#">Cerrar sesión</a>
                         </ul>
-                    </details>
-                    <details class="nav__details">
-                        <summary class="nav_link">
-                            RODAMIENTOS
-                        </summary>
-                        <ul>
-                            <li><a class="insert_tread" href="/web-coodetrans/rodamiento/add">Insertar rodamiento</a></li>
-                            <li><a href="/web-coodetrans/rodamiento/lista">Listar rodamiento</a></li>
-                        </ul>
-                    </details>
-                    <details class="nav__details">
-                        <summary class="nav_link">
-                            TIEMPOS
-                        </summary>
-                        <ul>
-                            <li><a href="insert_time.html">Insertar Tiempos</a></li>
-                            <li><a href="time.html">Ver Tiempos</a></li>
-                            <li><a href="search_time.html">Consultar Tiempo</a></li>
-                        </ul>
-                    </details>
-                    {# {% if usuario.tipo_id %} #}
-                    <details class="nav__details">
-                        <summary class="nav_link">
-                            OPERADORES
-                        </summary>
-                        <ul>
-                            <li><a href="#">Insertar operador</a></li>
-                            <li><a href="#">Listar operador</a></li>
-                        </ul>
-                    </details>
-                    {# {% endif %} #}
-                    <details class="nav__details">
-                        <summary class="nav_link">
-                            TURNOS
-                        </summary>
-                        <ul>
-                            <li><a href="/web-coodetrans/turno/add">Insertar turno</a></li>
-                            <li><a href="/web-coodetrans/turno/lista">Listar turno</a></li>
-                        </ul>
-                    </details>
-                    <ul>
-                        <i c class="nav_link" lass="nav__icon icon-exit "></i>
-                        <a href="#">Cerrar sesión</a>
-                    </ul>
-                </nav>
-            </header>
+                    </nav>
+                </header>
+            {% endblock %}
+            <section class="info" id="info">
+                {% block control %}
+                    <article class="departure">
+                        <div class="location">
+                            <h1 class="title__control">
+                                {% block tituloControl %}{% endblock %}Control</h1>
+                        </div>
+                        <div class="date">
+                            <h1 class="title__date">Fecha</h1>
+                            <div class="info__date" id="info__date"></div>
+                        </div>
+                        <div class="time">
+                            <h1 class="title__time">Hora</h1>
+                            <div class="info__time" id="info__time"></div>
+                        </div>
+                    </article>
+                {% endblock %}
+            </section>
             {% block content %}{% endblock %}
             <footer class="copyright">
-                <div class="copy-div">
-                    <p class="copy-p">
-                        COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
-                    </p>
-                </div>
-            </footer>
+                {% block footer %}
+                    <div class="copy-div">
+                        <p class="copy-p">
+                            &copy; COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+                        </p>
+                    </div>
+                </footer>
+            {% endblock %}
         </div>
         <script src="../public/dist/js/experimento.js"></script>
     </body>

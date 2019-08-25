@@ -93,7 +93,7 @@ validation($movil);
 
 function hideShow() {
     if ($menu.classList.contains("is-active")) {
-        console.log(event);
+        // console.log(event);
         $menu.classList.remove("is-active");
     } else {
         $menu.classList.add("is-active");
@@ -194,40 +194,40 @@ function hideShow() {
 
 
 
-function createNode($element) {
-    return document.createElement($element);
-}
+// function createNode($element) {
+//     return document.createElement($element);
+// }
 
-function append(parent, el){
-    return parent.appendChild(el);
-}
+// function append(parent, el){
+//     return parent.appendChild(el);
+// }
 
-const ID = document.querySelector('#id')
-const VEHICULO = document.querySelector('#vehiculo')
-// const BASE_API1 = 'http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-08-20 03:00:00&fin=2019-08-20 20:00:00';
-const BASE_API1 = 'http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=17230987';
-const BASE_APITRAMOS = 'http://logirastreo.com/ws_app/tramosViaje.php?';
-fetch(BASE_API1)
-    .then((resp) => resp.json()) // transformo la data en json
-    .then(function(data){
-        let viajes = data.tramos;
-        console.log(data.tramos)
-        return viajes.map(function(viaje) {
-            let li = createNode('li'),
-            span = createNode('span');
-            span.innerHTML = `${viaje.nombre} <br> ${viaje.fecha_fin}`;
-            append(li, span)
-            append(VEHICULO, li);
-        })
-    })
-    .catch(function(error){
-        console.log(error);
-    });
+// const ID = document.querySelector('#id')
+// const VEHICULO = document.querySelector('#vehiculo')
+// // const BASE_API1 = 'http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-08-20 03:00:00&fin=2019-08-20 20:00:00';
+// const BASE_API1 = 'http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=17230987';
+// const BASE_APITRAMOS = 'http://logirastreo.com/ws_app/tramosViaje.php?';
+// fetch(BASE_API1)
+//     .then((resp) => resp.json()) // transformo la data en json
+//     .then(function(data){
+//         let viajes = data.tramos;
+//         console.log(data.tramos)
+//         return viajes.map(function(viaje) {
+//             let li = createNode('li'),
+//             span = createNode('span');
+//             span.innerHTML = `${viaje.nombre} <br> ${viaje.fecha_fin}`;
+//             append(li, span)
+//             append(VEHICULO, li);
+//         })
+//     })
+//     .catch(function(error){
+//         console.log(error);
+//     });
 
 
 
- const BASE_API1 = 'http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-08-20 03:00:00&fin=2019-08-20 20:00:00';
- const BASE_API_TRAMOS = 'http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=${id_viaje}';
+//  const BASE_API1 = 'http://logirastreo.com/ws_app/resumenViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&inicio=2019-08-20 03:00:00&fin=2019-08-20 20:00:00';
+//  const BASE_API_TRAMOS = 'http://logirastreo.com/ws_app/tramosViaje.php?pass=b3dcd41072ccdbb7b7925f144f4dbaa7&idViaje=${id_viaje}';
 
 // function getIdViaje(){
 //     fetch(BASE_API1)
@@ -247,42 +247,42 @@ fetch(BASE_API1)
 
 //Modal recibo
 
-(async function load() {
+// (async function load() {
     
-    function setAtributos($elementos, $atributos) 
-    {
-        for(const atributo in atributos) {
-            $elementos.setAtributos(atributo,atributos[atributos]);
-        }
-    }
+//     function setAtributos($elementos, $atributos) 
+//     {
+//         for(const atributo in atributos) {
+//             $elementos.setAtributos(atributo,atributos[atributos]);
+//         }
+//     }
 
 
-    function addEventClick($elemento) 
-    {
-        $elemento.addEventListener('click',() =>{
-            alert('click')
-            showModal($elemento)
-        })    
-    };
+//     function addEventClick($elemento) 
+//     {
+//         $elemento.addEventListener('click',() =>{
+//             alert('click')
+//             showModal($elemento)
+//         })    
+//     };
 
 
-    const $modal = document.querySelector('modal');
-    const $overlay = document.querySelector('overlay');
-    const $hideModal = document.querySelector('hide-modal');
+//     const $modal = document.querySelector('modal');
+//     const $overlay = document.querySelector('overlay');
+//     const $hideModal = document.querySelector('hide-modal');
 
-    const $modalTitulo = document.querySelector('h1');
-    const $modalImg = document.querySelector('img');
-    const $modalDescripcion= document.querySelector('p');
-
-
+//     const $modalTitulo = document.querySelector('h1');
+//     const $modalImg = document.querySelector('img');
+//     const $modalDescripcion= document.querySelector('p');
 
 
 
-    function showModal($elemento)
-    {
-        $overlay.classList.add('active');
-        $modal.getElementsByClassName.animation = 'modalIn .8s forwards';
 
-    }
 
-});
+//     function showModal($elemento)
+//     {
+//         $overlay.classList.add('active');
+//         $modal.getElementsByClassName.animation = 'modalIn .8s forwards';
+
+//     }
+
+// });

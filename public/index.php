@@ -211,7 +211,7 @@ if (!$route) {
     }
 
 
-
+    // if(assert($sessionUserID))
 
     $controller = new $controllerName();
     $response = $controller->$actionName($request);
