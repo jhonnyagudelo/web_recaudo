@@ -45,7 +45,7 @@
                                     <select name="tipoArea">
                                         <option value="">Seleccione:</option>
                                         {% for tipo_area in tipo_areas %}
-                                            <option value={{tipo_area.tipo_id}}>{{tipo_area.nombre}}
+                                            <option value={{tipo_area.tipo_id}}>{{tipo_area.nombre|capitalize }}
                                             {% endfor %}
                                         </select>
                                     </label>

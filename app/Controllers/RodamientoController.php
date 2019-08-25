@@ -65,6 +65,12 @@ class RodamientoController extends BaseController
             'vehiculos' => $vehiculo
         ]);
     }
+
+    public function getControlIndex(){
+        return $this->renderHTML('control.twig');
+    }
+
+
 }
 
 

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\{Usuario, Tipo_area, Vehiculo};
+use App\Models\{Usuario, Tipo_area};
 use Respect\Validation\Validator as v;
 
 class UsuarioController extends BaseController
@@ -43,7 +43,7 @@ class UsuarioController extends BaseController
                 $usuario = new Usuario();
                 $usuario->nombre = $postData['nombre'];
                 $usuario->apellido = $postData['apellido'];
-                $usuario->imagen = $ruta;
+                $usuario->imagen = $ruta ?? null;
                 $usuario->username = $postData['username'];
                 $usuario->password = password_hash($postData['password'], PASSWORD_DEFAULT);
                 $usuario->tipo_id = $postData['tipoArea'];
@@ -53,7 +53,8 @@ class UsuarioController extends BaseController
                 echo $e->getMessage();
             }
         }
-
         return $this->renderHTML('agregarUsuario.twig');
     }
+
+        // public function getMenu
 }

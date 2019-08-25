@@ -5,6 +5,7 @@ use App\Models\Control;
 use Respect\Validation\Validator as v;
 
 class ControlController  extends BaseController {
+
     public function getAddControlAction($request) {
 			var_dump($request->getMethod());
 			var_dump((string)$request->getBody());
@@ -33,4 +34,7 @@ class ControlController  extends BaseController {
             
             ]);
     }
+
+
+
 }

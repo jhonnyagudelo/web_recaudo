@@ -45,7 +45,7 @@
                             <input list="vehiculo" name="vehiculo" required type="search">
                             <datalist id="vehiculo">
                                 {% for vehiculo in vehiculos %}
-                                    <option value={{vehiculo.vehiculo_id}}>{{vehiculo.numero_interno}}</option>
+                                    <option value={{vehiculo.vehiculo_id|e}}>{{vehiculo.numero_interno}}</option>
                                 {% endfor %}
                             </datalist>
                         </label>
