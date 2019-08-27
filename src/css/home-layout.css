@@ -233,11 +233,6 @@
 	margin-right: 10px;
 }
 
-.title_sub{
-	color: var(--lightColor);
-	font-size: 1em;
-}
-
 
 
 .info_general{
@@ -350,9 +345,8 @@
 	}
   }
   
-
-
-  .mk:checked + .select1-dropdown {
-		background-color: red;
-		display: none;
-  }
+  .alert{
+	  /* padding: .8em; */
+	  color: var(--lightColor);
+	  background-color:var(--contrans);
+  }	 

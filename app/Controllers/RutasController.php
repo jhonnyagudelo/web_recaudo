@@ -10,6 +10,7 @@ class RutasController extends BaseController
 {
     public function getAddRutasAction($resques) 
     {
+        $respuestaMensaje = null;
         $peaje = Peaje::all();
         $tarifa = Tarifa_positivo::all();
         $salario = Salario::all();
@@ -45,9 +46,9 @@ class RutasController extends BaseController
                 $rutas->combustible_id = $postData['combustible'];
                 $rutas->peaje_id = $postData['peaje'];
                 $rutas->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             }catch (\Exeption $e){
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }     
         }
         return $this->renderHtml('agregarRuta.twig', [
@@ -57,7 +58,8 @@ class RutasController extends BaseController
             'ayudas' => $ayuda,
             'tasas' => $tasa,
             'descuentos' => $descuento,
-            'tarifas' => $tarifa
+            'tarifas' => $tarifa,
+            'respuestaMensaje' => $respuestaMensaje
         ]);
     }
 

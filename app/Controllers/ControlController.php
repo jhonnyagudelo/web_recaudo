@@ -7,10 +7,10 @@ use Respect\Validation\Validator as v;
 class ControlController  extends BaseController {
 
     public function getAddControlAction($request) {
-			var_dump($request->getMethod());
-			var_dump((string)$request->getBody());
-			var_dump($request->getParsedBody());
-
+			// var_dump($request->getMethod());
+			// var_dump((string)$request->getBody());
+			// var_dump($request->getParsedBody());
+            $respuestaMensaje = null;
         if($request->getMethod() == 'POST') {
             $postData = $request->getParsedBody();
             $controlValidator = v::key('nombre', v::stringType()->notEmpty());
@@ -24,14 +24,14 @@ class ControlController  extends BaseController {
                 $controles = new Control();
                 $controles->nombre = $postData['nombre'];
                 $controles->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch(\Exception $e) {
-                echo  $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
 
         return $this->renderHTML('list_road.twig',[
-            
+                'respuestaMensaje' => $respuestaMensaje
             ]);
     }
 

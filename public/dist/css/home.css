@@ -2510,11 +2510,6 @@ input
 	margin-right: 10px;
 }
 
-.title_sub{
-	color: white;
-	font-size: 1em;
-}
-
 .info_general{
 	color:#273b47;
 	font-size: 1em;
@@ -2613,9 +2608,10 @@ input
 	  display: none;
   }
 
-.mk:checked + .select1-dropdown {
-		background-color: red;
-		display: none;
+.alert{
+	  /* padding: .8em; */
+	  color: white;
+	  background-color:#57717F;
   }
 
 /*login*/
@@ -3168,6 +3164,8 @@ input
 	border-radius: 8px 8px 0 0;
 	background-color: #57717F;
 	padding: 15px ;
+	color: white;
+	font-size: .8em;
 }
 
 .form_general-content {

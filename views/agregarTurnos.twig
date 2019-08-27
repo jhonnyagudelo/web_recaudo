@@ -1,20 +1,9 @@
 {% extends "layout.twig" %}
-
+{% block title %}|Agregar turno{% endblock %}
 {% block content %}
-    <section class="info" id="info">
-        <article class="departure">
-            <div class="date">
-                <h1 class="title__date">Fecha</h1>
-                <div class="info__date" id="info__date"></div>
-            </div>
-            <div class="time">
-                <h1 class="title__time">Hora</h1>
-                <div class="info__time" id="info__time"></div>
-            </div>
-        </article>
-    </section>
+
     <section class="content">
-        <div class="turns_add">
+        <div>
             <div class="icon_title">
                 <i class="icon-road icon-title "></i>
                 <h1 class="main_title">Turnos</h1>
@@ -58,6 +47,9 @@
                             </div>
                             <div class="div_btn btn_form ">
                                 <input class="btn-save" name="" type="submit" value="Guardar">
+                            </div>
+                            <div class="alert">
+                                {{respuestaMensaje}}
                             </div>
                         </div>
                     </form>

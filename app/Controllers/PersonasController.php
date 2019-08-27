@@ -13,6 +13,7 @@ class PersonasController extends BaseController
      */
     public function getAddPersonasAction($request)
     {
+        $respuestaMensaje = null;
         if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
             $PersonaValidator = v::key('numero_documento', v::intVal()->notEmpty())
@@ -43,13 +44,15 @@ class PersonasController extends BaseController
                     $persona->genero = $postData['genero'];
                     $persona->save();
                 }
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch (\Exception $e) {
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
 
-        return $this->renderHTML('guardarPersona.twig', []);
+        return $this->renderHTML('guardarPersona.twig', [
+            'respuestaMensaje'=>$respuestaMensaje
+        ]);
     }
 
     public function getListPersonAction()

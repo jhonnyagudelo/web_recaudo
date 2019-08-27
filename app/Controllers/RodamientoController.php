@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-use App\Models\{Rodamiento, Control, Vehiculo};
+use App\Models\{Rodamiento, Control, Vehiculo, Usuario};
 use Respect\Validation\Validator as v;
-use Illuminate\Support\Facades\Request;
 // use Illuminate\Support\Facades\DB;
 
 class RodamientoController extends BaseController
 {
     public function getAddRodamientoAction($request)
     {
+        $respuestaMensaje = null;
         $control = Control::all();
         $vehiculo = Vehiculo::all();
         $fileName=null;
@@ -38,17 +38,18 @@ class RodamientoController extends BaseController
                 $rodamientos->numero_planilla = $postData['planilla'];
                 $rodamientos->control_id = $postData['control'];
                 $rodamientos->vehiculo_id = $postData['vehiculo'];
-                $rodamientos->imagen = $ruta;
+                $rodamientos->imagen = $ruta ?? null;
                 $rodamientos->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch (\Exception $e) {
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
 
         return $this->renderHTML('agregarRodamiento.twig', [
             'controles' => $control,
-            'vehiculos' => $vehiculo
+            'vehiculos' => $vehiculo,
+            'respuestaMensaje' => $respuestaMensaje
         ]);
     }
 
@@ -60,16 +61,15 @@ class RodamientoController extends BaseController
     {
         $vehiculo = Vehiculo::all();
         $rodamientos = Rodamiento::all();
+        $nombrePerfil = $_SESSION['perfil'];
+        $nombreUsuario = $_SESSION['nombreID'];
         return $this->renderHTML('listaRodamiento.twig', [
             'rodamientos' => $rodamientos,
-            'vehiculos' => $vehiculo
+            'vehiculos' => $vehiculo,
+            'nombre' => $nombrePerfil,
+            'usuario'=>$nombreUsuario
         ]);
     }
-
-    public function getControlIndex(){
-        return $this->renderHTML('control.twig');
-    }
-
 
 }
 

@@ -12,9 +12,15 @@
             <link href="../public/dist/favicon/site.webmanifest" rel="manifest">
             <meta content="#da532c" name="msapplication-TileColor">
             <meta content="#ffffff" name="theme-color">
+            <link href="public/dist/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+            <link href="public/dist/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+            <link href="public/dist/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+            <link href="public/dist/favicon/site.webmanifest" rel="manifest">
+            <meta content="#da532c" name="msapplication-TileColor">
+            <meta content="#ffffff" name="theme-color">
             <title>
-                {% block title %}{% endblock %}
-                Suic</title>
+               Suic {% block title %}{% endblock %}
+            </title>
             <link href="../../public/dist/css/home.css" rel="stylesheet" type="text/css">
             <link href="../public/dist/css/home.css" rel="stylesheet" type="text/css">
             <link href="public/dist/css/home.css" rel="stylesheet" type="text/css">
@@ -25,6 +31,7 @@
         <i class=" burger-button icon-menu" id="burger-button"></i>
         <div class="container">
             {% block header %}
+            
                 <header class="header " id="header">
                     <div class="header-logo">
                         <figure class="logotipo">
@@ -33,8 +40,31 @@
                     </div>
                     <nav class="header-nav header__nav-ul ">
                         <div class="main-title">
-                            <a href="#">PRINCIPAL</a>
+                            <a href="#">DASHBOARD</a>
                         </div>
+
+
+                    {% if nombre == 'analista' %}
+                        <details class="nav__details">
+                            <summary>
+                                PERSONAL
+                            </summary>
+                            <ul>
+                                <li id="nav_details">
+                                    <a href="/web-coodetrans/usuario/add">Agregar Usuario</a>
+                                </li>                           
+                                <li id="nav_details">
+                                    <a href="/web-coodetrans/usuario/add">Listar Usuario</a>
+                                </li>
+                                    <li id="nav_details">
+                                    <a href="/web-coodetrans/usuario/add">Agregar Personal</a>
+                                </li>  
+                                </li>
+                                    <li id="nav_details">
+                                    <a href="/web-coodetrans/usuario/add">listar Personal</a>
+                                </li>                        
+                            </ul>
+                        </details>
                         <details class="nav__details">
                             <summary class="nav_link">
                                 VEHICULOS
@@ -45,9 +75,10 @@
                                 </li>
                                 <li>
                                     <a href="/web-coodetrans/vehiculo/lista">Listar vehículos</a>
-                                </li>
+                                </li>  
                             </ul>
                         </details>
+                    
                         <details class="nav__details">
                             <summary class="nav_link">
                                 RODAMIENTOS
@@ -57,6 +88,8 @@
                                 <li><a href="/web-coodetrans/rodamiento/lista">Listar rodamiento</a></li>
                             </ul>
                         </details>
+
+
                         <details class="nav__details">
                             <summary class="nav_link">
                                 TIEMPOS
@@ -67,6 +100,8 @@
                                 <li><a href="search_time.html">Consultar Tiempo</a></li>
                             </ul>
                         </details>
+
+
                         {% if tipo_id %}
                             <details class="nav__details">
                                 <summary class="nav_link">
@@ -78,6 +113,8 @@
                                 </ul>
                             </details>
                         {% endif %}
+
+
                         <details class="nav__details">
                             <summary class="nav_link">
                                 TURNOS
@@ -87,19 +124,24 @@
                                 <li><a href="/web-coodetrans/turno/lista">Listar turno</a></li>
                             </ul>
                         </details>
+{% endif %}
+
                         <ul>
                             <i c class="nav_link" lass="nav__icon icon-exit "></i>
-                            <a href="#">Cerrar sesión</a>
+                            <a href="/web-coodetrans/Logout">Cerrar sesión</a>
                         </ul>
                     </nav>
                 </header>
             {% endblock %}
+
             <section class="info" id="info">
                 {% block control %}
                     <article class="departure">
                         <div class="location">
                             <h1 class="title__control">
-                                {% block tituloControl %}{% endblock %}Control</h1>
+                                {{nombre|capitalize }}
+                            </h1>
+                            <p>{{usuario|capitalize}}</p>
                         </div>
                         <div class="date">
                             <h1 class="title__date">Fecha</h1>
@@ -112,7 +154,9 @@
                     </article>
                 {% endblock %}
             </section>
-            {% block content %}{% endblock %}
+            {% block content %}           
+            {% endblock %}
+
             <footer class="copyright">
                 {% block footer %}
                     <div class="copy-div">

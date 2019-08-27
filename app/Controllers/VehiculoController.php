@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 use App\Models\{Vehiculo,Marca};
 use Respect\Validation\Validator as V;
-use Illuminate\Support\Facades\Request;
 
 class VehiculoController extends BaseController
 {
     public function getAddVehiculoAction($request)
     {
+        $respuestaMensaje = null;
         $marcas = Marca::all();
         if (!empty($request->getMethod() == 'POST')) {
             $postData = $request->getParsedBody();
@@ -38,13 +38,14 @@ class VehiculoController extends BaseController
                 $vehiculo->clase_bus = $postData['clase_bus'];
                 $vehiculo->carroceria = $postData['carroceria'];
                 $vehiculo->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch (\Exception $e) {
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
         return $this->renderHTML('ingreso_vehiculo.twig', [
-            'marcas' => $marcas
+            'marcas' => $marcas,
+            'respuestaMensaje' => $respuestaMensaje
         ]);
     }
 

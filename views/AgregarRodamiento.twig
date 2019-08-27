@@ -1,7 +1,6 @@
 {% extends "layout.twig" %}
-{% block title %}SUIC | Agregar Rodamiento
+{% block title %}| Agregar Rodamiento
 {% endblock %}
-{% block tituloControl %}{% endblock %}
 {% block content %}
 
     <section class="content">
@@ -33,7 +32,7 @@
                             <input list="vehiculo" name="vehiculo" required type="search">
                             <datalist id="vehiculo">
                                 {% for vehiculo in vehiculos %}
-                                    <option value={{vehiculo.vehiculo_id|e}}>{{vehiculo.numero_interno}}</option>
+                                    <option value={{vehiculo.vehiculo_id|e}}>{{vehiculo.numero_interno|e}}</option>
                                 {% endfor %}
                             </datalist>
                         </label>
@@ -41,7 +40,11 @@
                             <input class="imgRecibo" name="imagen" type="file"></input>
                     </label>
                     <div class="div_btn">
-                        <input class="btn-save" name="" type="submit" value="Guardar">
+                        <input class="btn-save" id="save" name="" type="submit" value="Guardar">
+                    </div>
+                    <div class="alert">
+                        {{respuestaMensaje}}
+                        {# <p>hello</p> #}
                     </div>
                 </form>
             </div>

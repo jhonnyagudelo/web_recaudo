@@ -13,8 +13,6 @@ class Vehiculo extends Model {
     {
         return $this->belongsTo(Marca::class, 'id_marca');
     }
-
-
 }
 
 ?>

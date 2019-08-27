@@ -11,6 +11,7 @@ class  TurnoController extends BaseController
 
     public function getAddTurnoAction($request)
     {
+        $respuestaMensaje = null;
         $ruta = Ruta::all();
         $vehiculos = Vehiculo::all();
 
@@ -30,14 +31,15 @@ class  TurnoController extends BaseController
                 $turnos->numero_turno = $postData['num_turno'];
                 $turnos->novedad = $postData['novedad'];
                 $turnos->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch (\Exception $e) {
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
         return $this->renderHTML('agregarTurnos.twig', [
             'rutas' => $ruta,
-            'vehiculos' => $vehiculos
+            'vehiculos' => $vehiculos,
+            'respuestaMensaje' => $respuestaMensaje
         ]);
     }
     /**=============================

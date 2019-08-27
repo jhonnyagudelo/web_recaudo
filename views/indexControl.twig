@@ -1,0 +1,40 @@
+{% extends "layout.twig" %} 
+{% block title %} | Control{% endblock %} 
+{% block content %}
+
+
+
+
+
+<section class="content">
+<form action="" method="get"> 
+<table>
+  <thead>
+    <tr>
+      <th>
+        Control
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <select name="selectControl" id="">
+            <option value="">Seleccione:</option>
+            {% for control in controles %}
+                <option value={{control.control_id}}>{{control.nombre|e}}</option>
+            {% endfor %}
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="div-btn">
+    <input class="btn-save" id="save" type="submit" value="Entrar">
+</div>
+
+</form>
+</section>
+
+
+{% endblock %}

@@ -1,17 +1,7 @@
 {% extends "layout.twig" %}
+{% block title %}| Agregar persona{% endblock %}
 {% block content %}
-    <section class="info" id="info">
-        <article class="departure">
-            <div class="date">
-                <h1 class="title__date">Fecha</h1>
-                <div class="info__date" id="info__date"></div>
-            </div>
-            <div class="time">
-                <h1 class="title__time">Hora</h1>
-                <div class="info__time" id="info__time"></div>
-            </div>
-        </article>
-    </section>
+
     <section class="content">
         <div class="user_add">
             <div class="icon_title">
@@ -69,6 +59,9 @@
                             </div>
                             <div class="btn_form  div_btn btn-info">
                                 <input class="btn-save btn-on" name="" type="submit" value="Siguiente"/>
+                            </div>
+                            <div class="alert">
+                                {{respuestaMensaje}}
                             </div>
                         </div>
                     </form>

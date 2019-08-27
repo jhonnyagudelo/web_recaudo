@@ -1,31 +1,9 @@
 {% extends "layout.twig" %}
+{% block title %}| Lista Rodamiento{% endblock %} 
 {% block content %}
-<section class="info" id="info">
-    <article class="departure">
-        <div class="location">
-            <h1 class="title__control">Control</h1>
-        </div>
-        <div class="date">
-            <h1 class="title__date">Fecha</h1>
-            <div class="info__date" id="info__date"></div>
-        </div>
-        <div class="time">
-            <h1 class="title__time">Hora</h1>
-            <div class="info__time" id="info__time"></div>
-        </div>
-    </article>
-</section>
+
 <section class="content tread">
-    <form class="dataFilter-from">
-        <div class="from-fecha">
-            <label for="fecha_search">Fecha:</label>
-            <input name="fecha_search" type="date">
-        </div>
-        <div class="search-from">
-            <i class="search__icon icon-search "></i>
-            <input class=" from-search" name="search-label" type="search">
-        </div>
-    </form>
+
     <article class="info__content">
         <table class="info__frame">
             <thead>
@@ -36,6 +14,7 @@
                     <th>Imagen recibo</th>
                     <th>Activo</th>
                     <th>Informacion</th>
+                    {# <th>{{nombre}}</th> #}
                 </tr>
             </thead>
             {% for rodamiento in rodamientos %}

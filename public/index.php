@@ -13,6 +13,7 @@ use Zend\Diactoros\Response\RedirectResponse;
 
 session_start();
 
+
 $dotenv = Dotenv\Dotenv::create(__DIR__ . '/..');
 $dotenv->load();
 
@@ -63,17 +64,20 @@ $map->get('index', '/web-coodetrans/', [
  */
 $map->get('rodamientos', '/web-coodetrans/rodamiento/add', [
     'controller' => 'App\Controllers\RodamientoController',
-    'action' => 'getAddRodamientoAction'
+    'action' => 'getAddRodamientoAction',
+    'auth'=> true
 ]);
 
 $map->post('guardarRodamientos', '/web-coodetrans/rodamiento/add', [
     'controller' => 'App\Controllers\RodamientoController',
-    'action' => 'getAddRodamientoAction'
+    'action' => 'getAddRodamientoAction',
+    'auth'=> true
 ]);
 
 $map->get('listaRodamiento', '/web-coodetrans/rodamiento/lista', [
     'controller' => 'App\Controllers\RodamientoController',
-    'action' => 'getListRodamientoAction'
+    'action' => 'getListRodamientoAction',
+    'auth'=> true
 ]);
 
 /**
@@ -82,97 +86,115 @@ $map->get('listaRodamiento', '/web-coodetrans/rodamiento/lista', [
 
 $map->get('Vechicle', '/web-coodetrans/vehiculo/add', [
     'controller' => 'App\Controllers\VehiculoController',
-    'action' => 'getAddVehiculoAction'
+    'action' => 'getAddVehiculoAction',
+    'auth'=> true
 ]);
 
 $map->get('listaVehiculos', '/web-coodetrans/vehiculo/lista', [
     'controller' => 'App\Controllers\VehiculoController',
-    'action' => 'getListVehiculoAction'
+    'action' => 'getListVehiculoAction',
+    'auth'=> true
 ]);
 
 $map->post('addVehicle', '/web-coodetrans/vehiculos/add', [
     'controller' => 'App\Controllers\VehiculoController',
-    'action' => 'getAddVehiculoAction'
+    'action' => 'getAddVehiculoAction',
+    'auth'=> true
 ]);
 
 /**lista personas */
 
 $map->get('personas', '/web-coodetrans/persona/add', [
     'controller' => 'App\Controllers\PersonasController',
-    'action' => 'getAddPersonasAction'
+    'action' => 'getAddPersonasAction',
+    'auth'=> true
 ]);
 
 $map->get('listPersonas', '/web-coodetrans/persona/lista', [
     'controller' => 'App\Controllers\PersonasController',
-    'action' => 'getListPersonAction'
+    'action' => 'getListPersonAction',
+    'auth'=> true
 ]);
 
 $map->post('addPersona', '/web-coodetrans/persona/add', [
     'controller' => 'App\Controllers\PersonasController',
-    'action' => 'getAddPersonasAction'
+    'action' => 'getAddPersonasAction',
+    'auth'=> true
 ]);
 
 /**Listar turnos */
 
 $map->get('turnos', '/web-coodetrans/turno/add', [
     'controller' => 'App\Controllers\TurnoController',
-    'action' => 'getAddTurnoAction'
+    'action' => 'getAddTurnoAction',
+    'auth'=> true
 ]);
 
 $map->get('listTurnos', '/web-coodetrans/turno/lista', [
     'controller' => 'App\Controllers\TurnoController',
-    'action' => 'getListTurnoAction'
+    'action' => 'getListTurnoAction',
+    'auth'=> true
 ]);
 
 $map->post('addTurnos', '/web-coodetrans/turno/add', [
     'controller' => 'App\Controllers\TurnoController',
-    'action' => 'getAddTurnoAction'
+    'action' => 'getAddTurnoAction',
+    'auth'=> true
 ]);
 
 /**Listar rutas */
 
 $map->get('Ruta', '/web-coodetrans/ruta/add', [
     'controller' => 'App\Controllers\RutasController',
-    'action' => 'getAddRutasAction'
+    'action' => 'getAddRutasAction',
+    'auth'=> true
 ]);
 
 $map->get('listRuta', '/web-coodetrans/turno/lista', [
     'controller' => 'App\Controllers\RutasController',
-    'action' => 'getListTurnoAction'
+    'action' => 'getListTurnoAction',
+    'auth'=> true
 ]);
 
 $map->post('addRuta', '/web-coodetrans/turno/add', [
     'controller' => 'App\Controllers\RutasController',
-    'action' => 'getAddRutasAction'
+    'action' => 'getAddRutasAction',
+    'auth'=> true
 ]);
 
 /**Listar tiempos */
 $map->get('saveTiempo', '/web-coodetrans/tiempos/costaRicaCali/add', [
     'controller' => 'App\Controllers\TiempoController',
-    'action' => 'getTiemposAction'
+    'action' => 'getTiemposAction',
+    'auth'=> true
 ]);
 
 $map->get('listaTiempo', '/web-coodetrans/tiempos/costaRicaCali/lista', [
     'controller' => 'App\Controllers\TiempoController',
-    'action' => 'getListTiempoAction'
+    'action' => 'getListTiempoAction',
+    'auth'=> true
 ]);
 
 $map->post('addTiempo', 'web-coodetrans/tiempos/costaRicaCali/add', [
     'controller' => 'App\Controllers\TiempoController',
-    'action' => 'getTiemposAction'
+    'action' => 'getTiemposAction',
+    'auth'=> true
 ]);
 
 /**AGREGAR USUARIOS */
 /**Listar tiempos */
 $map->get('agregarUsuario', '/web-coodetrans/usuario/add', [
     'controller' => 'App\Controllers\UsuarioController',
-    'action' => 'getaddUser'
+    'action' => 'getaddUser',
+    'auth'=> true
 ]);
 
 
 $map->post('guardarUsuario', '/web-coodetrans/usuario/add', [
     'controller' => 'App\Controllers\UsuarioController',
-    'action' => 'postSaveUser'
+    'action' => 'postSaveUser',
+    'auth'=> true
+
 ]);
 
 /**Logear */
@@ -188,30 +210,48 @@ $map->get('logout', '/web-coodetrans/Logout',[
 
 $map->post('auth', '/web-coodetrans/auth',[
     'controller' => 'App\Controllers\AuthController',
-    'action' => 'postLogin'
+    'action' => 'postLogin',
 ]);
 
 
+
+
+/**Noo found */
+$map->get('noFound', '/web-coodetrans/indexControl',[
+    'controller' => 'App\Controllers\adminControlController',
+    'action' => 'getIndexControl'
+]);
+
+
+/**Noo found */
+// $map->get('noFound', '/web-coodetrans/noFound',[
+//     'controller' => 'App\Controllers\NoFoundController',
+//     'action' => 'getNoFound'
+// ]);
 
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
 if (!$route) {
-    $response = new HtmlResponse('No route found!', 404);
-    exit;
+    $html= 'No route found!';
+    $responder = new HtmlResponse($html, 404);
 } else {
     $handlerData = $route->handler;
     $controllerName = $handlerData['controller']; //va a instanciar el contenido de la variable
     $actionName = $handlerData['action'];
-    $needsAuth = $handlerData['auth'] ?? null;
+    $needsAuth = $handlerData['auth'] ?? false;
 
     $sessionUserID = $_SESSION['userID'] ?? null;
+    // $sesseionUSerPerfil = $_SESSION['perfil'] ?? null;
+    // $sesseionUSerNombre= $_SESSION['nombreID'] ?? null;
+
     if($needsAuth && !$sessionUserID) {
-        $response = new RedirectResponse('/web-coodetrans/Login');
+        // $responsed = new RedirectResponse('/web-coodetrans/Login');
+        $controllerName = 'App\controllers\AuthController';
+        $actionName = 'getLogin';
+        $_SESSION['mensaje'] = 'Ruta protegida debe ingresar su usuario y contraseña';
+        
     }
-
-
-    // if(assert($sessionUserID))
 
     $controller = new $controllerName();
     $response = $controller->$actionName($request);

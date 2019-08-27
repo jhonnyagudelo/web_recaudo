@@ -18,7 +18,7 @@ class UsuarioController extends BaseController
     public function postSaveUser($resquest)
     {
 
-
+        $respuestaMensaje = null;
         if (!empty($resquest->getMethod() == 'POST')) {
             $postData = $resquest->getParsedBody();
             $UserValadation = v::key('nombre', v::stringType()->notEmpty())
@@ -48,12 +48,14 @@ class UsuarioController extends BaseController
                 $usuario->password = password_hash($postData['password'], PASSWORD_DEFAULT);
                 $usuario->tipo_id = $postData['tipoArea'];
                 $usuario->save();
-                echo 'Guardado';
+                $respuestaMensaje = 'Guardado';
             } catch (\Exception $e) {
-                echo $e->getMessage();
+                $respuestaMensaje = $e->getMessage();
             }
         }
-        return $this->renderHTML('agregarUsuario.twig');
+        return $this->renderHTML('agregarUsuario.twig',[
+            'respuestaMensaje' => $respuestaMensaje
+        ]);
     }
 
         // public function getMenu
