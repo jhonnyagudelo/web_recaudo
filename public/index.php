@@ -52,13 +52,34 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
+
+
+
+
+
+/**Logear */
+$map->get('LoginForm', '/web-coodetrans/', [
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'getLogin'
+]);
+
+$map->get('logout', '/web-coodetrans/Logout',[
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'getLogout'
+]);
+
+$map->post('auth', '/web-coodetrans/auth',[
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'postLogin',
+]);
+
 /**
  * sesion de los index
  */
-$map->get('index', '/web-coodetrans/', [
-    'controller' => 'App\Controllers\IndexController',
-    'action' => 'indexAction'
-]);
+// $map->get('index', '/web-coodetrans/', [
+//     'controller' => 'App\Controllers\IndexController',
+//     'action' => 'indexAction'
+// ]);
 
 /**
  * sesion de los rodamiento
@@ -198,21 +219,7 @@ $map->post('guardarUsuario', '/web-coodetrans/usuario/add', [
 
 ]);
 
-/**Logear */
-$map->get('LoginForm', '/web-coodetrans/Login', [
-    'controller' => 'App\Controllers\AuthController',
-    'action' => 'getLogin'
-]);
 
-$map->get('logout', '/web-coodetrans/Logout',[
-    'controller' => 'App\Controllers\AuthController',
-    'action' => 'getLogout'
-]);
-
-$map->post('auth', '/web-coodetrans/auth',[
-    'controller' => 'App\Controllers\AuthController',
-    'action' => 'postLogin',
-]);
 
 
 
