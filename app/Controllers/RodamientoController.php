@@ -61,13 +61,15 @@ class RodamientoController extends BaseController
     {
         $vehiculo = Vehiculo::all();
         $rodamientos = Rodamiento::all();
+        $user = Usuario::all();
         $nombrePerfil = $_SESSION['perfil'];
         $nombreUsuario = $_SESSION['nombreID'];
         return $this->renderHTML('listaRodamiento.twig', [
             'rodamientos' => $rodamientos,
             'vehiculos' => $vehiculo,
             'nombre' => $nombrePerfil,
-            'usuario'=>$nombreUsuario
+            'usuarioNombre'=>$nombreUsuario,
+             'tipoArea' => $user
         ]);
     }
 

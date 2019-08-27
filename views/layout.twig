@@ -19,7 +19,8 @@
             <meta content="#da532c" name="msapplication-TileColor">
             <meta content="#ffffff" name="theme-color">
             <title>
-               Suic {% block title %}{% endblock %}
+                Suic
+                {% block title %}{% endblock %}
             </title>
             <link href="../../public/dist/css/home.css" rel="stylesheet" type="text/css">
             <link href="../public/dist/css/home.css" rel="stylesheet" type="text/css">
@@ -31,7 +32,7 @@
         <i class=" burger-button icon-menu" id="burger-button"></i>
         <div class="container">
             {% block header %}
-            
+
                 <header class="header " id="header">
                     <div class="header-logo">
                         <figure class="logotipo">
@@ -44,130 +45,160 @@
                         </div>
 
 
-                    {% if nombre == 'analista' %}
-                        <details class="nav__details">
-                            <summary>
-                                PERSONAL
-                            </summary>
-                            <ul>
-                                <li id="nav_details">
-                                    <a href="/web-coodetrans/usuario/add">Agregar Usuario</a>
-                                </li>                           
-                                <li id="nav_details">
-                                    <a href="/web-coodetrans/usuario/add">Listar Usuario</a>
-                                </li>
+                        {% if tipoArea.status == t %}
+
+                            {% if nombre == 'Coordinador operativo' or nombre == 'Director operativo' %}
+                                <details class="nav__details">
+                                    <summary>
+                                        PERSONAL
+                                    </summary>
+                                    <ul>
+                                        <li id="nav_details">
+                                            <a href="/web-coodetrans/usuario/add">Agregar Usuario</a>
+                                        </li>
+                                        <li id="nav_details">
+                                            <a href="/web-coodetrans/usuario/lista">Listar Usuario</a>
+                                        </li>
+                                        <li id="nav_details">
+                                            <a href="/web-coodetrans/usuario/add">Agregar Personal</a>
+                                        </li>
+                                    </li>
                                     <li id="nav_details">
-                                    <a href="/web-coodetrans/usuario/add">Agregar Personal</a>
-                                </li>  
-                                </li>
-                                    <li id="nav_details">
-                                    <a href="/web-coodetrans/usuario/add">listar Personal</a>
-                                </li>                        
-                            </ul>
-                        </details>
-                        <details class="nav__details">
-                            <summary class="nav_link">
-                                VEHICULOS
-                            </summary>
-                            <ul>
-                                <li id="add_vehicle">
-                                    <a href="/web-coodetrans/vehiculo/add">Registrar vehículo</a>
-                                </li>
-                                <li>
-                                    <a href="/web-coodetrans/vehiculo/lista">Listar vehículos</a>
-                                </li>  
-                            </ul>
-                        </details>
-                    
-                        <details class="nav__details">
-                            <summary class="nav_link">
-                                RODAMIENTOS
-                            </summary>
-                            <ul>
-                                <li><a class="insert_tread" href="/web-coodetrans/rodamiento/add">Insertar rodamiento</a></li>
-                                <li><a href="/web-coodetrans/rodamiento/lista">Listar rodamiento</a></li>
-                            </ul>
-                        </details>
-
-
-                        <details class="nav__details">
-                            <summary class="nav_link">
-                                TIEMPOS
-                            </summary>
-                            <ul>
-                                <li><a href="insert_time.html">Insertar Tiempos</a></li>
-                                <li><a href="time.html">Ver Tiempos</a></li>
-                                <li><a href="search_time.html">Consultar Tiempo</a></li>
-                            </ul>
-                        </details>
-
-
-                        {% if tipo_id %}
+                                        <a href="/web-coodetrans/usuario/add">listar Personal</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        {% endif %}
+                        {% if nombre == 'Coordinador operativo' or nombre == 'Director operativo' %}
                             <details class="nav__details">
                                 <summary class="nav_link">
-                                    OPERADORES
+                                    VEHICULOS
                                 </summary>
                                 <ul>
-                                    <li><a href="#">Insertar operador</a></li>
-                                    <li><a href="#">Listar operador</a></li>
+                                    <li id="add_vehicle">
+                                        <a href="/web-coodetrans/vehiculo/add">Registrar vehículo</a>
+                                    </li>
+                                    <li>
+                                        <a href="/web-coodetrans/vehiculo/lista">Listar vehículos</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        {% endif %}
+                        {% if nombre == 'Coordinador operativo' or nombre == 'Director operativo' or nombre == 'Control' %}
+                            <details class="nav__details">
+                                <summary class="nav_link">
+                                    RODAMIENTOS
+                                </summary>
+                                <ul>
+                                    {% if nombre == 'Control' %}
+                                        <li>
+                                            <a class="insert_tread" href="/web-coodetrans/rodamiento/add">Insertar rodamiento</a>
+                                        </li>
+                                    {% elseif nombre == 'Control' or  nombre == 'Coordinador operativo' %}
+                                        <li>
+                                            <a href="/web-coodetrans/rodamiento/lista">Listar rodamiento</a>
+                                        </li>
+                                    {% else %}
+                                        <p>No valido</p>
+                                    {% endif %}
+                                </ul>
+                            </details>
+                        {% endif %}
+
+                        {% if nombre == 'Coordinador operativo' or nombre == 'Director operativo' or nombre == 'Control' or nombre == 'Analista' %}
+                            <details class="nav__details">
+                                <summary class="nav_link">
+                                    TIEMPOS
+                                </summary>
+                                <ul>
+                                    {% if nombre == 'Analista' %}
+                                        <li>
+                                            <a href="insert_time.html">Insertar Tiempos</a>
+                                        </li>
+                                    {% elseif nombre == 'Coordinador operativo' or nombre == 'Director operativo' or nombre == 'Control' or nombre == 'Analista' %}
+
+                                        <li>
+                                            <a href="time.html">Ver Tiempos</a>
+                                        </li>
+                                        <li>
+                                            <a href="search_time.html">Consultar Tiempo</a>
+                                        </li>
+                                    {% endif %}
                                 </ul>
                             </details>
                         {% endif %}
 
 
-                        <details class="nav__details">
-                            <summary class="nav_link">
-                                TURNOS
-                            </summary>
-                            <ul>
-                                <li><a href="/web-coodetrans/turno/add">Insertar turno</a></li>
-                                <li><a href="/web-coodetrans/turno/lista">Listar turno</a></li>
-                            </ul>
-                        </details>
-{% endif %}
+                        {% if nombre == 'Coordinador operativo' or nombre == 'Director operativo' %}
+                            <details class="nav__details">
+                                <summary class="nav_link">
+                                    OPERADORES
+                                </summary>
+                                <ul>
+                                    <li><a href="">Insertar operador</a></li>
+                                    <li><a href="">Listar operador</a></li>
+                                </ul>
+                            </details>
+                        {% endif %}
 
-                        <ul>
-                            <i c class="nav_link" lass="nav__icon icon-exit "></i>
-                            <a href="/web-coodetrans/Logout">Cerrar sesión</a>
-                        </ul>
-                    </nav>
-                </header>
-            {% endblock %}
+                        {% if nombre == 'Control' or nombre == 'Coordinador operativo' or nombre == 'Director operativo' or  nombre == 'Analista' %}
+                            <details class="nav__details">
+                                <summary class="nav_link">
+                                    TURNOS
+                                </summary>
+                                <ul>
+                                    {% if nombre == 'Control'  %}
+                                        <li>
+                                            <a href="/web-coodetrans/turno/add">Insertar turno</a>
+                                        </li>
+                                    {% elseif nombre == 'Coordinador operativo' or nombre == 'Director operativo' or nombre == 'Analista' or nombre == 'Control' %}
+                                        <li>
+                                            <a href="/web-coodetrans/turno/lista">Listar turno</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </details>
+                        {% endif %}
+                    {% endif %}
 
-            <section class="info" id="info">
-                {% block control %}
-                    <article class="departure">
-                        <div class="location">
-                            <h1 class="title__control">
-                                {{nombre|capitalize }}
-                            </h1>
-                            <p>{{usuario|capitalize}}</p>
-                        </div>
-                        <div class="date">
-                            <h1 class="title__date">Fecha</h1>
-                            <div class="info__date" id="info__date"></div>
-                        </div>
-                        <div class="time">
-                            <h1 class="title__time">Hora</h1>
-                            <div class="info__time" id="info__time"></div>
-                        </div>
-                    </article>
-                {% endblock %}
-            </section>
-            {% block content %}           
-            {% endblock %}
+                    <ul>
+                        <i c class="nav_link" lass="nav__icon icon-exit "></i>
+                        <a href="/web-coodetrans/Logout">Cerrar sesión</a>
+                    </ul>
+                </nav>
+            </header>
+        {% endblock %}
 
-            <footer class="copyright">
-                {% block footer %}
-                    <div class="copy-div">
-                        <p class="copy-p">
-                            &copy; COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
-                        </p>
+        <section class="info" id="info">
+            {% block control %}
+                <article class="departure">
+                    <div class="location">
+                        <h1 class="title__control">
+                            {{nombre|capitalize }}
+                        </h1>
+                        <p>{{usuarioNombre|capitalize}}</p>
                     </div>
-                </footer>
+                    <div class="date">
+                        <h1 class="title__date">Fecha</h1>
+                        <div class="info__date" id="info__date"></div>
+                    </div>
+                    <div class="time">
+                        <h1 class="title__time">Hora</h1>
+                        <div class="info__time" id="info__time"></div>
+                    </div>
+                </article>
             {% endblock %}
-        </div>
-        <script src="../public/dist/js/experimento.js"></script>
-    </body>
+        </section>
+        {% block content %}{% endblock %}
 
-</html>
+        <footer class="copyright">
+            {% block footer %}
+                <div class="copy-div">
+                    <p class="copy-p">
+                        &copy; COPYRIGHT© SISTEMA SUIC 1.0 | DESARROLLO DE SOFTWARE
+                    </p>
+                </div>
+            </footer>
+        {% endblock %}
+    </body>
+</html></div><script src="../public/dist/js/experimento.js"></script></body></html>
