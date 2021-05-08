@@ -7,7 +7,7 @@
     "autoprefixer": "^9.5.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "postcss": "^7.0.17",
     "postcss-cssnext": "^3.1.0",
